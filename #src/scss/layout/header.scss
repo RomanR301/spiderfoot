@@ -3,10 +3,54 @@
 
 .body-padding {
   padding-top: 70px;
-  @media (min-width: $breakpoint-xxl) {
-    padding-top: 90px;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 15px 0;
+  .container {
+    display: flex;
+    justify-content: space-between;
   }
 }
 
+.navbar {
+  display: flex;
+  align-items: center;
+}
 
+.menu {
+  display: flex;
+  align-items: center;
+  &-item {
+    margin-right: 48px;
+    display: flex;
+    align-items: center;
+    a {
+      font-size: 16px;
+      line-height: 16px;
+    }
+    img {
+      width: 14px;
+      height: 14px;
+      object-fit: contain;
+      margin-right: 4px;
+    }
+  }
+}
+
+.sub-menu {
+  display: none;
+  &-button {
+    font-size: 12px;
+    margin-left: 4px;
+  }
+}
+
+.hamburger {
+  display: none;
+}
 

@@ -300,10 +300,10 @@ input[type=number] {
 }
 
 .heading-1 {
-  font-size: 60px;
-  font-size: -webkit-calc(40px + (60 - 40) * ((100vw - 300px) / (1900 - 300)));
-  font-size: -moz-calc(40px + (60 - 40) * ((100vw - 300px) / (1900 - 300)));
-  font-size: calc(40px + (60 - 40) * ((100vw - 300px) / (1900 - 300)));
+  font-size: 62px;
+  font-size: -webkit-calc(40px + (62 - 40) * ((100vw - 300px) / (1900 - 300)));
+  font-size: -moz-calc(40px + (62 - 40) * ((100vw - 300px) / (1900 - 300)));
+  font-size: calc(40px + (62 - 40) * ((100vw - 300px) / (1900 - 300)));
   line-height: 1.07;
 }
 
@@ -415,8 +415,49 @@ input[type=number] {
   color: #fff;
 }
 
+.btn {
+  font-family: inherit;
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 16px;
+  text-decoration: none;
+  padding: 12px 24px;
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+
+.btn-primary {
+  background: #079DD9;
+  border: 2px solid #079DD9;
+  border-radius: 100px;
+}
+
+.btn-primary:hover {
+  background: transparent;
+}
+
+.btn.has-icon {
+  display: flex;
+  align-items: center;
+}
+
+.btn.has-icon i {
+  font-size: 12px;
+  margin-right: 10px;
+}
+
+.btn.has-icon i:before {
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+
 .container {
-  max-width: 1155px;
+  max-width: 1110px;
   margin: auto;
   padding: 0 15px;
 }
@@ -627,6 +668,60 @@ input[type=number] {
 
 .body-padding {
   padding-top: 70px;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 15px 0;
+}
+
+.header .container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+}
+
+.menu-item {
+  margin-right: 48px;
+  display: flex;
+  align-items: center;
+}
+
+.menu-item a {
+  font-size: 16px;
+  line-height: 16px;
+}
+
+.menu-item img {
+  width: 14px;
+  height: 14px;
+  object-fit: contain;
+  margin-right: 4px;
+}
+
+.sub-menu {
+  display: none;
+}
+
+.sub-menu-button {
+  font-size: 12px;
+  margin-left: 4px;
+}
+
+.hamburger {
+  display: none;
 }
 
 @media (min-width: 576px) {
@@ -1093,10 +1188,6 @@ input[type=number] {
 
   .heading-3 {
     font-size: 33px;
-  }
-
-  .body-padding {
-    padding-top: 90px;
   }
 }
 

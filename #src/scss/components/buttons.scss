@@ -2,8 +2,32 @@
 @import "../abstracts/variables";
 
 .btn {
+  font-family: inherit;
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 16px;
+  text-decoration: none;
+  padding: 12px 24px;
+  @include transition(.3);
   &-primary {
-
+    background: $primaryColor;
+    border: 2px solid $primaryColor;
+    border-radius: 100px;
+    &:hover {
+      background: transparent;
+    }
+  }
+  &.has-icon {
+    display: flex;
+    align-items: center;
+    i {
+      font-size: 12px;
+      margin-right: 10px;
+      &:before {
+        @include transition(.3);
+      }
+    }
   }
   &-secondary {
     

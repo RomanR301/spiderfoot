@@ -30,7 +30,7 @@
 }
 
 .heading-1 {
-  @include fontSize(40, 60);
+  @include fontSize(40, 62);
   @media (min-width: $breakpoint-xxl) {
     @include fontSize(50, 80);
   }
