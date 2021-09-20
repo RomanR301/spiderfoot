@@ -1,3 +1,77 @@
 @import "../abstracts/mixins";
 @import "../abstracts/variables";
 
+body {
+  overflow-x: hidden;
+}
+
+.main-screen {
+  margin: 67px 0 100px 0;
+  display: block;
+  .row {
+    align-items: center;
+  }
+  &-abstracts {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    left: 0;
+    object-fit: contain;
+    display: block;
+    z-index: -1;
+  }
+  &-square {
+    position: absolute;
+    top: -60px;
+    width: 1000px;
+    right: -500px;
+    &-half {
+      position: absolute;
+      top: 500px;
+      left: 0;
+      transform: translate(0, -50%) rotate(180deg);
+    }
+  }
+  &-title {
+    margin-bottom: 24px;
+  }
+  &-description {
+    margin-bottom: 32px;
+    font-size: 20px;
+  }
+  .img-container {
+    &-secondary {
+      z-index: 2;
+      bottom: -230px;
+      left: -150px;
+      width: 410px;
+      position: absolute;
+    }
+  }
+}
+
+.img-container {
+  filter: drop-shadow(0px 30px 100px #000000);
+  img {
+    display: block;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+}
+
+.video {  
+  .container {
+    position: relative;
+  }
+  &-background {
+    z-index: -1;
+  }
+  &-inner {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    text-align: center;
+    transform: translate(-50%, -50%);
+  }
+}
