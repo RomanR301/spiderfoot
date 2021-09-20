@@ -1,0 +1,52 @@
+@import "./#src/scss/abstracts/mixins.scss";
+@import "./#src/scss/abstracts/variables.scss";
+
+.breadcrumb {
+
+  // position: absolute;
+  top: 20px;
+  @media (max-width: $breakpoint-md) {
+    position: static;
+    padding-top: 20px;
+  }
+  & .kama_breadcrumbs {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  & a {
+    // color: $greyColor;
+    display: block;
+    position: relative;
+    margin-right: 20px;
+    &:before {
+      content: '';
+      width: 4px;
+      height: 4px;
+      background: #fff;
+      border-radius: 100px;
+      position: absolute;
+      right: -12px;
+      top: calc(50% - 2px);
+    }
+  }
+  & span {
+    // padding-right: 20px;
+    font-size: 12px;
+    display: block;
+  }
+}
+
+// .woocomerce {
+  .woocommerce-breadcrumb {
+    margin: 24px 12px 0 12px!important;
+    // color: $defaultText!important;
+    & a {
+      // color: $heavyGreyColor;
+      margin-right: 10px;
+      &:after {
+        content: '/';
+        margin-left: 10px;
+      }
+    }
+  }
+// }

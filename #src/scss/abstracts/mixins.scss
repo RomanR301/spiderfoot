@@ -1,0 +1,60 @@
+@mixin font($font_name, $file_name, $weight, $style) {
+  @font-face {
+  font-family: $font_name;
+  font-display: swap;
+  src: url("../fonts/#{$file_name}.woff2") format("woff2");
+  font-weight: #{$weight};
+  font-style: #{$style};
+  }
+}
+
+@function get-vh($object) {
+  $vh: (1080 * 0.01) * 1px;
+  @return ($object / $vh) * 1vh;
+}
+
+@function get-vw($object) {
+  $vw: (1650 * 0.01) * 1px;
+  @return ($object / $vw) * 1vw;
+}
+
+@mixin transition($time) {
+  -webkit-transition: all $time + 0s ease-out;
+  -moz-transition: all $time + 0s ease-out;
+  -o-transition: all $time + 0s ease-out;
+  transition: all $time + 0s ease-out;
+}
+
+@mixin text-ellipsis($strokes) {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: $strokes;
+  -webkit-box-orient: vertical;
+}
+
+@mixin grid-size($size) {
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 0 $size;
+  -ms-flex: 0 0 $size;
+  flex: 0 0 $size;
+  max-width: $size;
+}
+
+@mixin fontSize($minSize, $maxSize) {
+  font-size: $maxSize + 0px;
+  font-size: -webkit-calc(#{$minSize + 0px} + (#{$maxSize} - #{$minSize}) * ((100vw - 300px) / (1900 - 300)));
+  font-size: -moz-calc(#{$minSize + 0px} + (#{$maxSize} - #{$minSize}) * ((100vw - 300px) / (1900 - 300)));
+  font-size: calc(#{$minSize + 0px} + (#{$maxSize} - #{$minSize}) * ((100vw - 300px) / (1900 - 300)));
+}
+
+@mixin order($number) {
+  order: $number;
+}
+
+@mixin defaultIcon($size) {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: $size;
+}

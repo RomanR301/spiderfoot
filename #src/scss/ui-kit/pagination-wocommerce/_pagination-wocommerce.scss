@@ -1,0 +1,75 @@
+@import "./#src/scss/abstracts/mixins.scss";
+@import "./#src/scss/abstracts/variables.scss";
+.woocommerce nav.woocommerce-pagination ul {
+  border: none;
+  margin: 0;
+  clear: unset;
+  padding: 0;
+}
+.woocommerce nav.woocommerce-pagination ul li {
+  border: none;
+}
+.woocommerce nav.woocommerce-pagination ul li a:focus, .woocommerce nav.woocommerce-pagination ul li a:hover, .woocommerce nav.woocommerce-pagination ul li span.current {
+  // color: $defaultText;
+  background: $whiteColor;
+}
+.woocommerce-pagination {
+  margin: 40px 0;
+  & ul {    
+    display: flex;
+    justify-content: center;
+  }
+  & li {
+    // margin-right: 10px;
+  }
+  & a, & span.current {  
+    display: flex!important;
+    align-items: center;
+    justify-content: center;
+    width: 47px;
+    height: 47px;
+    color: #7C7C7C;
+    font-size: 16px;
+    line-height: 24px;
+    @include transition(.3);
+    // border: 2px solid #333333;
+
+    &:hover {
+      // color: $defaultText;
+    }
+  }
+  .page-numbers .current {
+    border: 2px solid #333333;
+    // color: $defaultText;
+    margin: 0 10px;
+  }
+  & .prev, & .next {
+    &:before {
+     font-family: 'icomoon';
+     display: block;
+     content: "\e901";
+    //  color: $defaultText;
+     font-size: 40px;
+     transform: rotate(180deg);
+     @include transition(.3);
+    }
+  }
+  & .next {
+    &:before {
+      transform: unset;
+    }
+    &:hover {
+      &:before {
+        padding-left: 10px;
+      }
+    }
+  }
+  & .prev {
+    &:hover {
+      &:before {
+        padding-left: 10px;
+      }
+    }
+  }
+}
+

@@ -1,0 +1,60 @@
+.accordion {
+  &-container {
+
+  }
+  &__item {
+    position: relative;
+    width: 100%;
+    border-bottom: 1px solid #E7E7E7;
+    &.active {
+      & i:before {
+        opacity: 0;
+      }
+    }
+  }
+  &__content {
+    display: none;
+    padding: 0 0 24px 0;
+    max-width: 80%;
+    & p {
+      margin: 0;
+      color: $defaultText;
+    }
+  }
+  &__button {
+    display: block;
+    color: #1E172F;
+    font-weight: 600;
+    font-size: 20px;
+    @include transition(.3);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    padding: 24px 0;
+    & i {
+      min-width: 30px;
+      min-height: 30px;
+      max-width: 30px;
+      max-height: 30px;
+      border-radius: 100px;
+      position: relative;
+      display: block;
+      margin-left: 10px;
+      &:before, &:after {
+        content: '';
+        width: 18px;
+        height: 2px;
+        position: absolute;
+        left: calc(50% - 9px);
+        top: calc(50% - 1px);
+        background: $blackColor;
+        transform: rotate(90deg);
+        @include transition(.3);
+      }
+      &:after {
+        transform: rotate(180deg);
+      }
+    }
+  }
+}

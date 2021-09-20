@@ -1,0 +1,104 @@
+.custom-select {
+  position: relative;
+  // font-family: Arial;
+  margin: 15px 0 90px 70px;
+  @include transition(.3);
+  @media (min-width: $breakpoint-xxl) {
+    margin: 15px 0 120px 90px;
+  }
+  @media (max-width: $breakpoint-md) {
+    margin: 10px 30px 10px 0;
+  }
+}
+
+.custom-select select {
+  display: none; /*hide original SELECT element:*/
+  width: 200px;
+}
+
+#inputselect {
+  display: none;
+}
+
+
+/*style the arrow inside the select element:*/
+.select-selected:after, .select-selected:before {
+  position: absolute;
+  font-family: icomoon;
+  content: "\e900";
+  display: inline-block;
+  @include transition(.3);
+  right: -40px;
+  width: 40px;
+  display: flex;
+  justify-content: center;
+  top: calc(50% - 15px);
+}
+
+.select-selected:after {
+  top: calc(50% - 15px);
+}
+
+.select-selected:before {
+  transform: rotate(180deg);
+  opacity: 0;
+  top: calc(50% + 10px);
+}
+
+.select-selected.select-arrow-active:after {
+  opacity: 0;
+  top: calc(50% + 10px);
+
+}
+.select-selected.select-arrow-active:before {
+  opacity: 1;
+  top: calc(50% - 15px);
+}
+
+/*style the items (options), including the selected item:*/
+.select-items div,.select-selected {
+  color: $purpleColor;
+  width: 120px;
+  padding: 4px 0;
+  // padding: 8px 16px;
+  // border: 1px solid transparent;
+  // border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
+  cursor: pointer;
+  user-select: none;
+  margin: 4px 8px;
+  padding: 4px 8px;
+  background: $blackColor;
+  @include transition(.3);
+  &:hover {
+    // color: $whiteColor;
+    // background: $purpleColor;
+  }
+}
+
+/*style items (options):*/
+.select-items {
+  position: absolute;
+  // background-color: DodgerBlue;
+  top: 100%;
+  left: 0;
+  right: 0;
+  z-index: 99;
+  @include transition(.3);
+}
+
+/*hide the items when the select box is closed:*/
+.select-hide {
+  // display: none;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.select-items div:hover, .same-as-selected {
+  color: $darkPurpleColor;
+}
+
+.select-selected {
+  color: $whiteColor;
+  border-bottom: 1px solid #fff;
+  background: $blackColor;
+}

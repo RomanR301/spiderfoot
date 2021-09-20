@@ -1,0 +1,127 @@
+@import "../abstracts/mixins";
+@import "../abstracts/variables";
+
+.text-center {
+  text-align: center;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.--semibold {
+  font-weight: 600;
+}
+
+.--regular {
+  font-weight: 400;
+}
+
+.--medium {
+  font-weight: 500;
+}
+
+.--bold {
+  font-weight: 700;
+}
+
+.--uppercase {
+  text-transform: uppercase;
+}
+
+.heading-1 {
+  @include fontSize(40, 60);
+  @media (min-width: $breakpoint-xxl) {
+    @include fontSize(50, 80);
+  }
+  line-height: 1.07;
+}
+
+.heading-2 {
+  @include fontSize(28, 50);
+  @media (min-width: $breakpoint-xxl) {
+    @include fontSize(34, 62);
+  }
+  line-height: 1.33;
+}
+
+.heading-3 {
+  @include fontSize(24, 42);
+  @media (min-width: $breakpoint-xxl) {
+    @include fontSize(28, 54);
+  }
+  line-height: 1.16;
+}
+
+.heading-3 {
+  @include fontSize(18,24);
+  line-height: 1.1;
+  font-weight: 700;
+  @media (min-width: $breakpoint-xxl) {
+    font-size: 33px;
+  }
+}
+
+.heading-4 {
+  @include fontSize(16, 36);
+  line-height: 1.33;
+}
+
+.heading-5 {
+  @include fontSize(14, 24);
+  line-height: 1.33;
+}
+
+.heading-5 {
+  @include fontSize(14, 16);
+  line-height: 1.33;
+}
+
+.section-heading {
+  font-weight: 900;
+  @include fontSize(36, 56);
+  line-height: 1;
+}
+
+
+
+.icon-icon-discord:before {
+  content: "\e901";
+  color: #fff;
+}
+.icon-icon-footer-envelope:before {
+  content: "\e902";
+  color: #fff;
+}
+.icon-icon-twitter:before {
+  content: "\e903";
+  color: #fff;
+}
+.icon-icon-youtube:before {
+  content: "\e904";
+  color: #fff;
+}
+.icon-icon-arrow-right-long:before {
+  content: "\e907";
+  color: #fff;
+}
+.icon-icon-envelope:before {
+  content: "\e908";
+  color: #5a6c81;
+}
+.icon-icon-arrow-right:before {
+  content: "\e909";
+  color: #fff;
+}
+.icon-icon-user:before {
+  content: "\e90a";
+  color: #fff;
+}
+.icon-icon-github:before {
+  content: "\e90b";
+  color: #fff;
+}
+.icon-icon-shevron:before {
+  content: "\e90c";
+  color: #fff;
+}

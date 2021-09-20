@@ -1,0 +1,87 @@
+.lang {
+  color: $defaultText;
+  line-height: 17px;
+  font-size: 18px;
+  padding: 0 10px;
+  cursor: pointer;
+  position: relative;
+  display: flex;
+  align-items: center;
+  &:after {
+    content: "\e900";
+    font-family: 'icomoon';
+    position: absolute;
+    right: -15px;
+  }
+  &-options {
+    position: absolute;
+    display: block;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    z-index: 2;
+    @include transition(.3);
+  }
+  &-option {
+    position: relative;
+    display: block;
+    font-weight: 500;
+    color: #ffffff;
+    line-height: 30px;
+    cursor: pointer;
+    @include fontSize(16, 18);
+    @include transition(.3);
+    z-index: 99;
+    &:hover {
+      color: #8E6954;
+    }
+  }
+}
+.header-lang {
+  margin: 0 10px;
+  @media (max-width: $breakpoint-xl) {
+    display: none;
+  }
+}
+.lang-select {
+  &-wrapper {
+    position: relative;
+    user-select: none;
+    width: 100%;
+  }
+  &__trigger {
+    position: relative;
+    display: flex;
+    align-items: center;
+    font-weight: 500;
+    color: #ffffff;
+    line-height: 24px;
+    background: transparent;
+    cursor: pointer;
+    @include fontSize(16, 18);
+    & span {
+      color: #ffffff;
+    }
+    & i {
+      margin-left: 6px;
+      transform: rotate(90deg);
+      @include transition(.3);
+      &:before {
+        font-size: 10px;
+        display: block;
+      }
+    }
+  }
+  &.open {
+    & .lang-options {
+      opacity: 1;
+      visibility: visible;
+      pointer-events: all;
+    }
+    & .lang-select__trigger {
+      & i {
+        transform: rotate(-90deg);
+      }
+    }
+  }
+}

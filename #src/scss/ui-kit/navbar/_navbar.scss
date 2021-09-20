@@ -1,0 +1,124 @@
+@import "./#src/scss/abstracts/mixins.scss";
+@import "./#src/scss/abstracts/variables.scss";
+
+.navbar {
+  @include transition(.3);
+  margin-left: auto;
+  @media (max-width: $breakpoint-xl) {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: -120vw;
+    background: $blackColor;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    @include transition(.3);
+    padding: 10px;
+  }
+  &.active {
+    right: 0;
+  }
+}
+.menu {
+  @media (max-width: $breakpoint-xl) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  &-item {
+    margin: 0 15px;
+    @media (max-width: 1400px) {
+      margin: 0 8px;
+    }
+    @media (max-width: $breakpoint-xl) {
+      margin: 20px 0;
+    }
+    & a {
+      display: block;
+      font-size: 18px;
+      position: relative;
+      overflow: hidden;
+      @media (max-width: 1400px) {
+        font-size: 16px;
+      }
+      @media (max-width: $breakpoint-xl) {
+        font-size: 30px;
+        font-weight: 900;
+      }
+      &:before {
+        content: '';
+        position: absolute;
+        bottom: 6px;
+        left: -100%;
+        width: 100%;
+        height: 6px;
+        background: $blueColor;
+        @include transition(.3);
+        z-index: -1;
+      }
+      &:hover {
+        &:before {
+          left: 0;
+        }
+      }
+    }
+  }
+}
+.hamburger {
+  display: none;
+  width: 45px;
+  height: 45px;
+  margin-right: -15px;
+  position: relative;
+  z-index: 22;
+  @media (max-width: $breakpoint-xl) {
+    display: block;
+  } 
+  & span {
+    position: absolute;
+    right: 15px;
+    display: block;
+    width: 25px;
+    background: $whiteColor;
+    height: 3px;
+    border-radius: 10px;
+    @include transition(.3);
+  }
+  & span:nth-child(1) {
+    top: calc(50% - 8.5px);
+  }
+  & span:nth-child(2) {
+    top: calc(50% - 2.5px);
+  }
+  & span:nth-child(3) {
+    top: calc(50% - 2.5px);
+  }
+  & span:nth-child(4) {
+    top: calc(50% + 3.5px);
+  }
+  &.open {
+    & span {
+      background: $whiteColor;
+    }
+    & span:nth-child(1) {
+      top: calc(50% - 2.5px);
+      width: 0%;
+      right: 50%;
+    }
+    & span:nth-child(2) {
+      transform: rotate(45deg);
+    }
+    & span:nth-child(3) {
+      transform: rotate(-45deg);
+    }
+    & span:nth-child(4) {
+      top: calc(50% - 2.5px);
+      width: 0;
+      right: 50%;
+    }
+  }
+}

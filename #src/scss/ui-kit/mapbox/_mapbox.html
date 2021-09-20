@@ -1,0 +1,46 @@
+<script src='https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.js'></script>
+<link href='https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.css' rel='stylesheet' />  
+
+
+<div class="map-container">
+  <div id='map'></div>
+  <script>
+    // change this line
+    mapboxgl.accessToken = 'pk.eyJ1Ijoicm9tYW5yMzAxIiwiYSI6ImNrMWdiNHRzNDBsdDMzY3FsazczZ3NvcXkifQ.RbhqVO194w3peff7hCWzwA';
+    var map = new mapboxgl.Map({
+      container: 'map',
+      style: 'mapbox://styles/romanr301/ckfcsplv09kx819nu2ymm4ca2',
+      // change this line
+      center: [-77.0177, 38.901],
+      zoom: 16.05
+    });
+    var geojson = {
+      type: 'FeatureCollection',
+      features: [{
+        type: 'Feature',
+        geometry: {
+          type: 'Point',
+          // change this line
+          coordinates: [-77.0176, 38.9014]
+        },
+        properties: {
+          title: 'Mapbox',
+          description: 'Washington, D.C.'
+        }
+      }]
+    }
+    geojson.features.forEach(function (marker) {
+
+
+      var el = document.createElement('div');
+      el.className = 'marker';
+
+      // make a marker for each feature and add to the map
+      new mapboxgl.Marker(el)
+        .setLngLat(marker.geometry.coordinates)
+        .addTo(map);
+    });
+    var nav = new mapboxgl.NavigationControl();
+    map.addControl(nav, 'top-right');
+  </script>
+</div>

@@ -1,0 +1,28 @@
+<div id="overlay" class="preloader">
+  <!-- preloader code -->
+</div>
+
+
+<script>
+  // ---------- Loading Screen ---------- //
+  ;(function () {
+      function id(v) {
+          return document.getElementById(v);
+      }
+      function loadbar() {
+          var ovrl = id("overlay");
+          setTimeout(function () {
+              doneLoading();
+          }, 3400);
+          // optional animation
+          // function doneLoading() {
+          //     TweenMax.to(
+          //         ovrl, 1.5,
+          //         {left: '-130%', ease: Expo.easeInOut, delay: .9}
+          //     );
+          // }
+      }
+      document.addEventListener('DOMContentLoaded', loadbar, false);
+  }());
+
+</script>

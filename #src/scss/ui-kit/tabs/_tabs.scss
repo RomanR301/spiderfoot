@@ -1,0 +1,72 @@
+.tabs { 
+  & .row {
+    width: 100%;
+    &.w-100 {
+      @media (max-width: $breakpoint-md) {
+        flex-direction: column-reverse;
+      }
+    }
+  }
+  &-list {
+    display: flex;
+    max-width: 70%;
+    flex-wrap: wrap;
+    @media (max-width: $breakpoint-lg) {
+      max-width: 100%;
+    }
+    &__item {
+      &_link {
+        margin: 3px;
+        display: block;
+        &.btn-primary {
+          @include transition(0.3);
+          background: $whiteColor;
+          // color: $defaultText;
+          cursor: pointer;
+          @media (max-width: $breakpoint-md) {
+            padding: 4px 12px;
+          }
+          &:hover {
+            // background: $defaultText;
+            color: $whiteColor;
+          }
+          &.active {
+            // background: $defaultText;
+            color: $whiteColor;
+          }
+        }
+      }
+    }
+  }
+
+  &-wrap {
+    width: 100%;
+    padding-top: 35px;
+    // overflow: hidden;
+    @media (max-width: $breakpoint-lg) {
+      max-width: unset;
+    }
+    .tab-content {
+      display: none;
+      animation: fadeEffect .5s;
+      -webkit-animation: fadeEffect .5s;
+      &.is-show {
+        display: block;
+      }
+      &.active {
+        display: block;
+      }
+    }
+  }
+}
+
+
+
+@keyframes fadeEffect {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

@@ -1,0 +1,85 @@
+@import "./#src/scss/abstracts/mixins.scss";
+@import "./#src/scss/abstracts/variables.scss";
+
+.seo {
+  margin: 48px 0 64px 0;
+  @media (max-width: $breakpoint-md) {
+    margin: 24px 0 32px 0;
+  }
+  &-component {
+    & h1 {
+      @include fontSize(16, 28);
+      line-height: 1.375;
+      margin-bottom: 4px;
+    }
+    & h2 {
+      @include fontSize(16, 28);
+      line-height: 1.375;
+      margin-bottom: 4px;
+    }
+    & .entry-content {
+      height: 260px;
+      padding-right: 16px;
+      overflow-y: scroll;
+      color: $whiteColor;
+      & p {
+        color: $blackColor;
+        font-size: 16px;
+        line-height: 1.625;
+      }
+      & ul li, & ol li {
+        color: $blackColor;
+        & span {
+          color: $blackColor;
+        }
+      }
+      & h3 {
+        @include fontSize(14, 22);
+        line-height: 1.25;
+        margin: 12px 0 16px 0;
+      }
+    
+      & h4 {
+        @include fontSize(14, 20);
+        line-height: 1.22;
+        margin: 12px 0 16px 0;
+      }
+    
+      & h5 {
+        @include fontSize(12, 18);
+        line-height: 1.32;
+        margin: 12px 0 16px 0;
+      }
+    
+      & h6 {
+        @include fontSize(14, 20);
+        line-height: 1.64;
+        margin: 12px 0 16px 0;
+      }
+      & h2, & h3, & h4, & h5 {
+        color: $blackColor;
+        font-weight: 600;
+      }
+      &::-webkit-scrollbar-track {
+        -webkit-box-shadow: inset 0 0 1px #DDDDDD;
+        border-radius: 0;
+        background: rgba(0, 0, 0, 0.1);
+        width: 1px;
+      }
+      &::-webkit-scrollbar {
+        width: 3px;
+        background-color: transparent;
+      }
+      &::-webkit-scrollbar-thumb {
+        border-radius: 0;
+        -webkit-box-shadow: inset 0 0 6px #000000;
+        // background-color: $whiteColor;
+      }
+      & p:last-child, ul:last-child, ol:last-child {
+        margin: 0;
+      }
+      scrollbar-color: #333333 #DDDDDD; 
+      scrollbar-width: thin;
+    }
+  }
+}

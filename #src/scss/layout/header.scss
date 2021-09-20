@@ -1,0 +1,12 @@
+@import "../abstracts/mixins";
+@import "../abstracts/variables";
+
+.body-padding {
+  padding-top: 70px;
+  @media (min-width: $breakpoint-xxl) {
+    padding-top: 90px;
+  }
+}
+
+
+

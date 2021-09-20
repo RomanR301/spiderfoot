@@ -1,0 +1,53 @@
+@import "./#src/scss/abstracts/mixins.scss";
+@import "./#src/scss/abstracts/variables.scss";
+
+.section-carousel {
+  margin-bottom: 100px;
+  & .row {
+    width: 100%;
+  }
+  & .buttons-container {
+    margin-bottom: 24px;
+  }
+  & .swiper-button-next, .swiper-button-prev {
+    position: static;
+    margin: 0;
+    // border: 2px solid $heavyGreyColor;  
+    width: 36px;
+    height: 36px;
+    @include transition(.3);
+    outline: none;
+    &:after {
+      font-family: 'icomoon';
+      content: "\e901";
+      display: block;
+      // color: $heavyGreyColor;
+      @include transition(.3);
+    }
+    &:hover {
+      // border: 2px solid $defaultText;
+      &:after {
+        // color: $defaultText;
+      }
+    }
+  }
+  & .swiper-button-prev {
+    margin: 0 15px 0 15px;
+    &:after {
+      transform: rotate(-180deg);
+    }
+  }
+}
+
+.product-carousel {
+  & .swiper-slide {
+    min-height: 100%;
+  }
+  & .product {
+    overflow: hidden;
+    // &__image {
+    //   width: 100%;
+    //   height: 100%;
+    // }
+  }
+}

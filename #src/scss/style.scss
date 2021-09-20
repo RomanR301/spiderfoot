@@ -1,0 +1,45 @@
+// abstracts
+@import "./abstracts/mixins.scss";
+@import "./abstracts/variables.scss";
+
+// base
+@import "./base/fonts.scss";
+@import "./base/base.scss";
+@import "./base/reset.scss";
+@import "./base/typography.scss";
+// @import "./base/animation.scss";
+
+// ui-kit
+// @import "./ui-kit/breadkrumb/_breadkrumb.scss";
+// @import "./ui-kit/pagination-wocommerce/_pagination-wocommerce";
+// @import "./ui-kit/seo-component/_seo-component.scss";
+// @import "./ui-kit/navbar/_navbar.scss";
+// @import "./ui-kit/tabs/_tabs.scss";
+// @import "./ui-kit/modal/_modal.scss";
+// @import "./ui-kit/carousel-product/_product-slider.scss";
+// @import "./ui-kit/carousel-ecommerce/_ecommerce-slider.scss";
+// @import "./ui-kit/lang-select/_lang.scss";
+// @import "./ui-kit/preloader/_preloader.scss";
+// @import "./ui-kit/custom-select/_custom-select.scss";
+
+
+
+// components
+
+// @import "./components/buttons.scss";
+// @import "./components/entry-content.scss";
+// @import "./components/forms.scss";
+// @import "./components/other.scss";
+// @import "./components/carousel.scss";
+
+// layout 
+@import "./layout/grid.scss";
+@import "./layout/header.scss";
+@import "./layout/footer.scss";
+
+// Vendor
+// @import "./vendor/swiper.scss";
+
+
+// pages 
+@import "./pages/home.scss";

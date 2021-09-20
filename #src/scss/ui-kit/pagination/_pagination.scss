@@ -1,0 +1,47 @@
+@import "./#src/scss/abstracts/mixins.scss";
+@import "./#src/scss/abstracts/variables.scss";
+
+.page-numbers {
+  border-radius: 3px;
+  height: 40px; 
+  width: 40px;
+  font-size: 16px;
+  line-height: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 16px;
+  cursor: pointer;
+  color: $blackColor;
+  @include transition(.3);
+  border: 1px solid transparent;
+  text-decoration: none;
+  @media (max-width: $breakpoint-md) {
+    width: 30px;
+    height: 30px;
+    font-size: 14px;
+    margin-right: 10px;
+  }
+  &.current {
+    border: 1px solid $blackColor;
+    
+  }
+  &:hover {
+    border: 1px solid $blackColor;
+    background: transparent;
+  }
+  &.next, &.prev {
+    @include transition(.3);
+    border: none;
+    & i {
+      display: block;
+      @include transition(.3);
+    }
+  }
+  &.next:hover {
+    padding-left: 12px;
+  }
+  &.prev:hover {
+    padding-right: 12px;
+  }
+}

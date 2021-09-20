@@ -1,0 +1,155 @@
+@import "../abstracts/mixins";
+@import "../abstracts/variables";
+
+// * {
+//   outline: 1px solid rgba(255, 0, 0, .5);
+// }
+
+.container {
+  max-width: 1155px;
+  margin: auto;
+  padding: 0 15px;
+}
+
+.container-fluid {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.row {
+  display: flex;
+  flex-flow: row wrap;
+  margin: 0 -15px;
+}
+.m-row {
+  display: flex;
+  flex-flow: row wrap;
+  margin: 0;
+}
+.d-flex {
+  display: flex;
+  flex-flow: row wrap;
+}
+.m-auto {
+  display: block;
+  margin: auto;
+}
+.m-0 {
+  margin: 0;
+}
+.p-0 {
+  padding: 0;
+}
+
+.w-100 {
+  width: 100%;
+}
+
+.align-self-middle {
+  align-self: center;
+}
+
+.align-self-end {
+  align-self: flex-end;
+}
+
+.align-center {
+  justify-content: center;
+}
+
+.align-spaced {
+  justify-content: space-around;
+}
+
+.align-middle {
+  align-items: center;
+}
+
+.align-justify {
+  justify-content: space-between;
+}
+
+.align-right {
+  justify-content: flex-end;
+}
+
+.align-left {
+  justify-content: flex-start;
+}
+
+.align-end {
+  align-items: flex-end;
+}
+
+.align-start {
+  align-items: flex-start;
+}
+
+.align-self-bottom {
+  align-self: flex-end;
+}
+
+.align-content-justify {
+  align-content: space-between;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+@for $i from 1 through 12 {
+  .col-xs-#{$i} {
+    @include grid-size(8.333333% * $i);
+    padding: 0 15px;
+  }
+}
+
+@media (min-width: ($breakpoint-grid-sm)) {
+  @for $i from 1 through 12 {
+    .col-sm-#{$i} {
+      @include grid-size(8.333333% * $i);
+      padding: 0 15px;
+    }
+  }
+}
+
+@media (min-width: ($breakpoint-grid-md)) {
+  @for $i from 1 through 12 {
+    .col-md-#{$i} {
+      @include grid-size(8.333333% * $i);
+      padding: 0 15px;
+    }
+  }
+}
+
+@media (min-width: ($breakpoint-grid-lg)) {
+  @for $i from 1 through 12 {
+    .col-lg-#{$i} {
+      @include grid-size(8.333333% * $i);
+      padding: 0 15px;
+    }
+  }
+}
+
+@media (min-width: ($breakpoint-grid-xl)) {
+  @for $i from 1 through 12 {
+    .col-xl-#{$i} {
+      @include grid-size(8.333333% * $i);
+      padding: 0 15px;
+    }
+  }
+}
+
+
+/* small phones grid*/
+@media (max-width: (360px)) {
+  @for $i from 1 through 12 {
+    .col-exs-#{$i} {
+      @include grid-size(8.333333% * $i);
+      padding: 0 15px;
+    }
+  }
+}
