@@ -30,58 +30,54 @@
 }
 
 .heading-1 {
-  font-size: 62px;
+  @include fontSize(36, 62);
+  line-height: 1.07;
+}
+.heading-2 {
+  @include fontSize(28, 48);
+  line-height: 1.07;
+}
+.heading-3 {
+  @include fontSize(24, 36);
+  line-height: 1.07;
+}
+.heading-4 {
+  @include fontSize(26, 26);
+  line-height: 1.07;
+}
+.heading-5 {
+  @include fontSize(18, 20);
+  line-height: 1.07;
+}
+.heading-6 {
+  @include fontSize(16, 18);
   line-height: 1.07;
 }
 
-.heading-2 {
-  @include fontSize(28, 50);
-  @media (min-width: $breakpoint-xxl) {
-    @include fontSize(34, 62);
-  }
-  line-height: 1.33;
-}
 
-.heading-3 {
-  @include fontSize(24, 42);
-  @media (min-width: $breakpoint-xxl) {
-    @include fontSize(28, 54);
-  }
-  line-height: 1.16;
-}
 
-.heading-3 {
-  @include fontSize(18,24);
-  line-height: 1.1;
-  font-weight: 700;
-  @media (min-width: $breakpoint-xxl) {
-    font-size: 33px;
+.app__title {
+  @include fontSize(36, 62);
+  font-weight: 500;
+  line-height: 1.07;
+  text-align: center;
+  margin: auto auto 16px auto;
+  span {
+    font-weight: 500;
   }
 }
-
-.heading-4 {
-  @include fontSize(16, 36);
-  line-height: 1.33;
-}
-
-.heading-5 {
-  @include fontSize(14, 24);
-  line-height: 1.33;
-}
-
-.heading-5 {
-  @include fontSize(14, 16);
-  line-height: 1.33;
-}
-
-.section-heading {
-  font-weight: 900;
-  @include fontSize(36, 56);
-  line-height: 1;
+.app__description {
+  max-width: 600px;
+  margin: auto;
+  text-align: center;
+  margin-bottom: 48px;
 }
 
 
-
+.icon-icon-info:before {
+  content: "\e900";
+  color: #0089cf;
+}
 .icon-icon-discord:before {
   content: "\e901";
   color: #fff;

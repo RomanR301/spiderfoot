@@ -13,9 +13,12 @@
   padding: 15px 0;
   z-index: 1025;
   @include transition(.3);
-  .container {
+  &-logo {
     display: flex;
     align-items: center;
+  }
+  .container {
+    display: flex;
     justify-content: space-between;
   }
   &.scrolled {
@@ -54,7 +57,7 @@
         width: 0;
         height: 2px;
         left: 0;
-        bottom: -4px;
+        bottom: 8px;
         @include transition(.3);
       }
       &:hover {

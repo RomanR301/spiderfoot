@@ -8,7 +8,7 @@
   font-weight: 700;
   line-height: 16px;
   text-decoration: none;
-  padding: 12px 24px;
+  padding: 10px 24px;
   @include transition(.3);
   &-primary {
     background: $primaryColor;
@@ -29,7 +29,32 @@
       }
     }
   }
+  &-white {
+    background: transparent;
+    border: 2px solid $whiteColor;
+    color: $whiteColor;
+    display: flex;
+    align-items: center;
+    border-radius: 100px;
+    &:hover {
+      background: $whiteColor;
+      color: $defaultText;
+      i:before {
+        color: $defaultText;
+      }
+    }
+  }
+  &-arrow {
+    i {
+      font-size: 18px;
+      margin-left: 8px;
+      &:before {
+        @include transition(.3);
+      }
+    }
+  }
   &-secondary {
     
   }
 }
+

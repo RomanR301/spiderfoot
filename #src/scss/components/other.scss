@@ -11,7 +11,7 @@
       left: 24px;
       top: 50%;
       transform: translate(0, -50%);
-      font-family: 'icomoon';
+      font-family: "icomoon";
       content: "\e908";
       color: #5a6c81;
     }
@@ -24,20 +24,20 @@
     border: none;
     padding: 12px 50px;
     font-size: 18px;
-    @include transition(.3);
+    @include transition(0.3);
     &:focus {
-      box-shadow: 1px 1px 10px rgba(255,255,255,.3);
+      box-shadow: 1px 1px 10px rgba(255, 255, 255, 0.3);
       outline: none;
     }
     &::placeholder {
-      color: #4F4F4F;
+      color: #4f4f4f;
       opacity: 1;
     }
     &:-ms-input-placeholder {
-     color: #4F4F4F;
+      color: #4f4f4f;
     }
     &::-ms-input-placeholder {
-     color: #4F4F4F;
+      color: #4f4f4f;
     }
   }
   button {
@@ -47,12 +47,12 @@
     height: 40px;
     position: absolute;
     right: 5px;
-    top: 5px; 
+    top: 5px;
     cursor: pointer;
     border: 1px solid $primaryColor;
-    @include transition(.3);
+    @include transition(0.3);
     i:before {
-      @include transition(.3);
+      @include transition(0.3);
     }
     &:hover {
       background: $whiteColor;
@@ -66,9 +66,54 @@
     display: block;
     text-align: center;
     text-decoration: none;
-    @include transition(.3);
+    @include transition(0.3);
     &:hover {
       color: $primaryColor;
+    }
+  }
+}
+
+.tooltip {
+  cursor: pointer;
+  z-index: 22;
+  &-body {
+    z-index: 22;
+    position: absolute;
+    top: 50%;
+    left: 100%;
+    width: 265px;
+    background: rgba(47, 50, 65, 1);
+    box-shadow: 0 2px 30px rgba(0, 0, 0, 0.15);
+    border-radius: 2px;
+    padding: 16px;
+    visibility: hidden;
+    opacity: 0;
+    z-index: 4;
+    transform: translate(40px, -50%);
+    transition: all 0.3s ease-out;
+    &:before {
+      content: "";
+      background: rgba(47, 50, 65, 1.5);
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      left: -5px;
+      top: 50%;
+      transform: translate(0, -50%) rotate(45deg);
+    }
+  }
+  &-trigger {
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    left: 15px;
+    top: 8px;
+  }
+  &:hover {
+    .tooltip-body {
+      visibility: visible;
+      opacity: 1;
+      transform: translate(20px, -50%);
     }
   }
 }
