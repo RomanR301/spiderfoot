@@ -12,10 +12,11 @@
   width: 100%;
   padding: 15px 0;
   z-index: 1025;
-  @include transition(.3);
+  @include transition(0.3);
   &-logo {
     display: flex;
     align-items: center;
+    z-index: 104;
   }
   .container {
     display: flex;
@@ -23,17 +24,29 @@
   }
   &.scrolled {
     background: #282834;
-    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.25);  
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.25);
   }
   .menu {
     display: flex;
     align-items: center;
     height: 100%;
+    @media (max-width: $breakpoint-lg) {
+      height: auto;
+      flex-direction: column;
+      width: 100%;
+      align-items: flex-start;
+    }
     &-item {
       margin-right: 48px;
       display: flex;
       align-items: center;
       height: 100%;
+      @media (max-width: $breakpoint-lg) {
+        display: block;
+        width: 100%;
+        height: auto;
+        margin: 0 0 48px 0;
+      }
       a {
         text-decoration: none;
         display: flex;
@@ -42,16 +55,25 @@
         font-size: 16px;
         line-height: 16px;
         position: relative;
-        @include transition(.3);
+        @include transition(0.3);
+        @media (max-width: $breakpoint-lg) {
+          height: auto;
+          font-size: 32px;
+          line-height: 32px;
+          display: inline;
+          &:before {
+            display: none;
+          }
+        }
         &:before {
-          content: '';
+          content: "";
           position: absolute;
           background: $primaryColor;
           width: 0;
           height: 2px;
           left: 0;
           bottom: 8px;
-          @include transition(.3);
+          @include transition(0.3);
         }
         &:hover {
           &:before {
@@ -66,6 +88,10 @@
         height: 14px;
         object-fit: contain;
         margin-right: 4px;
+        @media (max-width: $breakpoint-lg) {
+          width: 20px;
+          height: 20px;
+        }
       }
     }
   }
@@ -74,47 +100,94 @@
 .navbar {
   display: flex;
   align-items: center;
+  @media (max-width: $breakpoint-lg) {
+    position: fixed;
+    top: 0;
+    right: -120vw;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    background: #282834;
+    z-index: 102;
+    padding: 100px 15px;
+    @include transition(.3);
+    &.active {
+      right: 0;
+    }
+    &-abstracts {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      z-index: -1;
+      pointer-events: none;
+    }
+  }
 }
-
 
 .menu-item-has-children {
   position: relative;
-  &:hover {
-    .sub-menu {
-      pointer-events: all;
-      transform: translate(0, 0);
-      opacity: 1;
-      visibility: visible;
-      &-button {
-        transform: rotate(180deg);
+  & .sub-menu-button.menuOpen {
+    transform: rotate(180deg);
+  }
+  @media (min-width: $breakpoint-lg) {
+    &:hover {
+      .sub-menu {
+        pointer-events: all;
+        transform: translate(0, 0);
+        opacity: 1;
+        visibility: visible;
+        &-button {
+          transform: rotate(180deg);
+        }
       }
     }
   }
 }
 
 .sub-menu {
-  opacity: 0;
-  visibility: hidden;
-  position:absolute;
-  min-width: 160px;
-  left: 0;
-  top: 40px;
-  background: $whiteColor;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.16);
-  border-radius: 8px;
-  @include transition(.3);
-  pointer-events: none;
-  transform: translate(0, 10px);
+  @media (min-width: $breakpoint-lg) {
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    min-width: 160px;
+    left: 0;
+    top: 40px;
+    background: $whiteColor;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.16);
+    border-radius: 8px;
+    @include transition(0.3);
+    pointer-events: none;
+    transform: translate(0, 10px);
+  }
+  @media (max-width: $breakpoint-lg) {
+    padding: 20px 0 0 0;
+    display: none;
+  }
   & .menu-item {
     width: 100%;
     margin: 0;
+    @media (max-width: $breakpoint-lg) {
+      margin: 0;
+    }
     a {
       line-height: 25px;
       width: 100%;
       padding: 8px 16px;
       color: $defaultText;
+      @media (max-width: $breakpoint-lg) {
+        font-size: 24px;
+        color: $whiteColor;
+      }
       &:hover {
-        background: rgba(7, 157, 217, 0.2);
+        @media (min-width: $breakpoint-lg) {
+          background: rgba(7, 157, 217, 0.2);
+        }
       }
       &:before {
         display: none;
@@ -125,11 +198,73 @@
     cursor: pointer;
     font-size: 12px;
     margin-left: 6px;
-    @include transition(.3);
+    @include transition(0.3);
+    @media (max-width: $breakpoint-lg) {
+      top: 1px;
+      width: 30px;
+      height: 30px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+      right: -5px;
+      position: absolute;
+    }
   }
 }
 
 .hamburger {
   display: none;
+  margin-left: 18px;
+  display: none;
+  width: 25px;
+  height: 25px;
+  position: relative;
+  z-index: 106;
+  cursor: pointer;
+  span {
+    position: absolute;
+    right: 0;
+    display: block;
+    width: 25px;
+    background: #fff;
+    height: 3px;
+    border-radius: 10px;
+    @include transition(0.3);
+    &:nth-child(1) {
+      top: calc(50% - 8.5px);
+    }
+    &:nth-child(2) {
+      top: calc(50% - 2.5px);
+    }
+    &:nth-child(3) {
+      top: calc(50% - 2.5px);
+    }
+    &:nth-child(4) {
+      top: calc(50% + 3.5px);
+    }
+  }
+  &.open {
+    span {
+      &:nth-child(1) {
+        top: calc(50% - 2.5px);
+        width: 0%;
+        right: 50%;
+      }
+      &:nth-child(2) {
+        transform: rotate(45deg);
+      }
+      &:nth-child(3) {
+        transform: rotate(-45deg);
+      }
+      &:nth-child(4) {
+        top: calc(50% - 2.5px);
+        width: 0;
+        right: 50%;
+      }
+    }
+  }
+  @media (max-width: $breakpoint-lg) {
+    display: block;
+  }
 }
-

@@ -87,6 +87,13 @@ let front = {
           prevEl: ".news-prev",
         },
       });
+      if (window.matchMedia('(max-width: 767px)').matches) {
+        $(document).on('click', '.menu-item-has-children .sub-menu-button', function(){
+          $(this).toggleClass('menuOpen').next().slideToggle();
+        })
+    } else {
+        //...
+    }
   }
 };
 

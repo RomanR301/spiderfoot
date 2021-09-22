@@ -19,16 +19,25 @@ body {
     object-fit: contain;
     display: block;
     z-index: -1;
+    pointer-events: none;
   }
   &-square {
     position: absolute;
     top: -10px;
     right: 0;
+    pointer-events: none;
+    @media (max-width: $breakpoint-lg) {
+      display: none;
+    }
     &-half {
+      pointer-events: none;
       position: absolute;
       top: 500px;
       left: 0;
       transform: translate(0, -50%);
+      @media (max-width: $breakpoint-lg) {
+        display: none;
+      }
     }
   }
   &-title {
@@ -68,6 +77,9 @@ body {
   }
   &-background {
     z-index: -1;
+    @media (max-width: $breakpoint-xl) {
+      width: 100%;
+    }
   }
   &-inner {
     position: absolute;
@@ -183,6 +195,7 @@ body {
     justify-content: center;
     background: rgba(47, 50, 65, 0.5);
     backdrop-filter: blur(64px);
+    -webkit-backdrop-filter: blur(64px);
     border-radius: 20px;
     margin-bottom: 30px;
     padding: 20px;
@@ -271,6 +284,7 @@ body {
   background: rgba(47, 50, 65, 0.5);
   border: 1px solid #2B2C31;
   backdrop-filter: blur(64px);
+  -webkit-backdrop-filter: blur(64px);
   border-radius: 10px;
   position: relative;
   &.anually {
@@ -416,6 +430,9 @@ body {
     h2 {
       text-align: left;
       line-height: 1;
+      @media (max-width: $breakpoint-xl) {
+        padding-left: 100px;
+      }
     }
   }
   .swiper-slide {
@@ -442,6 +459,7 @@ body {
   &-item {
     background: rgba(47, 50, 65, 0.5);
     backdrop-filter: blur(64px);
+    -webkit-backdrop-filter: blur(64px);
     border-radius: 10px;
     padding: 24px;
     height: 100%;
