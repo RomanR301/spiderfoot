@@ -15,7 +15,10 @@ let front = {
             this.nav.toggleClass('active');
             this.$body.removeClass('active')
         }
-    },  
+    }, 
+    togglePlan: function() {
+      $('.pricing-card').toggleClass('anually');
+    }, 
 
 
   openTab: function (element, tabName, parent) {
@@ -58,6 +61,12 @@ let front = {
       });
       $('.popup-youtube').magnificPopup({
         type: 'iframe'
+      });
+      $(document).on('click', '.billed-wrap__input', function () {
+        self.togglePlan();
+       });
+      tippy('.tooltip', {
+        maxWidth: 250,
       });
   }
 };

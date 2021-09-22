@@ -74,46 +74,14 @@
 }
 
 .tooltip {
+  position: absolute;
+  left: 15px;
+  top: 10px;
   cursor: pointer;
   z-index: 22;
-  &-body {
-    z-index: 22;
-    position: absolute;
-    top: 50%;
-    left: 100%;
-    width: 265px;
-    background: rgba(47, 50, 65, 1);
-    box-shadow: 0 2px 30px rgba(0, 0, 0, 0.15);
-    border-radius: 2px;
-    padding: 16px;
-    visibility: hidden;
-    opacity: 0;
-    z-index: 4;
-    transform: translate(40px, -50%);
-    transition: all 0.3s ease-out;
-    &:before {
-      content: "";
-      background: rgba(47, 50, 65, 1.5);
-      position: absolute;
-      width: 10px;
-      height: 10px;
-      left: -5px;
-      top: 50%;
-      transform: translate(0, -50%) rotate(45deg);
-    }
-  }
-  &-trigger {
-    width: 16px;
-    height: 16px;
-    position: absolute;
-    left: 15px;
-    top: 8px;
-  }
-  &:hover {
-    .tooltip-body {
-      visibility: visible;
-      opacity: 1;
-      transform: translate(20px, -50%);
-    }
-  }
+  display: flex;
+}
+
+.tippy-box {
+  font-size: 18px;
 }

@@ -264,6 +264,14 @@ body {
   backdrop-filter: blur(64px);
   border-radius: 10px;
   position: relative;
+  &.anually {
+    .pricing-card__price_monthly {
+      display: none;
+    }
+    .pricing-card__price_anually {
+      display: block;
+    }
+  }
   &__badge {
     position: absolute;
     top: -40px;
@@ -286,15 +294,23 @@ body {
     text-align: center;
   }
   &__price {
-    font-size: 48px;
+    font-size: 46px;
     font-weight: 700;
     line-height: 1.05;
-    padding: 15px;
+    padding: 15px 10px;
     text-align: center;
     border-bottom: 1px solid rgba(255, 255, 255, 0.2);
     span {
       font-size: 16px;
       font-weight: 400;
+    }
+    &_monthly, &_anually {
+      font-size: 46px;
+      font-weight: 700;
+      line-height: 1.05;
+    }
+    &_anually {
+      display: none;
     }
   }
   &__description {

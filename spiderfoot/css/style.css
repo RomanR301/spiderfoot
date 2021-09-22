@@ -588,50 +588,16 @@ input[type=number] {
 }
 
 .tooltip {
-  cursor: pointer;
-  z-index: 22;
-}
-
-.tooltip-body {
-  z-index: 22;
-  position: absolute;
-  top: 50%;
-  left: 100%;
-  width: 265px;
-  background: #2f3241;
-  box-shadow: 0 2px 30px rgba(0, 0, 0, 0.15);
-  border-radius: 2px;
-  padding: 16px;
-  visibility: hidden;
-  opacity: 0;
-  z-index: 4;
-  transform: translate(40px, -50%);
-  transition: all 0.3s ease-out;
-}
-
-.tooltip-body:before {
-  content: "";
-  background: #2f3241;
-  position: absolute;
-  width: 10px;
-  height: 10px;
-  left: -5px;
-  top: 50%;
-  transform: translate(0, -50%) rotate(45deg);
-}
-
-.tooltip-trigger {
-  width: 16px;
-  height: 16px;
   position: absolute;
   left: 15px;
-  top: 8px;
+  top: 10px;
+  cursor: pointer;
+  z-index: 22;
+  display: flex;
 }
 
-.tooltip:hover .tooltip-body {
-  visibility: visible;
-  opacity: 1;
-  transform: translate(20px, -50%);
+.tippy-box {
+  font-size: 18px;
 }
 
 .container {
@@ -1703,6 +1669,14 @@ body {
   position: relative;
 }
 
+.pricing-card.anually .pricing-card__price_monthly {
+  display: none;
+}
+
+.pricing-card.anually .pricing-card__price_anually {
+  display: block;
+}
+
 .pricing-card__badge {
   position: absolute;
   top: -40px;
@@ -1727,10 +1701,10 @@ body {
 }
 
 .pricing-card__price {
-  font-size: 48px;
+  font-size: 46px;
   font-weight: 700;
   line-height: 1.05;
-  padding: 15px;
+  padding: 15px 10px;
   text-align: center;
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
@@ -1738,6 +1712,17 @@ body {
 .pricing-card__price span {
   font-size: 16px;
   font-weight: 400;
+}
+
+.pricing-card__price_monthly,
+.pricing-card__price_anually {
+  font-size: 46px;
+  font-weight: 700;
+  line-height: 1.05;
+}
+
+.pricing-card__price_anually {
+  display: none;
 }
 
 .pricing-card__description {
