@@ -22,9 +22,8 @@ body {
   }
   &-square {
     position: absolute;
-    top: -60px;
-    width: 1000px;
-    right: -500px;
+    top: -10px;
+    right: 0;
     &-half {
       position: absolute;
       top: 500px;
@@ -399,6 +398,7 @@ body {
     top: 50%;
     transform: translate(0, -50%);
     height: 240px;
+    z-index: -1;
   }
   &-heading {
     position: relative;
