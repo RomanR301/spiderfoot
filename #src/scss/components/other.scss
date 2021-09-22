@@ -65,11 +65,6 @@
     margin-top: 4px;
     display: block;
     text-align: center;
-    text-decoration: none;
-    @include transition(0.3);
-    &:hover {
-      color: $primaryColor;
-    }
   }
 }
 

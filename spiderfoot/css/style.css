@@ -427,6 +427,7 @@ input[type=number] {
   line-height: 16px;
   text-decoration: none;
   padding: 10px 24px;
+  text-transform: uppercase;
   -webkit-transition: all 0.3s ease-out;
   -moz-transition: all 0.3s ease-out;
   -o-transition: all 0.3s ease-out;
@@ -576,15 +577,6 @@ input[type=number] {
   margin-top: 4px;
   display: block;
   text-align: center;
-  text-decoration: none;
-  -webkit-transition: all 0.3s ease-out;
-  -moz-transition: all 0.3s ease-out;
-  -o-transition: all 0.3s ease-out;
-  transition: all 0.3s ease-out;
-}
-
-.subscribe-form-account:hover {
-  color: #079DD9;
 }
 
 .tooltip {
@@ -1473,7 +1465,7 @@ body {
 
 .popup-youtube:before {
   content: '';
-  background-image: url("../../img/youtube-logo.svg");
+  background-image: url("../img/youtube-logo.svg");
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
@@ -1527,7 +1519,7 @@ body {
 
 .benefits-row:before {
   content: '';
-  background-image: url("../../img/square-half.svg");
+  background-image: url("../img/square-half.svg");
   background-repeat: no-repeat;
   background-size: contain;
   position: absolute;

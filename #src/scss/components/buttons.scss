@@ -9,6 +9,7 @@
   line-height: 16px;
   text-decoration: none;
   padding: 10px 24px;
+  text-transform: uppercase;
   @include transition(.3);
   &-primary {
     background: $primaryColor;
