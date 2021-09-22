@@ -1,3 +1,131 @@
 @import "../abstracts/mixins";
 @import "../abstracts/variables";
 
+.footer {
+  padding: 80px 0 40px 0;
+  border-top: 1px solid #253445;
+  position: relative;
+  &-background {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    object-fit: contain;
+    pointer-events: none;
+  }
+  &-columns-wrapper {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+  &-socials {
+    display: flex;
+    align-items: center;
+    &-item {
+      margin-right: 32px;
+    }
+    a {
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+      line-height: 1;
+      @include transition(.3);
+      &:hover {
+        color: $primaryColor;
+        i:before {
+          color: $primaryColor;
+        }
+      }
+      i {
+        font-size: 12px;
+        margin-right: 8px;
+        &:before {
+          @include transition(.3);
+        }
+      }
+    }
+  }
+  &-contacts {
+    margin-bottom: 60px;
+    display: flex;
+    justify-content: space-between;
+    .subscribe-form {
+      position: relative;
+      &-account {
+        position: absolute;
+        top: -35px;
+        left: 50%;
+        transform: translate(-50%, 0);
+      }
+    }
+  }
+  &-copyright {
+    display: flex;
+    justify-content: space-between;
+    a {
+      font-size: 16px;
+      color: $primaryColor;
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+      @include transition(.3);
+      &:hover {
+        border-color: $primaryColor;
+      }
+    }
+    &-column {
+      font-size: 16px;
+      &.left-column {
+        a {
+          margin-left: 24px;
+        }
+      }
+    }
+  }
+  &-column {
+    max-width: 25%;
+    &:nth-child(3) {
+      margin: 0px 100px;
+    }
+    &:nth-child(4) {
+      margin-right: 70px;
+    }
+  }
+  &-logo {
+    display: flex;
+    margin-bottom: 32px;
+  }
+  &-description {
+    font-size: 16px;
+    line-height: 25px;
+  }
+  &__title {
+    margin-bottom: 30px;
+    font-weight: 600;
+    font-size: 20px;
+    position: relative;
+    width: fit-content;
+    &:before {
+      content: '';
+      position: absolute;
+      background: $primaryColor;
+      height: 2px;
+      width: 40%;
+      left: 0;
+      bottom: -6px;
+    }
+  }
+  &-menu {
+    .menu-item {
+      margin-bottom: 8px;
+      a {
+        text-decoration: none;
+        line-height: 30px;
+        @include transition(.3);
+        text-decoration: none;
+        &:hover {
+          color: $primaryColor;
+        }
+      }
+    }
+  }
+}

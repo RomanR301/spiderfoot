@@ -68,6 +68,25 @@ let front = {
       tippy('.tooltip', {
         maxWidth: 250,
       });
+      var testimonialSlider = new Swiper(".testimonials-slider", {
+        slidesPerView: 2,
+        spaceBetween: 30,
+        loop: true,
+        navigation: {
+          nextEl: ".testimonials-next",
+          prevEl: ".testimonials-prev",
+        },
+      });
+      var newsSlider = new Swiper(".news-slider", {
+        slidesPerView: 3,
+        spaceBetween: 30,
+        loop: true,
+        allowTouchMove: false,
+        navigation: {
+          nextEl: ".news-next",
+          prevEl: ".news-prev",
+        },
+      });
   }
 };
 
