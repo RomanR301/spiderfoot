@@ -116,6 +116,13 @@ let front = {
     } else {
         null
     }
+    $(document).on('click', 'a[href^="#"]', function (event) {
+      event.preventDefault();
+  
+      $('html, body').animate({
+          scrollTop: $($.attr(this, 'href')).offset().top - 100
+      }, 500);
+    });
   }
 };
 
@@ -128,16 +135,16 @@ let modal = {
   },
   openModal: function (id) {
       let modalWindow = $(id);
-      modalWindow.fadeIn();
-      modalWindow.find('.modal__content').removeClass('animate-away').addClass('animate-in');
+      modalWindow.show();
+      // modalWindow.find('.modal__content').removeClass('animate-away').addClass('animate-in');
 
       $('body, html').addClass('active');
   },
 
   closeModal: function (id) {
       let modalWindow = $(id);
-      modalWindow.find('.modal__content').removeClass('animate-in').addClass('animate-away');
-      modalWindow.fadeOut();
+      // modalWindow.find('.modal__content').removeClass('animate-in').addClass('animate-away');
+      modalWindow.hide();
       $('body, html').removeClass('active');
   },
 

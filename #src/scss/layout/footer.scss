@@ -9,7 +9,7 @@
     padding: 50px 0 15px 0;
   }
   @media (max-width: $breakpoint-md) {
-    padding: 30px 0 15px 0;
+    padding: 30px 0 24px 0;
   }
   &-background {
     position: absolute;
@@ -103,6 +103,11 @@
     @media (max-width: $breakpoint-lg) {
       flex-direction: column;
     }
+    .left-column {
+      a {
+        margin-left: 24px;
+      }
+    }
     a {
       font-size: 16px;
       color: $primaryColor;
@@ -117,6 +122,9 @@
       font-size: 16px;
       @media (max-width: $breakpoint-lg) {
         margin-bottom: 24px;
+        &:last-child {
+          margin-bottom: 0;
+        }
       }
     }
   }

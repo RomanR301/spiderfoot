@@ -36,7 +36,7 @@
       </div>
     </div>
   </section>
-  <section class="video">
+  <section class="video" id="action">
     <div class="container">
       <img src="./img/square.svg" alt="background decor element" class="video-background" />
       <div class="video-inner">
@@ -45,13 +45,13 @@
           SpiderFoot automates OSINT so you can <br />
           find what matters, faster
         </p>
-        <a class="popup-youtube" href="https://www.youtube.com/watch?v=u31qwQUeGuM">
+        <div class="popup-youtube modalTrigger" data-modal="#actionPopup">
           <img src="./img/video-thumbnail.png" alt="video thumbnail" />
-        </a>
+        </div>
       </div>
     </div>
   </section>
-  <section class="features">
+  <section class="features" id="features">
     <div class="container">
       <h2 class="app__title">SpiderFoot HX Features</h2>
       <p class="app__description">For professionals who want to automate OSINT for threat intelligence, asset discovery, attack surface monitoring or security assessments</p>
@@ -205,7 +205,7 @@
       </div>
     </div>
   </section>
-  <section class="modules">
+  <section class="modules" id="intergations">
     <div class="container">
       <h2 class="app__title">Modules Which SpiderFoot Works with</h2>
       <div class="row modules-list">
@@ -305,7 +305,7 @@
       </div>
     </div>
   </section>
-  <section class="pricing">
+  <section class="pricing" id="pricing">
     <img src="./img/square.svg" alt="" class="pricing-background" />
     <div class="container">
       <h2 class="app__title">Our Pricing Plan</h2>
@@ -870,7 +870,7 @@
       </div>
     </div>
   </section>
-  <section class="testimonials">
+  <section class="testimonials" id="testimonials">
     <div class="testimonials-heading">
       <img class="square-half" src="./img/square-half.svg" alt="decor element" />
       <div class="container">
@@ -1010,5 +1010,27 @@
     </div>
   </section>
 </main>
+
+<div class="modal modal-action" id="actionPopup">
+  <div class="modal__body">
+    <div class="modal__content">
+      <div class="modal__close">
+        
+      </div>
+      <div class="app__title">See it in action</div>
+      <p class="app__description">SpiderFoot automates OSINT so you can find what matters, faster </p>
+      <iframe src="https://www.youtube.com/embed/hnp1pt8biD4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <div class="subscribe-form">
+        <form action="">
+          <div class="form-group">
+            <input type="email" name="main-screen-email" placeholder="Your Email" />
+            <button type="submit"><i class="icon-icon-arrow-right"></i></button>
+          </div>
+          <div class="subscribe-form-account">Create an account</div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
 
 @@include('_footer.html')
