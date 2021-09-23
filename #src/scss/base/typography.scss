@@ -30,7 +30,7 @@
 }
 
 .heading-1 {
-  @include fontSize(36, 62);
+  @include fontSize(32, 62);
   line-height: 1.07;
 }
 .heading-2 {
@@ -57,7 +57,7 @@
 
 
 .app__title {
-  @include fontSize(36, 62);
+  @include fontSize(32, 62);
   font-weight: 500;
   line-height: 1.07;
   text-align: center;

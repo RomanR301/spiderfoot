@@ -8,8 +8,18 @@ body {
 .main-screen {
   margin: 67px 0 100px 0;
   display: block;
+  @media (max-width: $breakpoint-lg) {
+    margin: 30px 0 220px 0;
+  }
+  @media (max-width: $breakpoint-md) {
+    margin: 30px 0 140px 0;
+    position: relative;
+  }
   .row {
     align-items: center;
+    @media (max-width: $breakpoint-lg) {
+      justify-content: center;
+    }
   }
   &-abstracts {
     position: absolute;
@@ -20,6 +30,11 @@ body {
     display: block;
     z-index: -1;
     pointer-events: none;
+    @media (max-width: $breakpoint-md) {
+      height: 100%;
+      object-fit: cover;
+      top: -90px;
+    }
   }
   &-square {
     position: absolute;
@@ -43,10 +58,22 @@ body {
   &-title {
     margin-bottom: 24px;
     text-align: left;
+    @media (max-width: $breakpoint-lg) {
+      text-align: center;
+    }
+    @media (max-width: $breakpoint-md) {
+      text-align: left;
+    }
   }
   &-description {
     margin-bottom: 32px;
     font-size: 20px;
+    @media (max-width: $breakpoint-lg) {
+      text-align: center;
+    }
+    @media (max-width: $breakpoint-md) {
+      text-align: left;
+    }
   }
   .img-container {
     &-secondary {
@@ -55,6 +82,20 @@ body {
       left: -150px;
       width: 410px;
       position: absolute;
+      @media (max-width: $breakpoint-lg) {
+        left: 50%;
+        top: 100%;
+        transform: translate(-50%, -30%);
+        width: 86%;
+      }
+    }
+  }
+  .subscribe-form {
+    @media (max-width: $breakpoint-lg) {
+      margin: auto auto 48px auto;
+    }
+    @media (max-width: $breakpoint-md) {
+      margin: 0 auto 48px 0;
     }
   }
 }
@@ -62,6 +103,9 @@ body {
 .img-container {
   display: block;
   filter: drop-shadow(0px 30px 100px #000000);
+  @media (max-width: $breakpoint-lg) {
+    filter: drop-shadow(0px 30px 40px #000000);
+  }
   img {
     display: block;
     width: 100%;
@@ -70,8 +114,11 @@ body {
   }
 }
 
-.video {  
+.video {
   margin-bottom: 100px;
+  @media (max-width: $breakpoint-lg) {
+    margin-bottom: 60px;
+  }
   .container {
     position: relative;
   }
@@ -80,6 +127,14 @@ body {
     @media (max-width: $breakpoint-xl) {
       width: 100%;
     }
+    @media (max-width: $breakpoint-md) {
+      width: 170%;
+      margin-left: -35%;
+    }
+    @media (max-width: 400px) {
+      width: 180%;
+      margin-left: -40%;
+    }
   }
   &-inner {
     position: absolute;
@@ -87,9 +142,21 @@ body {
     left: 50%;
     text-align: center;
     transform: translate(-50%, -50%);
+    @media (max-width: $breakpoint-lg) {
+      width: 95%;
+    }
+    @media (max-width: $breakpoint-md) {
+      top: 50%;
+    }
+    @media (max-width: 400px) {
+      top: 45%;
+    }
   }
   .popup-youtube {
     width: 800px;
+    @media (max-width: $breakpoint-lg) {
+      width: 100%;
+    }
   }
 }
 
@@ -99,8 +166,8 @@ body {
   display: block;
   position: relative;
   &:before {
-    content: '';
-    background-image: url('../img/youtube-logo.svg');
+    content: "";
+    background-image: url("../img/youtube-logo.svg");
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
@@ -122,10 +189,13 @@ body {
   margin-bottom: 30px;
   &-item {
     margin-bottom: 68px;
+    @media (max-width: $breakpoint-md) {
+      margin-bottom: 50px;
+    }
     &__icon {
       width: 64px;
       height: 64px;
-      background: #3C3C54;
+      background: #3c3c54;
       border-radius: 16px;
       display: flex;
       align-items: center;
@@ -144,12 +214,21 @@ body {
 }
 
 .benefits {
+  @media (max-width: $breakpoint-lg) {
+    margin-bottom: 60px;
+  }
   &-row {
     position: relative;
     margin-bottom: 90px;
+    @media (max-width: $breakpoint-lg) {
+      margin-bottom: 60px;
+    }
+    @media (max-width: $breakpoint-md) {
+      margin-bottom: 50px;
+    }
     &:before {
-      content: '';
-      background-image: url('../img/square-half.svg');
+      content: "";
+      background-image: url("../img/square-half.svg");
       background-repeat: no-repeat;
       background-size: contain;
       position: absolute;
@@ -158,6 +237,9 @@ body {
       width: 130px;
       height: 280px;
       transform: translate(0, -50%);
+      @media (max-width: $breakpoint-md) {
+        display: none;
+      }
     }
     .row {
       align-items: center;
@@ -167,6 +249,10 @@ body {
     }
     .img-container {
       filter: drop-shadow(-30px 30px 80px #000);
+      @media (max-width: $breakpoint-md) {
+        margin-bottom: 40px;
+        filter: drop-shadow(0px 0px 30px #000);
+      }
     }
     &:nth-child(even) {
       &:before {
@@ -186,8 +272,19 @@ body {
 
 .modules {
   margin-bottom: 175px;
+  @media (max-width: $breakpoint-lg) {
+    margin-bottom: 90px;
+  }
   &-list {
     margin-top: 24px;
+    @media (max-width: $breakpoint-md) {
+      margin: 24px -5px 0 -5px;
+    }
+  }
+  .col-xs-6 {
+    @media (max-width: $breakpoint-md) {
+      padding: 0 5px;
+    }
   }
   &__item {
     display: flex;
@@ -199,19 +296,35 @@ body {
     border-radius: 20px;
     margin-bottom: 30px;
     padding: 20px;
+    @media (max-width: $breakpoint-md) {
+      margin-bottom: 10px;
+      padding: 20px 15px;
+    }
     & img {
-      max-width: 120%;
+      max-width: 115%;
       height: 60px;
       object-fit: contain;
+      @media (max-width: $breakpoint-lg) {
+        max-width: 100%;
+      }
     }
   }
   &-more {
     display: flex;
     align-items: center;
     justify-content: center;
+    @media (max-width: $breakpoint-md) {
+      flex-direction: column;
+      margin-top: 10px;
+    }
     span {
       font-size: 36px;
       margin-right: 48px;
+      @media (max-width: $breakpoint-md) {
+        font-size: 26px;
+        text-align: center;
+        margin: 0 0 24px 0;
+      }
     }
   }
 }
@@ -219,6 +332,22 @@ body {
 .pricing {
   position: relative;
   margin-bottom: 120px;
+  @media (max-width: $breakpoint-md) {
+    margin-bottom: 50px;
+  }
+  &-card-wrapper {
+    @media (max-width: $breakpoint-lg) {
+      margin-bottom: 110px;
+    }
+    @media (max-width: $breakpoint-md) {
+      margin-bottom: 50px;
+    }
+    &.pricing-card-most-popular {
+      @media (max-width: $breakpoint-md) {
+        margin-top: 40px;
+      }
+    }
+  }
   &-card-wrapper {
     position: relative;
   }
@@ -255,8 +384,8 @@ body {
       &:after {
         content: "";
         display: block;
-        widtH: 20px;
-        heighT: 20px;
+        width: 20px;
+        height: 20px;
         border-radius: 100%;
         background: #ffffff;
         transform: translateY(-50%);
@@ -274,19 +403,42 @@ body {
     margin-top: 80px;
     width: 100%;
     padding: 0 15px;
+    display: none;
+    &-main {
+      display: flex;
+    }
+    @media (max-width: $breakpoint-lg) {
+      margin-top: -30px;
+    }
+    @media (max-width: $breakpoint-md) {
+      display: flex;
+      flex-direction: column;
+      margin-top: 65px;
+      padding: 0;
+      &-main {
+        display: none;
+      }
+    }
     &__text {
       font-size: 16px;
+      @media (max-width: $breakpoint-md) {
+        margin-bottom: 15px;
+      }
     }
   }
 }
 
 .pricing-card {
   background: rgba(47, 50, 65, 0.5);
-  border: 1px solid #2B2C31;
+  border: 1px solid #2b2c31;
   backdrop-filter: blur(64px);
   -webkit-backdrop-filter: blur(64px);
   border-radius: 10px;
   position: relative;
+  z-index: 2;
+  @media (max-width: $breakpoint-lg) {
+    border: none;
+  }
   &.anually {
     .pricing-card__price_monthly {
       display: none;
@@ -309,6 +461,10 @@ body {
     padding: 13px;
     width: calc(100% - 30px);
     left: 15px;
+    @media (max-width: $breakpoint-lg) {
+      color: $primaryColor;
+      background: $whiteColor;
+    }
   }
   &__title {
     padding: 15px;
@@ -323,14 +479,21 @@ body {
     padding: 15px 10px;
     text-align: center;
     border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    @media (max-width: $breakpoint-xl) {
+      font-size: 36px;
+    }
     span {
       font-size: 16px;
       font-weight: 400;
     }
-    &_monthly, &_anually {
+    &_monthly,
+    &_anually {
       font-size: 46px;
       font-weight: 700;
       line-height: 1.05;
+      @media (max-width: $breakpoint-xl) {
+        font-size: 36px;
+      }
     }
     &_anually {
       display: none;
@@ -344,25 +507,23 @@ body {
     display: flex;
     align-items: center;
     padding: 6px 15px 6px 40px;
-    border-bottom: 1px solid #2B2C31;
+    border-bottom: 1px solid #2b2c31;
     position: relative;
     &:last-child {
       border-bottom: none;
     }
     &:nth-child(odd) {
-      background: #2F3241;
-      // backdrop-filter: blur(64px)
-    }
-    &:nth-child(even) {
-      // backdrop-filter: blur(64px);
+      background: #2f3241;
     }
     &.disabled {
-      .pricing-card__key, .pricing-card__value {
+      .pricing-card__key,
+      .pricing-card__value {
         color: #828282;
       }
     }
   }
-  &__key, &__value {
+  &__key,
+  &__value {
     font-size: 16px;
     line-height: 25px;
   }
@@ -382,10 +543,9 @@ body {
   &__button {
     position: absolute;
     bottom: -44px;
-    z-index: -1;
     left: 15px;
     height: 55px;
-    width:  calc(100% - 30px);
+    width: calc(100% - 30px);
     padding: 22px 10px 10px 10px;
     text-decoration: none;
     display: flex;
@@ -396,7 +556,10 @@ body {
     font-weight: 700;
     font-size: 12px;
     border-radius: 0px 0px 20px 20px;
-    @include transition(.3);
+    @include transition(0.3);
+    @media (max-width: $breakpoint-md) {
+      bottom: 100px;
+    }
     i {
       margin-right: 10px;
     }
@@ -406,6 +569,9 @@ body {
 .testimonials {
   position: relative;
   margin-bottom: 100px;
+  @media (max-width: $breakpoint-lg) {
+    margin-bottom: 60px;
+  }
   .square-half {
     position: absolute;
     left: 0;
@@ -413,12 +579,21 @@ body {
     transform: translate(0, -50%);
     height: 240px;
     z-index: -1;
+    @media (max-width: $breakpoint-lg) {
+      height: 150px;
+    }
+    @media (max-width: $breakpoint-md) {
+      display: none;   
+    }
   }
   &-heading {
     position: relative;
     margin-bottom: 48px;
+    @media (max-width: $breakpoint-md) {
+      margin-bottom: 20px;
+    }
     &:after {
-      content: '';
+      content: "";
       width: 54vw;
       height: 2px;
       background: $primaryColor;
@@ -426,12 +601,19 @@ body {
       right: 0;
       top: 50%;
       transform: translate(0, -50%);
+      @media (max-width: $breakpoint-md) {
+        display: none;
+      }
     }
     h2 {
       text-align: left;
       line-height: 1;
       @media (max-width: $breakpoint-xl) {
         padding-left: 100px;
+      }
+      @media (max-width: $breakpoint-md) {
+        text-align: center;
+        padding-left: 0;
       }
     }
   }
@@ -464,21 +646,18 @@ body {
     padding: 24px;
     height: 100%;
     &-author {
-      display: grid;
+      display: flex;
       align-items: center;
-      grid-template-columns: 82px 1fr;
-      grid-template-rows: 1fr 1fr;
       margin-bottom: 34px;
       min-height: 108px;
       img {
-        grid-column: 1/2;
-        grid-row: 1/3;
         display: block;
         width: 74px;
         height: 74px;
+        margin-right: 8px;
         object-fit: contain;
         border-radius: 100%;
-      } 
+      }
       &__title {
         align-self: flex-end;
         font-size: 26px;
@@ -487,6 +666,9 @@ body {
         font-size: 16px;
         line-height: 1.7;
         align-self: flex-start;
+        @media (max-width: $breakpoint-lg) {
+          line-height: 1.4;
+        }
       }
     }
   }
@@ -494,6 +676,26 @@ body {
 
 .news {
   margin-bottom: 123px;
+  @media (max-width: $breakpoint-lg) {
+    margin-bottom: 60px;
+  }
+  .app__description {
+    @media (max-width: $breakpoint-md) {
+      margin-bottom: 24px;
+    }
+  }
+  &-navigation {
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+    display: none;
+    @media (max-width: $breakpoint-md) {
+      display: flex;
+    }
+    .news-prev:after, .news-next:after {
+      font-size: 26px;
+    }
+  }
   &-item {
     position: relative;
     display: block;
@@ -539,9 +741,19 @@ body {
       font-weight: 500;
       font-size: 26px;
       margin-bottom: 16px;
+      @media (max-width: $breakpoint-lg) {
+        font-size: 20px;
+        line-height: 1.3;
+      }
+      @media (max-width: $breakpoint-md) {
+        font-size: 26px;
+      }
     }
     &__description {
       @include text-ellipsis(3);
+      @media (max-width: $breakpoint-lg) {
+        font-size: 16px;
+      }
     }
   }
 }

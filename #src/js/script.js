@@ -76,6 +76,14 @@ let front = {
           nextEl: ".testimonials-next",
           prevEl: ".testimonials-prev",
         },
+        breakpoints: {
+          320: {
+            slidesPerView: 1,
+          },
+          767: {
+            slidesPerView: 2,
+          },
+        }
       });
       var newsSlider = new Swiper(".news-slider", {
         slidesPerView: 3,
@@ -86,13 +94,27 @@ let front = {
           nextEl: ".news-next",
           prevEl: ".news-prev",
         },
+        breakpoints: {
+          320: {
+            slidesPerView: 1,
+            allowTouchMove: true,
+          },
+          576: {
+            slidesPerView: 2,
+            allowTouchMove: true,
+          },
+          767: {
+            slidesPerView: 3,
+            allowTouchMove: false,
+          },
+        }
       });
-      if (window.matchMedia('(max-width: 767px)').matches) {
+      if (window.matchMedia('(max-width: 992px)').matches) {
         $(document).on('click', '.menu-item-has-children .sub-menu-button', function(){
           $(this).toggleClass('menuOpen').next().slideToggle();
         })
     } else {
-        //...
+        null
     }
   }
 };

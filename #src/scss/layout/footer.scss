@@ -5,6 +5,12 @@
   padding: 80px 0 40px 0;
   border-top: 1px solid #253445;
   position: relative;
+  @media (max-width: $breakpoint-lg) {
+    padding: 50px 0 15px 0;
+  }
+  @media (max-width: $breakpoint-md) {
+    padding: 30px 0 15px 0;
+  }
   &-background {
     position: absolute;
     top: 0;
@@ -12,17 +18,44 @@
     height: 100%;
     object-fit: contain;
     pointer-events: none;
+    @media (max-width: $breakpoint-md) {
+      display: none;
+    }
   }
   &-columns-wrapper {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     margin-bottom: 20px;
+    @media (max-width: $breakpoint-lg) {
+      margin-bottom: 40px;
+    }
+    @media (max-width: $breakpoint-md) {
+      flex-wrap: wrap;
+      margin-bottom: 0;
+    }
   }
   &-socials {
     display: flex;
     align-items: center;
+    height: 100%;
+    @media (max-width: $breakpoint-lg) {
+      margin: 30px 0 0 0;
+      height: auto;
+    }
+    @media (max-width: $breakpoint-md) {
+      margin: 0;
+      flex-direction: column;
+      align-items: flex-start;
+    }
     &-item {
       margin-right: 32px;
+      @media (max-width: $breakpoint-md) {
+        margin: 0 0 30px 0;
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
     }
     a {
       display: flex;
@@ -45,23 +78,31 @@
       }
     }
   }
-  &-contacts {
-    margin-bottom: 60px;
-    display: flex;
-    justify-content: space-between;
-    .subscribe-form {
-      position: relative;
-      &-account {
-        position: absolute;
-        top: -35px;
-        left: 50%;
-        transform: translate(-50%, 0);
-      }
+  .subscribe-form {
+    position: relative;
+    @media (max-width: $breakpoint-lg) {
+      margin-top: 60px;
+    }
+    @media (max-width: $breakpoint-md) {
+      margin-top: 30px;
+    }
+    @media (max-width: 400px) {
+      width: 100%;
+    }
+    &-account {
+      position: absolute;
+      top: -35px;
+      left: 50%;
+      transform: translate(-50%, 0);
+      width: 100%;
     }
   }
   &-copyright {
     display: flex;
     justify-content: space-between;
+    @media (max-width: $breakpoint-lg) {
+      flex-direction: column;
+    }
     a {
       font-size: 16px;
       color: $primaryColor;
@@ -74,20 +115,57 @@
     }
     &-column {
       font-size: 16px;
-      &.left-column {
-        a {
-          margin-left: 24px;
-        }
+      @media (max-width: $breakpoint-lg) {
+        margin-bottom: 24px;
       }
     }
   }
   &-column {
     max-width: 25%;
+    @media (max-width: $breakpoint-md) {
+      max-width: 50%;
+      width: 50%;
+      margin-bottom: 30px;  
+    }
+    &:nth-child(1) {
+      @media (max-width: $breakpoint-md) {
+        max-width: 100%;
+        width: 100%;
+      }
+    }
+    &:nth-child(2) {
+      @media (max-width: $breakpoint-md) {
+        width: 40%;
+      }
+    }
     &:nth-child(3) {
       margin: 0px 100px;
+      @media (max-width: $breakpoint-lg) {
+        margin: 0;
+      }
+      @media (max-width: $breakpoint-md) {
+        max-width: 60%;
+        width: 60%;
+      }
     }
     &:nth-child(4) {
       margin-right: 70px;
+      @media (max-width: $breakpoint-lg) {
+        margin: 0;
+      }
+    }
+    &:nth-child(5) {
+      max-width: 70%;
+      @media (max-width: $breakpoint-md) {
+        max-width: 47%;
+      }
+    }
+    &:nth-child(6) {
+      max-width: 50%;
+      @media (max-width: $breakpoint-md) {
+        max-width: 100%;
+        width: 100%;
+      }
     }
   }
   &-logo {

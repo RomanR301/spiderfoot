@@ -3,6 +3,9 @@
 
 .body-padding {
   padding-top: 70px;
+  @media (max-width: $breakpoint-lg) {
+    padding-top: 60px;
+  }
 }
 
 .header {
@@ -100,6 +103,9 @@
 .navbar {
   display: flex;
   align-items: center;
+  &-abstracts {
+    display: none;
+  }
   @media (max-width: $breakpoint-lg) {
     position: fixed;
     top: 0;
@@ -117,6 +123,7 @@
       right: 0;
     }
     &-abstracts {
+      display: block;
       position: absolute;
       top: 0;
       left: 0;
@@ -173,7 +180,10 @@
     width: 100%;
     margin: 0;
     @media (max-width: $breakpoint-lg) {
-      margin: 0;
+      margin: 0 0 28px 0;
+      &:last-child {
+        margin-bottom: 0;
+      }
     }
     a {
       line-height: 25px;
@@ -207,7 +217,7 @@
       align-items: center;
       justify-content: center;
       font-size: 18px;
-      right: -5px;
+      right: -3px;
       position: absolute;
     }
   }
