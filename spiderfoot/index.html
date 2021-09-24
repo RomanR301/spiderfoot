@@ -216,7 +216,7 @@
             <p>
               Are you still using ad-hoc scripts to query APIs, scrape websites and filter through false positives? SpiderFoot HX enables you to “fire and forget” scan to collect OSINT from over 100 data sources without writing a single line of code.
             </p>
-            <a href="#" class="btn btn-primary has-icon"><i class="icon-icon-user"></i> Create an account</a>
+            <buttom class="btn btn-primary has-icon modalTrigger" data-modal="#downloadPopup"><i class="icon-icon-user"></i> Create an account</buttom>
           </div>
         </div>
       </div>
@@ -234,7 +234,7 @@
             <p>
               Aside from normalizing scan results for you and giving you a range of ways to work with the data, SpiderFoot HX also automatically analyzes scan data to identify data points that may be of most interest through its Correlations feature.
             </p>
-            <a href="#" class="btn btn-primary has-icon"><i class="icon-icon-user"></i> Create an account</a>
+            <buttom class="btn btn-primary has-icon modalTrigger" data-modal="#downloadPopup"><i class="icon-icon-user"></i> Create an account</buttom>
           </div>
         </div>
       </div>
@@ -250,7 +250,7 @@
           <div class="col-md-6 col-xs-12">
             <h3 class="heading-3">Know when data changes</h3>
             <p>Run scans automatically daily, weekly or monthly and be notified of any changes that were identified, such as newly exposed ports, new data breaches or newly identified vulnerabilities.</p>
-            <a href="#" class="btn btn-primary has-icon"><i class="icon-icon-user"></i> Create an account</a>
+            <buttom class="btn btn-primary has-icon modalTrigger" data-modal="#downloadPopup"><i class="icon-icon-user"></i> Create an account</buttom>
           </div>
         </div>
       </div>
@@ -268,7 +268,7 @@
             <p>
               Aside from normalizing scan results for you and giving you a range of ways to work with the data, SpiderFoot HX also automatically analyzes scan data to identify data points that may be of most interest through its Correlations feature.
             </p>
-            <a href="#" class="btn btn-primary has-icon"><i class="icon-icon-user"></i> Create an account</a>
+            <buttom class="btn btn-primary has-icon modalTrigger" data-modal="#downloadPopup"><i class="icon-icon-user"></i> Create an account</buttom>
           </div>
         </div>
       </div>
@@ -284,7 +284,7 @@
           <div class="col-md-6 col-xs-12">
             <h3 class="heading-3">Putting the Open into OSINT</h3>
             <p>Write your own modules in Python and run them in the cloud, and have scan data fed in real time to your Splunk or ElasticSearch instance.</p>
-            <a href="#" class="btn btn-primary has-icon"><i class="icon-icon-user"></i> Create an account</a>
+            <buttom class="btn btn-primary has-icon modalTrigger" data-modal="#downloadPopup"><i class="icon-icon-user"></i> Create an account</buttom>
           </div>
         </div>
       </div>
@@ -1256,6 +1256,31 @@
     </div>
   </div>
 </footer>
+
+<div class="modal modal-download" id="downloadPopup">
+  <div class="modal__body">
+    <div class="modal__content">
+      <div class="modal__close">
+        
+      </div>
+      <div class="download-image">
+        <img src="./img/spider.svg" alt="spider logo">
+      </div>
+      <div class="download-content">
+        <div class="heading-3 text-center">Download and start</div>
+        <p class="app__description">You can pay your plan in SpiderFoot platform, but firstly you need to subscribe to get the premium version</p>
+        <div class="subscribe-form subscribe-form-long">
+          <form action="">
+            <div class="form-group">
+              <input type="email" name="main-screen-email" placeholder="Your Email" />
+              <button type="submit">Get started<i class="icon-icon-arrow-right"></i></button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
 <script src="js/libs.min.js"></script>
 <script src="js/script.min.js"></script>

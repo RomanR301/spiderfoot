@@ -1,12 +1,15 @@
 @import "../abstracts/mixins";
 @import "../abstracts/variables";
 
-.body-padding {
+
+main {
+  overflow-x: hidden;
   padding-top: 70px;
   @media (max-width: $breakpoint-lg) {
     padding-top: 60px;
   }
 }
+
 
 .header {
   position: fixed;

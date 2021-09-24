@@ -3,6 +3,9 @@
 
 .subscribe-form {
   width: 328px;
+  @media (max-width: 400px) {
+    width: 100%;
+  }
   .form-group {
     position: relative;
     width: 100%;
@@ -79,4 +82,26 @@
 
 .tippy-box {
   font-size: 18px;
+}
+
+.subscribe-form-long {
+  width: 440px;
+  button {
+    width: 140px;
+    border-radius: 100px;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: $darkBlue;
+    &:hover {
+      color: $darkBlue;
+      i:before {
+        color: $darkBlue;
+      }
+    }
+    i {
+      margin-left: 12px;
+    }
+  }
 }
