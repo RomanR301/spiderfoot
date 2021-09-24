@@ -54,8 +54,6 @@
   line-height: 1.07;
 }
 
-
-
 .app__title {
   @include fontSize(32, 62);
   font-weight: 500;
@@ -73,6 +71,43 @@
   margin-bottom: 48px;
 }
 
+.icon-icon-facebook:before {
+  content: "\e919";
+  color: #fff;
+}
+
+.icon-icon-card-view:before {
+  content: "\e901";
+  color: #079dd9;
+}
+.icon-icon-table-view:before {
+  content: "\e911";
+  color: #fff;
+}
+.icon-icon-search:before {
+  content: "\e912";
+  color: #5a6c81;
+}
+.icon-icon-quote:before {
+  content: "\e914";
+  color: #079dd9;
+}
+.icon-icon-attack-surface-monitoring:before {
+  content: "\e915";
+  color: #fff;
+}
+.icon-icon-discovery:before {
+  content: "\e916";
+  color: #fff;
+}
+.icon-icon-security-assesments:before {
+  content: "\e917";
+  color: #fff;
+}
+.icon-icon-threat-intelligence:before {
+  content: "\e918";
+  color: #0d94da;
+}
 .icon-icon-discord:before {
   content: "\e910";
   color: #fff;

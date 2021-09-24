@@ -1,0 +1,69 @@
+@import "../abstracts/mixins";
+@import "../abstracts/variables";
+
+.nav-links {
+  display: flex;
+  justify-content: center;
+}
+
+.pagination {
+  width: 100%;
+  margin-top: 10px;
+}
+.page-numbers {
+  width: 48px;
+  height: 48px;
+  border: 1px solid $whiteColor;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 4px;
+  line-height: 1;
+  border-radius: 3px;
+  text-decoration: none;
+  font-size: 16px;
+  @include transition(.3);
+  @media (max-width: $breakpoint-md) {
+    width: 40px;
+    height: 40px;
+  }
+  &:hover {
+    background: $darkBlue;
+    color: $whiteColor;
+    border-color: $darkBlue;
+    &:before, &:after {
+      color: $whiteColor;
+    }
+  }
+  &.prev, &.next {
+    width: 87px;
+    @media (max-width: $breakpoint-md) {
+      width: 70px;
+    }
+  }
+  &.dots {
+    border: none;
+    pointer-events: none;
+    @media (max-width: $breakpoint-md) {
+      width: 30px;
+    }
+  }
+  &.prev:before {
+    font-family: 'icomoon';
+    content: "\e90c";
+    display: block;
+    font-size: 12px;
+    transform: rotate(90deg);
+    margin-right: 7px;
+    @include transition(.3);
+  }
+  &.next:after {
+    font-family: 'icomoon';
+    content: "\e90c";
+    display: block;
+    font-size: 12px;
+    transform: rotate(-90deg);
+    margin-left: 7px;
+    @include transition(.3);
+  }
+}

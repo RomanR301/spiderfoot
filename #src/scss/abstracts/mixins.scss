@@ -25,6 +25,11 @@
   transition: all $time + 0s ease-out;
 }
 
+@mixin blur($px){
+  backdrop-filter: blur($px);
+  -webkit-backdrop-filter: blur($px);
+}
+
 @mixin text-ellipsis($strokes) {
   overflow: hidden;
   text-overflow: ellipsis;

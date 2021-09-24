@@ -1,10 +1,6 @@
 @import "../abstracts/mixins";
 @import "../abstracts/variables";
 
-body {
-  overflow-x: hidden;
-}
-
 .main-screen {
   margin: 67px 0 100px 0;
   display: block;
@@ -118,6 +114,7 @@ body {
   margin-bottom: 100px;
   @media (max-width: $breakpoint-lg) {
     margin-bottom: 60px;
+    overflow: hidden;
   }
   .container {
     position: relative;
@@ -273,7 +270,7 @@ body {
 .modules {
   margin-bottom: 175px;
   @media (max-width: $breakpoint-lg) {
-    margin-bottom: 90px;
+    margin-bottom: 0;
   }
   &-list {
     margin-top: 24px;
@@ -291,8 +288,7 @@ body {
     align-items: center;
     justify-content: center;
     background: rgba(47, 50, 65, 0.5);
-    backdrop-filter: blur(64px);
-    -webkit-backdrop-filter: blur(64px);
+    @include blur(64px);
     border-radius: 20px;
     margin-bottom: 30px;
     padding: 20px;
@@ -330,8 +326,13 @@ body {
 }
 
 .pricing {
+  // overflow: hidden;
   position: relative;
   margin-bottom: 120px;
+  @media (max-width: $breakpoint-lg) {
+    overflow: hidden;
+    padding-top: 100px;
+  }
   @media (max-width: $breakpoint-md) {
     margin-bottom: 50px;
   }
@@ -357,6 +358,12 @@ body {
     top: -100px;
     transform: translate(-50%, 0%);
     z-index: -1;
+    @media (max-width: $breakpoint-lg) {
+      top: 0;
+    }
+    @media (max-width: $breakpoint-md) {
+      height: 700px;
+    }
   }
   &-toggler {
     display: flex;
@@ -431,8 +438,7 @@ body {
 .pricing-card {
   background: rgba(47, 50, 65, 0.5);
   border: 1px solid #2b2c31;
-  backdrop-filter: blur(64px);
-  -webkit-backdrop-filter: blur(64px);
+  @include blur(64px);
   border-radius: 10px;
   position: relative;
   z-index: 2;
@@ -640,8 +646,7 @@ body {
   }
   &-item {
     background: rgba(47, 50, 65, 0.5);
-    backdrop-filter: blur(64px);
-    -webkit-backdrop-filter: blur(64px);
+    @include blur(64px);
     border-radius: 10px;
     padding: 24px;
     height: 100%;
@@ -700,11 +705,19 @@ body {
     position: relative;
     display: block;
     text-decoration: none;
+    &:hover {
+      .news-item__icon img {
+        transform: scale(1.05);
+      }
+    }
     &__icon {
+      border-radius: 10px;
+      overflow: hidden;
       img {
-        border-radius: 10px;
+
         width: 100%;
         display: block;
+        @include transition(.3);
       }
       figcaption {
         display: block;

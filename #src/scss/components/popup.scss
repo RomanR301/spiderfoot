@@ -8,8 +8,7 @@
     display: flex;
     align-items: center;
     background: rgba(47, 50, 65, 0.5);
-    backdrop-filter: blur(64px);
-    -webkit-backdrop-filter: blur(64px);
+    @include blur(64px);
     @media (max-width: $breakpoint-lg) {
       width: 95%;
     }

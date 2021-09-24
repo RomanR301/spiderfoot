@@ -52,8 +52,7 @@
   }
   &__content {
     background: rgba(47, 50, 65, 0.5);
-    -webkit-backdrop-filter: blur(64px);
-    backdrop-filter: blur(64px);
+    @include blur(64px);
     border-radius: 20px;
     position: relative;
     margin: auto;
