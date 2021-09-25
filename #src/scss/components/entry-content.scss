@@ -2,64 +2,64 @@
 @import "../abstracts/variables";
 
 .entry-content {
+  * {
+    font-family: 'Lora', serif;
+  }
+  strong {
+    font-weight: 700;
+    color: #CFCFCF;
+  }
   & p {
-    font-size: 18px;
-    margin-bottom: 18px;
-    line-height: 1.5;
-    @media (min-width: $breakpoint-xxl) {
-      font-size: 24px;
-      margin-bottom: 24px;
-    }
+    font-size: 20px;
+    line-height: 1.75;
+    color: #CFCFCF;
+    margin-bottom: 36px;
   }
   & a {
-    // color: $redColor;
-    line-height: 1.3;
-    // border-bottom: 1px solid $redColor;
+    color: $primaryColor;
+    @include transition(.3);
+    &:hover {
+      color: $darkBlue;
+    }
   }
   & h1 {
-    @include fontSize(24, 36);
-    line-height: 1.33;
+    @include fontSize(32, 62);
   }
   & h2 {
-    @include fontSize(24, 36);
-    line-height: 1.16;
-    margin: 24px 0;
+    @include fontSize(28, 48);
   }
   & h3 {
-    @include fontSize(20, 30);
-    line-height: 1.16;
-    margin: 20px 0;
+    @include fontSize(24, 36);
   }
   & h4 {
-    @include fontSize(16, 24);
-    line-height: 1.16;
-    margin-bottom: 8px;
+    @include fontSize(26, 26);
   }
   & h5 {
-    @include fontSize(14, 20);
-    line-height: 1.16;
-    margin-bottom: 8px;
+    @include fontSize(18, 20);
   }
   & h1, h2, h3, h4, h5 {
-    font-weight: 600;
+    line-height: 1.3;
+    margin-bottom: 16px;
   }
 
   & img {
     display: block;
-    width: 100%;
-    max-height: 550px;
+    max-width: 100%;
+    border-radius: 20px;
     object-fit: cover;
     object-position: center;
-    margin-bottom: 24px;
+    margin-bottom: 36px;
   }
   & ul, ol {
-    margin-bottom: 24px;
+    margin-bottom: 36px;
   }
   & ul {
     & li {
-      padding-left: 20px;
+      padding-left: 24px;
       position: relative;
       font-size: 18px;
+      color: #CFCFCF;
+      line-height: 1.75;
       @media (min-width: $breakpoint-xxl) {
         font-size: 24px;
       }
@@ -67,10 +67,10 @@
         content: '';
         position: absolute;
         left: 4px;
-        top: 10px;
-        width: 5px;
-        height: 5px;
-        // background: $redColor;
+        top: 8px;
+        width: 8px;
+        height: 8px;
+        background: $primaryColor;
         border-radius: 100%;
       }
     }
@@ -79,42 +79,46 @@
     & li {
       counter-increment: li;
       font-size: 18px;
+      color: #CFCFCF;
+      line-height: 1.75;
       @media (min-width: $breakpoint-xxl) {
         font-size: 24px;
       }
       &:before {
+        font-family: 'Lora', serif;
         content: counter(li) ".";
-        font-weight: 700;
+        font-weight: 400;
         padding: 0 4px;
         display: inline-block;
-        min-width: 24px;
-        // color: $redColor;
+        min-width: 22px;
+        color: $primaryColor;
       }
     }
   }
   & blockquote {
     position: relative;
-    @include fontSize(18, 24);
     line-height: 1.4;
-    position: relative;
-    padding: 30px 0 30px 20px;
-    // border-left: 8px solid $redColor;
-    margin: 0 0 24px 4px;
-    @media (max-width: $breakpoint-md) {
-      padding: 20px 0 20px 15px;
-    }
-    &:after {
+    margin: 88px 0;
+    font-size: 20px;
+    line-height: 1.75;
+    color: #CFCFCF;
+    &:after, &:before {
       content: '';
       position: absolute;
-      left: -12px;
-      top: calc(50% - 26px);
-      width: 19px;
-      height: 52px;
+      width: 44px;
+      height: 36px;
+      left: 0;
       z-index: 1;
-      background-image: url(../../img/icons/blockquote-bg.svg);
+      background-image: url('../../img/blockquote.svg');
       background-repeat: no-repeat;
-      // background-color: $bodyBackground;
       background-position: center;
+    }
+    &:before {
+      top: -52px;
+    }
+    &:after {
+      bottom: -52px;
+      transform: rotate(180deg);
     }
   }
 }

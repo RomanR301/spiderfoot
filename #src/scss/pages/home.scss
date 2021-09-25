@@ -679,7 +679,7 @@
   }
 }
 
-.news {
+.news-carousel {
   margin-bottom: 123px;
   @media (max-width: $breakpoint-lg) {
     margin-bottom: 60px;
@@ -714,7 +714,6 @@
       border-radius: 10px;
       overflow: hidden;
       img {
-
         width: 100%;
         display: block;
         @include transition(.3);

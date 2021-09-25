@@ -1,10 +1,14 @@
+
 @include font("FuturaPT", "FuturaPT-Heavy", "900", "normal");
 @include font("FuturaPT", "FuturaPT-ExtraBold", "800", "normal");
 @include font("FuturaPT", "FuturaPT-Bold", "700", "normal");
 @include font("FuturaPT", "FuturaPT-Demi", "600", "normal");
 @include font("FuturaPT", "FuturaPT-Medium", "500", "normal");
 @include font("FuturaPT", "FuturaPT-Book", "400", "normal");
-@include font("FuturaPT", "FuturaPT-Light", "300", "normal");
+
+@include font("Lora", "Lora-Bold", "700", "normal");
+@include font("Lora", "Lora-Regular", "400", "normal");
+
 
 @font-face {
   font-family: 'icomoon';
