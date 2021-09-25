@@ -203,3 +203,65 @@ document.body.addEventListener('keyup', function(e) {
     document.body.classList.remove('no-focus-outline');
   }
 });
+
+
+
+
+
+function closeAllSelect(e) {
+  var t, s, n, l = [];
+  for (t = document.getElementsByClassName("select-items"),
+  s = document.getElementsByClassName("select-selected"),
+  n = 0; n < s.length; n++)
+      e == s[n] ? l.push(n) : s[n].classList.remove("select-arrow-active");
+  for (n = 0; n < t.length; n++)
+      l.indexOf(n) && t[n].classList.add("select-hide")
+}
+function fireEvent(e, t) {
+  if (document.createEventObject) {
+      s = document.createEventObject();
+      return e.fireEvent("on" + t, s)
+  }
+  var s;
+  return (s = document.createEvent("HTMLEvents")).initEvent(t, !0, !0),
+  !e.dispatchEvent(s)
+}
+var x, i, j, selElmnt, a, b, c;
+for (x = document.getElementsByClassName("custom-select-js"),
+i = 0; i < x.length; i++) {
+  for (selElmnt = x[i].getElementsByTagName("select")[0],
+  (a = document.createElement("DIV")).setAttribute("class", "select-list__item --current"),
+  a.innerHTML = selElmnt.options[selElmnt.selectedIndex].innerHTML,
+  x[i].appendChild(a),
+  (b = document.createElement("DIV")).setAttribute("class", "select-list select-hide"),
+  j = 0; j < selElmnt.length; j++)
+      (c = document.createElement("DIV")).innerHTML = selElmnt.options[j].innerHTML,
+      c.setAttribute("class", "select-list__item"),
+      c.addEventListener("click", function(e) {
+          var t, s, n, l, i;
+          for (l = this.parentNode.parentNode.getElementsByTagName("select")[0],
+          i = this.parentNode.previousSibling,
+          s = 0; s < l.length; s++)
+              if (l.options[s].innerHTML == this.innerHTML) {
+                  for (l.options[s].selected = !0,
+                  fireEvent(l.options[s], "change"),
+                  l.selectedIndex = s,
+                  i.innerHTML = this.innerHTML,
+                  t = this.parentNode.getElementsByClassName("same-as-selected"),
+                  n = 0; n < t.length; n++)
+                      t[n].setAttribute("class", "select-list__item");
+                  this.setAttribute("class", "select-list__item same-as-selected");
+                  break
+              }
+          i.click()
+      }),
+      b.appendChild(c);
+  x[i].appendChild(b),
+  a.addEventListener("click", function(e) {
+      e.stopPropagation(),
+      closeAllSelect(this),
+      this.nextSibling.classList.toggle("select-hide"),
+      this.classList.toggle("select-arrow-active")
+  })
+}
+document.addEventListener("click", closeAllSelect);

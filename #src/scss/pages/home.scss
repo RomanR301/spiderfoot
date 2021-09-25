@@ -267,7 +267,7 @@
   }
 }
 
-.modules {
+.integrations {
   margin-bottom: 175px;
   @media (max-width: $breakpoint-lg) {
     margin-bottom: 0;
@@ -706,7 +706,7 @@
     display: block;
     text-decoration: none;
     &:hover {
-      .news-item__icon img {
+      .news-carousel-item__icon img {
         transform: scale(1.05);
       }
     }

@@ -957,6 +957,26 @@ input[type=number] {
   transform: rotate(180deg);
 }
 
+.form-control {
+  width: 100%;
+  font-family: inherit;
+  border: none;
+  border-radius: 100px;
+  padding: 12px 27px;
+  resize: none;
+  color: #4F4F4F;
+  font-size: 18px;
+  line-height: 25px;
+}
+
+.form-control::placeholder {
+  color: #4F4F4F;
+}
+
+.form-control::-moz-placeholder {
+  color: #4F4F4F;
+}
+
 .subscribe-form {
   width: 328px;
 }
@@ -2838,15 +2858,15 @@ button.swiper-pagination-bullet {
   filter: drop-shadow(30px 30px 80px #000);
 }
 
-.modules {
+.integrations {
   margin-bottom: 175px;
 }
 
-.modules-list {
+.integrations-list {
   margin-top: 24px;
 }
 
-.modules__item {
+.integrations__item {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -2858,19 +2878,19 @@ button.swiper-pagination-bullet {
   padding: 20px;
 }
 
-.modules__item img {
+.integrations__item img {
   max-width: 115%;
   height: 60px;
   object-fit: contain;
 }
 
-.modules-more {
+.integrations-more {
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.modules-more span {
+.integrations-more span {
   font-size: 36px;
   margin-right: 48px;
 }
@@ -3214,7 +3234,7 @@ button.swiper-pagination-bullet {
   text-decoration: none;
 }
 
-.news-carousel-item:hover .news-item__icon img {
+.news-carousel-item:hover .news-carousel-item__icon img {
   transform: scale(1.05);
 }
 
@@ -3458,6 +3478,96 @@ button.swiper-pagination-bullet {
 .news-single-carousel .heading-3 {
   text-align: center;
   margin-bottom: 30px;
+}
+
+.modules .subscribe-form {
+  margin: auto;
+}
+
+.modules-filters {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 80px 0 30px 0;
+}
+
+.modules-filters-search {
+  display: flex;
+  align-items: center;
+}
+
+.modules-filters-search-input {
+  width: 280px;
+  margin-right: 16px;
+}
+
+.modules-filters-select {
+  margin-right: 16px;
+}
+
+.modules-filters-view {
+  display: flex;
+  align-items: center;
+}
+
+.custom-select {
+  display: none;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.select-list__item {
+  font-size: 16px;
+  padding: 11px 34px 11px 56px;
+  font-size: 16px;
+  color: #B6B6B6;
+  padding: 7px 10px 5px 10px;
+  line-height: normal;
+  cursor: pointer;
+  user-select: none;
+  text-align: left;
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+  width: 100%;
+}
+
+.select-list__item.--current {
+  border: 2px solid #EEEEEE;
+  border-radius: 100px;
+  padding: 11px 34px 11px 48px;
+}
+
+.select-list {
+  position: absolute;
+  cursor: pointer;
+  background: #fff;
+  border-radius: 0;
+  min-width: 100%;
+  padding: 20px 16px;
+  top: 100%;
+  left: 0;
+  visibility: visible;
+  opacity: 1;
+  -webkit-transform: translate(0, 0);
+  transform: translate(0, 0);
+  z-index: 5;
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+
+.select-hide {
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transform: translate(0, 50px);
+  transform: translate(0, 50px);
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
 }
 
 @media (min-width: 576px) {
@@ -4185,11 +4295,11 @@ button.swiper-pagination-bullet {
     margin-bottom: 60px;
   }
 
-  .modules {
+  .integrations {
     margin-bottom: 0;
   }
 
-  .modules__item img {
+  .integrations__item img {
     max-width: 100%;
   }
 
@@ -4529,25 +4639,25 @@ button.swiper-pagination-bullet {
     filter: drop-shadow(0px 0px 30px #000);
   }
 
-  .modules-list {
+  .integrations-list {
     margin: 24px -5px 0 -5px;
   }
 
-  .modules .col-xs-6 {
+  .integrations .col-xs-6 {
     padding: 0 5px;
   }
 
-  .modules__item {
+  .integrations__item {
     margin-bottom: 10px;
     padding: 20px 15px;
   }
 
-  .modules-more {
+  .integrations-more {
     flex-direction: column;
     margin-top: 10px;
   }
 
-  .modules-more span {
+  .integrations-more span {
     font-size: 26px;
     text-align: center;
     margin: 0 0 24px 0;
