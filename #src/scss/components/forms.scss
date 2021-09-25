@@ -11,10 +11,122 @@
   color: #4F4F4F;
   font-size: 18px;
   line-height: 25px;
+  @include transition(.3);
+  &:focus {
+    box-shadow: 1px 1px 10px rgba(255, 255, 255, 0.3);
+    outline: none;
+  }
   &::placeholder  {
     color: #4F4F4F;
   }
   &::-moz-placeholder {
     color: #4F4F4F;
   }
+}
+
+
+.select-dropdown {
+	position: relative;
+	display: inline-block;
+	max-width: 100%;
+	margin: 0 15px 0 0;
+	&:last-child {
+		margin-right: 0px;
+	}
+	&__button {
+    width: 100%;
+    font-family: inherit;
+    border: none;
+    border-radius: 100px;
+    padding: 12px 27px 12px 60px;
+    resize: none;
+    text-align: left;
+    background: $whiteColor;
+    &:before {
+      content: '';
+      background-repeat: no-repeat;
+      width: 18px;
+      height: 12px;
+      left: 27px;
+      top: 50%;
+      transform: translate(0, -50%);
+      position: absolute;
+      background-image: url('../../img/icons/status-icon.svg');
+    }
+    i:before {
+      // font-family: 'icomoon';
+      // content: "\e90c";
+      position: absolute;
+      right: 20px;
+      top: 50%;
+      transform: translate(0, -50%);
+      color: #5A6C81;
+    }
+    &:after {
+      // font-family: 'icomoon';
+      // content: "\e90c";
+      // position: absolute;
+      // right: 20px;
+      // top: 50%;
+      // transform: translate(0, -50%);
+      // color: #5A6C81;
+    }
+    span {
+      color: $defaultextLight;
+      font-size: 18px;
+      line-height: 25px;
+    }
+		&:focus {
+			outline: none;
+		}
+	}
+	&__list {
+		position: absolute;
+		display: block;
+		left: 0;
+		right: 0;
+		max-height: 300px;
+		overflow: auto;
+		margin: 0;
+		padding: 0;
+		border-top: 0px solid transparent;
+		list-style-type: none;
+		opacity: 0;
+		pointer-events: none;
+		transform-origin: top left;
+		transform: scale(1,0);
+		transition: all ease-in-out .3s;
+		z-index: 101;
+
+    top: 60px;
+    border-radius: 20px;
+
+		&.active {
+			opacity: 1;
+			pointer-events: auto;
+			transform: scale(1,1);
+		}
+	}
+	&__list-item {
+		display: block;
+		list-style-type: none;
+		padding: 10px 15px;
+		background: #fff;
+		border-top: 1px solid #e6e6e6;
+		font-size: 14px;
+		line-height: 1.4;
+		cursor: pointer;
+		text-align: left;
+    color: $defaultextLight;
+		transition: all ease-in-out .3s;
+    &:first-child {
+      border-top: none;
+    }
+		&:hover {
+      background: $primaryColor;
+      border-color: $primaryColor;
+			color: $whiteColor;
+			transition: all ease-in-out .3s;
+		}
+	}
 }

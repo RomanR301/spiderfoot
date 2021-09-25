@@ -14,76 +14,69 @@
       display: flex;
       align-items: center;
       &-input {
+        height: 50px;
         width: 280px;
         margin-right: 16px;
+        position: relative;
+        .form-control {
+          padding: 12px 55px 12px 27px;
+        }
+        &:before {
+          font-family: 'icomoon';
+          content: "\e912";
+          position: absolute;
+          top: 50%;
+          right: 28px;
+          color: #5A6C81;
+          transform: translate(0, -50%);
+        }
       }
     }
     &-select {
+      height: 50px;
       margin-right: 16px;
+      .select-dropdown__button {
+        width: 200px;
+      }
+    }
+    &-submit {
+      button {
+        height: 50px;
+        color: $whiteColor;
+        width: 144px;
+        font-size: 18px;
+        text-transform: unset;
+        font-weight: 400;
+      }
     }
     &-view {
       display: flex;
       align-items: center;
+      .view-item {
+        border: 2px solid $primaryColor;
+        padding: 12px 24px;
+        border-radius: 100px;
+        display: flex;
+        align-items: center;
+        color: $primaryColor;
+        margin-left: 12px;
+        cursor: pointer;
+        @include transition(.3);
+        i {
+          margin-right: 10px;
+          &:before {
+            color: $primaryColor;
+            @include transition(.3);
+          }
+        }
+        &.active, &:hover {
+          background: $primaryColor;
+          color: $whiteColor;
+          i:before {
+            color: $whiteColor;
+          }
+        }
+      }
     }
   }
-}
-
-.custom-select {
-  display: none;
-  opacity: 0;
-  visibility: hidden;
-}
-
-.select-list__item {
-  font-size: 16px;
-  padding: 11px 34px 11px 56px;font-size: 16px;
-  color: #B6B6B6;
-  padding: 7px 10px 5px 10px;
-  line-height: normal;
-  cursor: pointer;
-  user-select: none;
-  text-align: left;
-  -webkit-transition: all 0.3s ease-out;
-  -moz-transition: all 0.3s ease-out;
-  -o-transition: all 0.3s ease-out;
-  transition: all 0.3s ease-out;
-  width: 100%;
-}
-
-.select-list__item.--current {
-  border: 2px solid #EEEEEE;
-  border-radius: 100px;
-  padding: 11px 34px 11px 48px;
-}
-
-.select-list {
-  position: absolute;
-  cursor: pointer;
-  background: #fff;
-  // box-shadow: 0px 0px 10px rgb(0 0 0 / 10%);
-  border-radius: 0;
-  min-width: 100%;
-  padding: 20px 16px;
-  top: 100%;
-  left: 0;
-  visibility: visible;
-  opacity: 1;
-  -webkit-transform: translate(0, 0);
-  transform: translate(0, 0);
-  z-index: 5;
-  -webkit-transition: all 0.3s ease-out;
-  -moz-transition: all 0.3s ease-out;
-  -o-transition: all 0.3s ease-out;
-  transition: all 0.3s ease-out;
-}
-
-.select-hide {
-  visibility: hidden;
-  opacity: 0;
-  -webkit-transform: translate(0, 50px);
-  transform: translate(0, 50px);
-  -webkit-transition: all 0.3s ease-out;
-  -moz-transition: all 0.3s ease-out;
-  -o-transition: all 0.3s ease-out;
-  transition: all 0.3s ease-out;
 }
