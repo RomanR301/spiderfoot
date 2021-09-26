@@ -119,6 +119,9 @@ let front = {
       $('html, body').animate({
           scrollTop: $($.attr(this, 'href')).offset().top - 100
       }, 500);
+      $('body').removeClass('active');
+      $('.hamburger').removeClass('open');
+      $('.navbar').removeClass('active');
     });
     $(document).on('click', '.table-view', function() {
       $(this).addClass('active');
