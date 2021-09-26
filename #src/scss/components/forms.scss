@@ -54,11 +54,9 @@
       top: 50%;
       transform: translate(0, -50%);
       position: absolute;
-      background-image: url('../../img/icons/status-icon.svg');
+      background-image: url('../img/icons/status-icon.svg');
     }
     i:before {
-      // font-family: 'icomoon';
-      // content: "\e90c";
       position: absolute;
       right: 20px;
       top: 50%;
