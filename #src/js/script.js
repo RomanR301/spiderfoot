@@ -59,9 +59,6 @@ let front = {
       $(document).on('click', '.hamburger', function () {
           self.toggleNav();
       });
-      $('.popup-youtube').magnificPopup({
-        type: 'iframe'
-      });
       $(document).on('click', '.billed-wrap__input', function () {
         self.togglePlan();
        });
@@ -123,6 +120,24 @@ let front = {
           scrollTop: $($.attr(this, 'href')).offset().top - 100
       }, 500);
     });
+    $(document).on('click', '.table-view', function() {
+      $(this).addClass('active');
+      $('.card-view').removeClass('active');
+      $('.modules-list').removeClass('card-list');
+    })
+    $(document).on('click', '.card-view', function() {
+      $(this).addClass('active');
+      $('.table-view').removeClass('active');
+      $('.modules-list').addClass('card-list');
+    })
+
+    if(window.matchMedia('(max-width: 768px)').matches){
+      $(this).addClass('active');
+      $('.table-view').removeClass('active');
+      $('.modules-list').addClass('card-list');
+    }
+    
+
   }
 };
 

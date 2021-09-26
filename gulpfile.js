@@ -17,6 +17,7 @@ let path = {
     php: source_folder + '/php/*.php',
     css: source_folder + '/scss/style.scss',
     js: source_folder + '/js/script.js',
+    jquery: source_folder + '/js/jquery.min.js',
     img: source_folder + '/img/**/*.{jpg,png,svg,gif,ico,webp,json}',
     fonts: source_folder + '/fonts/*.{ttf,otf,woff,woff2}',
   },
@@ -127,6 +128,12 @@ function jsLibs() {
     .pipe(browsersync.stream())
 }
 
+function jquery() {
+  return src(source_folder + '/js/jquery.min.js')
+    .pipe(dest(path.build.js))
+    .pipe(browsersync.stream())
+}
+
 
 function images() {
   return src(path.src.img)
@@ -193,6 +200,7 @@ function watchFiles(params) {
   gulp.watch([path.watch.js], js)
   gulp.watch([path.watch.php], php)
   gulp.watch([source_folder + '/js/libs.js'], jsLibs)
+  gulp.watch([source_folder + '/js/jquery.min.js'], jquery)
   gulp.watch([path.watch.img], images)
 }
 
@@ -200,7 +208,7 @@ function clean(params) {
   return del(path.clean);
 }
 
-let build = gulp.series(clean, gulp.parallel(js, php, jsLibs, css, html, images, fonts), fontsStyle);
+let build = gulp.series(clean, gulp.parallel(js, php, jquery, jsLibs, css, html, images, fonts), fontsStyle);
 let watch = gulp.parallel(build, watchFiles, browserSync);
 
 
@@ -208,6 +216,7 @@ exports.fontsStyle = fontsStyle;
 exports.fonts = fonts;
 exports.images = images;
 exports.jsLibs = jsLibs;
+exports.jqeury = jquery;
 exports.js = js;
 exports.php = php;
 exports.css = css;

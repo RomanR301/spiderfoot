@@ -11,6 +11,7 @@
   padding: 10px 24px;
   text-transform: uppercase;
   @include transition(.3);
+  color: $whiteColor;
   cursor: pointer;
   &-primary {
     background: $primaryColor;

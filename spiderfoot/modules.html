@@ -87,7 +87,7 @@
             <a href="#">About</a>
           </li>
         </ul>
-        <a href="#" class="btn btn-primary has-icon header-cta"><i class="icon-icon-user"></i>SIGN IN</a>
+        <button class="btn btn-primary has-icon header-cta modalTrigger" data-modal="#downloadPopup"><i class="icon-icon-user"></i>SIGN IN</button>
       </div>
       <div class="hamburger">
         <span></span>
@@ -131,11 +131,138 @@
           </div>
         </div>
         <div class="modules-filters-view">
-          <div class="view-item table-view active"><i class="icon-icon-table-view"></i>  Table View</div>
-          <div class="view-item card-view"><i class="icon-icon-card-view"></i>  Card View</div>
+          <div class="view-item table-view active"><i class="icon-icon-table-view"></i> <span>Table View</span></div>
+          <div class="view-item card-view"><i class="icon-icon-card-view"></i> <span>Card View</span></div>
         </div>
       </div>
-      <div class="modules-list"></div>
+      <div class="modules-list">
+        <div class="modules-heading">
+          <div class="modules-heading__module">Module</div>
+          <div class="modules-heading__description">Description</div>
+          <div class="modules-heading__status">Status</div>
+          <div class="modules-heading__link">Link to module website</div>
+        </div>
+        <div class="modules-item">
+          <div class="modules__icon__title">
+            <div class="modules__icon">
+              <img src="./img/modules/modules-ibm.svg" alt="img logo">
+            </div>
+            <div class="modules__title">
+              IBM X-Force
+            </div>
+          </div>
+          <div class="modules__description">
+            Use Shodan to discover which of your devices are connected to the Internet, where they are located and who
+            is using them
+          </div>
+          <div class="modules__status">
+            PURCHASE
+          </div>
+          <div class="modules__link">
+            <a href="#">Visit Website</a>
+          </div>
+        </div>
+        <div class="modules-item">
+          <div class="modules__icon__title">
+            <div class="modules__icon">
+              <img src="./img/modules/modules-github.svg" alt="Github logo">
+            </div>
+            <div class="modules__title">
+              Github
+            </div>
+          </div>
+          <div class="modules__description">
+            Use Shodan to discover which of your devices are connected to the Internet, where they are located and who
+            is using them
+          </div>
+          <div class="modules__status">
+            FREE
+          </div>
+          <div class="modules__link">
+            <a href="#">Visit Website</a>
+          </div>
+        </div>
+        <div class="modules-item">
+          <div class="modules__icon__title">
+            <div class="modules__icon">
+              <img src="./img/modules/modules-shodan.svg" alt="shodan logo">
+            </div>
+            <div class="modules__title">
+              Shodan
+            </div>
+          </div>
+          <div class="modules__description">
+            Use Shodan to discover which of your devices are connected to the Internet, where they are located and who
+            is using them
+          </div>
+          <div class="modules__status">
+            FREE
+          </div>
+          <div class="modules__link">
+            <a href="#">Visit Website</a>
+          </div>
+        </div>
+        <div class="modules-item">
+          <div class="modules__icon__title">
+            <div class="modules__icon">
+              <img src="./img/modules/modules-ibm.svg" alt="img logo">
+            </div>
+            <div class="modules__title">
+              IBM X-Force
+            </div>
+          </div>
+          <div class="modules__description">
+            Use Shodan to discover which of your devices are connected to the Internet, where they are located and who
+            is using them
+          </div>
+          <div class="modules__status">
+            PURCHASE
+          </div>
+          <div class="modules__link">
+            <a href="#">Visit Website</a>
+          </div>
+        </div>
+        <div class="modules-item">
+          <div class="modules__icon__title">
+            <div class="modules__icon">
+              <img src="./img/modules/modules-github.svg" alt="Github logo">
+            </div>
+            <div class="modules__title">
+              Github
+            </div>
+          </div>
+          <div class="modules__description">
+            Use Shodan to discover which of your devices are connected to the Internet, where they are located and who
+            is using them
+          </div>
+          <div class="modules__status">
+            FREE
+          </div>
+          <div class="modules__link">
+            <a href="#">Visit Website</a>
+          </div>
+        </div>
+        <div class="modules-item">
+          <div class="modules__icon__title">
+            <div class="modules__icon">
+              <img src="./img/modules/modules-shodan.svg" alt="shodan logo">
+            </div>
+            <div class="modules__title">
+              Shodan
+            </div>
+          </div>
+          <div class="modules__description">
+            Use Shodan to discover which of your devices are connected to the Internet, where they are located and who
+            is using them
+          </div>
+          <div class="modules__status">
+            FREE
+          </div>
+          <div class="modules__link">
+            <a href="#">Visit Website</a>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 </main>
@@ -303,6 +430,7 @@
   </div>
 </div>
 
+<script src="js/jquery.min.js"></script>
 <script src="js/libs.min.js"></script>
 <script src="js/script.min.js"></script>
 </body>
