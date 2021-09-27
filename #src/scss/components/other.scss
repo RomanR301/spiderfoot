@@ -86,6 +86,9 @@
 
 .subscribe-form-long {
   width: 440px;
+  input {
+    padding: 12px 150px 12px 50px;
+  }
   button {
     width: 140px;
     border-radius: 100px;
@@ -99,6 +102,11 @@
       i:before {
         color: $darkBlue;
       }
+    }
+    span {
+      line-height: 1;
+      color: inherit;
+      @include transition(.3);
     }
     i {
       margin-left: 12px;

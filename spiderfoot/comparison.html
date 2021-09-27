@@ -1,0 +1,984 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="">
+  <!-- <link rel="apple-touch-icon" sizes="180x180" href="./img/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="./img/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="./img/favicon-16x16.png"> -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.min.css">
+  <title>spiderfoot</title>
+</head>
+
+
+<body>
+  <header class="header">
+    <div class="container">
+      <a href="index.html" class="header-logo">
+        <img src="./img/main-logo.svg" alt="spiderfoot logo">
+      </a>
+      <div class="navbar">
+        <img src="./img/abstract-background.png" alt="abstracts background" class="navbar-abstracts" />
+        <ul class="menu">
+          <li class="menu-item menu-item-has-children">
+            <a href="#">Product</a>
+            <i class="icon-icon-shevron sub-menu-button"></i>
+            <ul class="sub-menu">
+              <li class="menu-item">
+                <a href="#action">See it in action!</a>
+              </li>
+              <li class="menu-item">
+                <a href="#features">Features</a>
+              </li>
+              <li class="menu-item">
+                <a href="#intergations">Integrations</a>
+              </li>
+              <li class="menu-item">
+                <a href="#pricing">Pricing</a>
+              </li>
+              <li class="menu-item">
+                <a href="#testimonials">Testimonials</a>
+              </li>
+            </ul>
+          </li>
+          <li class="menu-item menu-item-has-children">
+            <a href="#">Use Cases</a>
+            <i class="icon-icon-shevron sub-menu-button"></i>
+            <ul class="sub-menu">
+              <li class="menu-item">
+                <a href="news-single.html">Use Case 1</a>
+              </li>
+              <li class="menu-item">
+                <a href="news-single.html">Use Case 2</a>
+              </li>
+              <li class="menu-item">
+                <a href="news-single.html">Use Case 3</a>
+              </li>
+              <li class="menu-item">
+                <a href="news-single.html">Use Case 4</a>
+              </li>
+            </ul>
+          </li>
+          <li class="menu-item menu-item-has-children">
+            <img src="./img/icons/icon-github.svg" alt="GitHub logo">
+            <a href="#">Community</a>
+            <i class="icon-icon-shevron sub-menu-button"></i>
+            <ul class="sub-menu">
+              <li class="menu-item">
+                <a href="#">Overview</a>
+              </li>
+              <li class="menu-item">
+                <a href="#">Pricing</a>
+              </li>
+              <li class="menu-item">
+                <a href="comparison.html">Open Source vs. HX</a>
+              </li>
+              <li class="menu-item">
+                <a href="#">Modules</a>
+              </li>
+            </ul>
+          </li>
+          <li class="menu-item">
+            <a href="news.html">News</a>
+          </li>
+          <li class="menu-item">
+            <a href="#">About</a>
+          </li>
+        </ul>
+        <button class="btn btn-primary has-icon header-cta modalTrigger" data-modal="#downloadPopup"><i class="icon-icon-user"></i>SIGN IN</button>
+      </div>
+      <div class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </header>
+  <div class="body-padding"></div>
+
+<main>
+  <section class="comparison">
+    <div class="container">
+      <h1 class="app__title">Open Source or HX?</h1>
+      <p class="app__description">Decide whether the open source version of SpiderFoot or SpiderFoot HX is best for your
+        needs.</p>
+      <div class="row">
+        <div class="col-md-6">
+          <div class="comparison-block open-source">
+            <h3 class="comparison-block__title">
+              Open Source
+            </h3>
+            <div class="comparison-block__bar">
+              <div class="bar-item bar-open">
+                <span class="bar-percentage">25%</span>
+                <span class="bar-text">Functionality open<span>
+              </div>
+              <div class="bar-item bar-closed">
+                <span class="bar-percentage">75%</span>
+                <span class="bar-text">Functionality closed<span>
+              </div>
+            </div>
+            <div class="comparison-block__description">
+              <p>Self-hosted and focused on data collection. If your use case is focused solely on data collection on
+                small to medium targets and you wish to run SpiderFoot within your own infrastructure that you set up,
+                secure and maintain with support from the community, the open source version is probably the best option
+                for you.</p>
+              <p>
+                With the open source version, most of the modules from SpiderFoot HX are available, but the ability to
+                navigate, visualize, monitor and investigate is not available. You'll be able to export the data from
+                SpiderFoot in CSV, JSON or GEXF and work with the data in other tools.
+              </p>
+              <p>
+                The open source version is typically used by hobbyists and those new to OSINT.
+              </p>
+            </div>
+            <a href="#" class="btn btn-secondary">Download Now</a>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="comparison-block spiderfoot-hx">
+            <h3 class="comparison-block__title">SpiderFoot HX</h3>
+            <div class="comparison-block__bar">
+              <div class="bar-item bar-open">
+                <span class="bar-percentage">100%</span>
+                <span class="bar-text">Functionality open<span>
+              </div>
+            </div>
+            <div class="comparison-block__description">
+              <p>SpiderFoot HX is designed for professionals who use OSINT as part of their work. When you want to
+                collect and monitor OSINT data as well as quickly find what's important through rich data navigation and
+                visualization features, SpiderFoot HX is what you're looking for.</p>
+              <p>SpiderFoot HX is designed for professionals who use OSINT as part of their work. When you want to
+                collect and monitor OSINT data as well as quickly find what's important through rich data navigation and
+                visualization features, SpiderFoot HX is what you're looking for.</p>
+              <p>SpiderFoot HX is typically the choice for organizations that provide security assessment services,
+                companies with their own threat intelligence teams, firms performing professional digital investigations
+                and law enforcement.</p>
+            </div>
+            <div class="subscribe-form subscribe-form-long">
+              <form action="">
+                <div class="form-group">
+                  <input type="email" name="main-screen-email" placeholder="Your Email" />
+                  <button type="submit"><span>Get started</span><i class="icon-icon-arrow-right"></i></button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="comparison-table --desktop">
+            <div class="row comparison-table-heading">
+              <div class="col-md-5">
+                <div class="comparison-table-heading__feature">Feature</div>
+              </div>
+              <div class="col-md-3">
+                <div class="comparison-table-heading__name">Open Source</div>
+              </div>
+              <div class="col-md-4">
+                <div class="comparison-table-heading__name">Commercial Use</div>
+              </div>
+            </div>
+            <div class="comparison-table-list">
+              <div class="comparison-table-item">
+                <div class="comparison-table-feature">
+                  <div class="tooltip"
+                    data-tippy-content="How SpiderFoot is installed, maintained, secured and upgraded with each release.">
+                    <img src="./img/icons/icon-info.svg" alt="tooltip" />
+                  </div>
+                  <span>Installation, security, management and updates
+                    How SpiderFoot is installed, </span>
+                </div>
+                <div class="comparison-table-product comparison-table-open-source">
+                  Yourself
+                </div>
+                <div class="comparison-table-product comparison-table-spiderfoothx">
+                  Professionally managed
+                </div>
+              </div>
+              <div class="comparison-table-item">
+                <div class="comparison-table-feature">
+                  <div class="tooltip"
+                    data-tippy-content="SpiderFoot HX runs on a distributed and optimized cloud infrastructure giving it a significant performance boost compared to the open source version.">
+                    <img src="./img/icons/icon-info.svg" alt="tooltip" />
+                  </div>
+                  <span>Performance</span>
+                </div>
+                <div class="comparison-table-product comparison-table-open-source">
+                  1x
+                </div>
+                <div class="comparison-table-product comparison-table-spiderfoothx">
+                  5x-10x
+                </div>
+              </div>
+              <div class="comparison-table-item">
+                <div class="comparison-table-feature">
+                  <div class="tooltip" data-tippy-content="Add your own capabilities and integrations in Python.">
+                    <img src="./img/icons/icon-info.svg" alt="tooltip" />
+                  </div>
+                  <span>Extend functionality with Python</span>
+                </div>
+                <div class="comparison-table-product comparison-table-open-source">
+                  <img src="./img/icons/pricing-success.svg" alt="checked icon" />
+                </div>
+                <div class="comparison-table-product comparison-table-spiderfoothx">
+                  <img src="./img/icons/pricing-success.svg" alt="checked icon" />
+                </div>
+              </div>
+              <div class="comparison-table-item">
+                <div class="comparison-table-feature">
+                  <div class="tooltip"
+                    data-tippy-content="Security of your SpiderFoot installation, and the strength of authentication of users.">
+                    <img src="./img/icons/icon-info.svg" alt="tooltip" />
+                  </div>
+                  <span>Security & anonymity</span>
+                </div>
+                <div class="comparison-table-product comparison-table-open-source">
+                  Yourself
+                </div>
+                <div class="comparison-table-product comparison-table-spiderfoothx">
+                  Professionally managed & 2FA
+                </div>
+              </div>
+              <div class="comparison-table-item">
+                <div class="comparison-table-feature">
+                  <div class="tooltip"
+                    data-tippy-content="Multiple named users who can collaborate on scans and analysis with different tiers of access.">
+                    <img src="./img/icons/icon-info.svg" alt="tooltip" />
+                  </div>
+                  <span>Team collaboration</span>
+                </div>
+                <div class="comparison-table-product comparison-table-open-source">
+                  Single user
+                </div>
+                <div class="comparison-table-product comparison-table-spiderfoothx">
+                  Multiple named users with role-based access
+                </div>
+              </div>
+              <div class="comparison-table-item">
+                <div class="comparison-table-feature">
+                  <div class="tooltip"
+                    data-tippy-content="The number of targets you can input for a single scan, such as subnets, IPs, domains and more.">
+                    <img src="./img/icons/icon-info.svg" alt="tooltip" />
+                  </div>
+                  <span>Targets per scan</span>
+                </div>
+                <div class="comparison-table-product comparison-table-open-source">
+                  1
+                </div>
+                <div class="comparison-table-product comparison-table-spiderfoothx">
+                  Many
+                </div>
+              </div>
+              <div class="comparison-table-item">
+                <div class="comparison-table-feature">
+                  <div class="tooltip"
+                    data-tippy-content="Automated scheduled scans that detect when a your target’s attack surface changes.">
+                    <img src="./img/icons/icon-info.svg" alt="tooltip" />
+                  </div>
+                  <span>Monitoring with change detection and notifications</span>
+                </div>
+                <div class="comparison-table-product comparison-table-open-source">
+                  <img src="./img/icons/pricing-error.svg" alt="error icon" />
+                </div>
+                <div class="comparison-table-product comparison-table-spiderfoothx">
+                  <img src="./img/icons/pricing-success.svg" alt="checked icon" />
+                </div>
+              </div>
+              <div class="comparison-table-item">
+                <div class="comparison-table-feature">
+                  <div class="tooltip"
+                    data-tippy-content="Pre-configured rules that flag when an interesting constellation of data points is found during a scan.">
+                    <img src="./img/icons/icon-info.svg" alt="tooltip" />
+                  </div>
+                  <span>Correlations</span>
+                </div>
+                <div class="comparison-table-product comparison-table-open-source">
+                  <img src="./img/icons/pricing-error.svg" alt="error icon" />
+                </div>
+                <div class="comparison-table-product comparison-table-spiderfoothx">
+                  <img src="./img/icons/pricing-success.svg" alt="checked icon" />
+                </div>
+              </div>
+              <div class="comparison-table-item">
+                <div class="comparison-table-feature">
+                  <div class="tooltip"
+                    data-tippy-content="The ability to perform data collection step-by-step to precisely extract the data you’re interested in.">
+                    <img src="./img/icons/icon-info.svg" alt="tooltip" />
+                  </div>
+                  <span>Investigations</span>
+                </div>
+                <div class="comparison-table-product comparison-table-open-source">
+                  <img src="./img/icons/pricing-error.svg" alt="error icon" />
+                </div>
+                <div class="comparison-table-product comparison-table-spiderfoothx">
+                  <img src="./img/icons/pricing-success.svg" alt="checked icon" />
+                </div>
+              </div>
+              <div class="comparison-table-item">
+                <div class="comparison-table-feature">
+                  <div class="tooltip"
+                    data-tippy-content="Professional customer support to help you get the most out of SpiderFoot.">
+                    <img src="./img/icons/icon-info.svg" alt="tooltip" />
+                  </div>
+                  <span>Customer support</span>
+                </div>
+                <div class="comparison-table-product comparison-table-open-source">
+                  <img src="./img/icons/pricing-error.svg" alt="error icon" />
+                </div>
+                <div class="comparison-table-product comparison-table-spiderfoothx">
+                  <img src="./img/icons/pricing-success.svg" alt="checked icon" />
+                </div>
+              </div>
+              <div class="comparison-table-item">
+                <div class="comparison-table-feature">
+                  <div class="tooltip"
+                    data-tippy-content="SpiderFoot can run external tools like Nmap, CMSeeK and more to obtain more data about your target.">
+                    <img src="./img/icons/icon-info.svg" alt="tooltip" />
+                  </div>
+                  <span>Third party tools</span>
+                </div>
+                <div class="comparison-table-product comparison-table-open-source">
+                  Install yourself
+                </div>
+                <div class="comparison-table-product comparison-table-spiderfoothx">
+                  Pre-installed & configured
+                </div>
+              </div>
+              <div class="comparison-table-item">
+                <div class="comparison-table-feature">
+                  <div class="tooltip"
+                    data-tippy-content="SpiderFoot HX provides a fully documented API to control scanning, result extraction and configuration.">
+                    <img src="./img/icons/icon-info.svg" alt="tooltip" />
+                  </div>
+                  <span>API</span>
+                </div>
+                <div class="comparison-table-product comparison-table-open-source">
+                  <img src="./img/icons/pricing-error.svg" alt="error icon" />
+                </div>
+                <div class="comparison-table-product comparison-table-spiderfoothx">
+                  <img src="./img/icons/pricing-success.svg" alt="checked icon" />
+                </div>
+              </div>
+              <div class="comparison-table-item">
+                <div class="comparison-table-feature">
+                  <div class="tooltip"
+                    data-tippy-content="Collect data from the dark web with built-in TOR integration.">
+                    <img src="./img/icons/icon-info.svg" alt="tooltip" />
+                  </div>
+                  <span>TOR integration</span>
+                </div>
+                <div class="comparison-table-product comparison-table-open-source">
+                  Yourself
+                </div>
+                <div class="comparison-table-product comparison-table-spiderfoothx">
+                  <img src="./img/icons/pricing-success.svg" alt="checked icon" />
+                </div>
+              </div>
+              <div class="comparison-table-item">
+                <div class="comparison-table-feature">
+                  <div class="tooltip"
+                    data-tippy-content="Automatically take screenshots of dark web, similar domains, etc.">
+                    <img src="./img/icons/icon-info.svg" alt="tooltip" />
+                  </div>
+                  <span>Screenshotting</span>
+                </div>
+                <div class="comparison-table-product comparison-table-open-source">
+                  <img src="./img/icons/pricing-error.svg" alt="error icon" />
+                </div>
+                <div class="comparison-table-product comparison-table-spiderfoothx">
+                  <img src="./img/icons/pricing-success.svg" alt="checked icon" />
+                </div>
+              </div>
+              <div class="comparison-table-item">
+                <div class="comparison-table-feature">
+                  <div class="tooltip"
+                    data-tippy-content="Feed scan data in real time to ElasticSearch, Splunk or REST endpoints.">
+                    <img src="./img/icons/icon-info.svg" alt="tooltip" />
+                  </div>
+                  <span>ElasticSearch, Splunk and REST feeds</span>
+                </div>
+                <div class="comparison-table-product comparison-table-open-source">
+                  <img src="./img/icons/pricing-error.svg" alt="error icon" />
+                </div>
+                <div class="comparison-table-product comparison-table-spiderfoothx">
+                  <img src="./img/icons/pricing-success.svg" alt="checked icon" />
+                </div>
+              </div>
+            </div>
+            <div class="comparison-table-buttons">
+              <div class="comparison-table-download"><a href="#" class="btn btn-secondary">Download Now</a></div>
+              <div class="subscribe-form subscribe-form-long">
+                <form action="">
+                  <div class="form-group">
+                    <input type="email" name="main-screen-email" placeholder="Your Email" />
+                    <button type="submit"><span>Get started</span><i class="icon-icon-arrow-right"></i></button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+          <div class="comparison-table --mobile">
+            <div class="row comparison-table-heading">
+              <div class="comparison-table-heading__feature">Feature</div>
+              <div class="comparison-table-heading__name">Open Source</div>
+            </div>
+            <div class="comparison-table-list">
+              <div class="comparison-table-item">
+                <div class="comparison-table-feature">
+                  <div class="tooltip"
+                    data-tippy-content="How SpiderFoot is installed, maintained, secured and upgraded with each release.">
+                    <img src="./img/icons/icon-info.svg" alt="tooltip" />
+                  </div>
+                  <span>Installation, security, management and updates
+                    How SpiderFoot is installed, </span>
+                </div>
+                <div class="comparison-table-product comparison-table-open-source">
+                  Yourself
+                </div>
+              </div>
+              <div class="comparison-table-item">
+                <div class="comparison-table-feature">
+                  <div class="tooltip"
+                    data-tippy-content="SpiderFoot HX runs on a distributed and optimized cloud infrastructure giving it a significant performance boost compared to the open source version.">
+                    <img src="./img/icons/icon-info.svg" alt="tooltip" />
+                  </div>
+                  <span>Performance</span>
+                </div>
+                <div class="comparison-table-product comparison-table-open-source">
+                  1x
+                </div>
+              </div>
+              <div class="comparison-table-item">
+                <div class="comparison-table-feature">
+                  <div class="tooltip" data-tippy-content="Add your own capabilities and integrations in Python.">
+                    <img src="./img/icons/icon-info.svg" alt="tooltip" />
+                  </div>
+                  <span>Extend functionality with Python</span>
+                </div>
+                <div class="comparison-table-product comparison-table-open-source">
+                  <img src="./img/icons/pricing-success.svg" alt="checked icon" />
+                </div>
+              </div>
+              <div class="comparison-table-item">
+                <div class="comparison-table-feature">
+                  <div class="tooltip"
+                    data-tippy-content="Security of your SpiderFoot installation, and the strength of authentication of users.">
+                    <img src="./img/icons/icon-info.svg" alt="tooltip" />
+                  </div>
+                  <span>Security & anonymity</span>
+                </div>
+                <div class="comparison-table-product comparison-table-open-source">
+                  Yourself
+                </div>
+              </div>
+              <div class="comparison-table-item">
+                <div class="comparison-table-feature">
+                  <div class="tooltip"
+                    data-tippy-content="Multiple named users who can collaborate on scans and analysis with different tiers of access.">
+                    <img src="./img/icons/icon-info.svg" alt="tooltip" />
+                  </div>
+                  <span>Team collaboration</span>
+                </div>
+                <div class="comparison-table-product comparison-table-open-source">
+                  Single user
+                </div>
+              </div>
+              <div class="comparison-table-item">
+                <div class="comparison-table-feature">
+                  <div class="tooltip"
+                    data-tippy-content="The number of targets you can input for a single scan, such as subnets, IPs, domains and more.">
+                    <img src="./img/icons/icon-info.svg" alt="tooltip" />
+                  </div>
+                  <span>Targets per scan</span>
+                </div>
+                <div class="comparison-table-product comparison-table-open-source">
+                  1
+                </div>
+              </div>
+              <div class="comparison-table-item">
+                <div class="comparison-table-feature">
+                  <div class="tooltip"
+                    data-tippy-content="Automated scheduled scans that detect when a your target’s attack surface changes.">
+                    <img src="./img/icons/icon-info.svg" alt="tooltip" />
+                  </div>
+                  <span>Monitoring with change detection and notifications</span>
+                </div>
+                <div class="comparison-table-product comparison-table-open-source">
+                  <img src="./img/icons/pricing-error.svg" alt="error icon" />
+                </div>
+              </div>
+              <div class="comparison-table-item">
+                <div class="comparison-table-feature">
+                  <div class="tooltip"
+                    data-tippy-content="Pre-configured rules that flag when an interesting constellation of data points is found during a scan.">
+                    <img src="./img/icons/icon-info.svg" alt="tooltip" />
+                  </div>
+                  <span>Correlations</span>
+                </div>
+                <div class="comparison-table-product comparison-table-open-source">
+                  <img src="./img/icons/pricing-error.svg" alt="error icon" />
+                </div>
+              </div>
+              <div class="comparison-table-item">
+                <div class="comparison-table-feature">
+                  <div class="tooltip"
+                    data-tippy-content="The ability to perform data collection step-by-step to precisely extract the data you’re interested in.">
+                    <img src="./img/icons/icon-info.svg" alt="tooltip" />
+                  </div>
+                  <span>Investigations</span>
+                </div>
+                <div class="comparison-table-product comparison-table-open-source">
+                  <img src="./img/icons/pricing-error.svg" alt="error icon" />
+                </div>
+              </div>
+              <div class="comparison-table-item">
+                <div class="comparison-table-feature">
+                  <div class="tooltip"
+                    data-tippy-content="Professional customer support to help you get the most out of SpiderFoot.">
+                    <img src="./img/icons/icon-info.svg" alt="tooltip" />
+                  </div>
+                  <span>Customer support</span>
+                </div>
+                <div class="comparison-table-product comparison-table-open-source">
+                  <img src="./img/icons/pricing-error.svg" alt="error icon" />
+                </div>
+              </div>
+              <div class="comparison-table-item">
+                <div class="comparison-table-feature">
+                  <div class="tooltip"
+                    data-tippy-content="SpiderFoot can run external tools like Nmap, CMSeeK and more to obtain more data about your target.">
+                    <img src="./img/icons/icon-info.svg" alt="tooltip" />
+                  </div>
+                  <span>Third party tools</span>
+                </div>
+                <div class="comparison-table-product comparison-table-open-source">
+                  Install yourself
+                </div>
+              </div>
+              <div class="comparison-table-item">
+                <div class="comparison-table-feature">
+                  <div class="tooltip"
+                    data-tippy-content="SpiderFoot HX provides a fully documented API to control scanning, result extraction and configuration.">
+                    <img src="./img/icons/icon-info.svg" alt="tooltip" />
+                  </div>
+                  <span>API</span>
+                </div>
+                <div class="comparison-table-product comparison-table-open-source">
+                  <img src="./img/icons/pricing-error.svg" alt="error icon" />
+                </div>
+              </div>
+              <div class="comparison-table-item">
+                <div class="comparison-table-feature">
+                  <div class="tooltip"
+                    data-tippy-content="Collect data from the dark web with built-in TOR integration.">
+                    <img src="./img/icons/icon-info.svg" alt="tooltip" />
+                  </div>
+                  <span>TOR integration</span>
+                </div>
+                <div class="comparison-table-product comparison-table-open-source">
+                  Yourself
+                </div>
+              </div>
+              <div class="comparison-table-item">
+                <div class="comparison-table-feature">
+                  <div class="tooltip"
+                    data-tippy-content="Automatically take screenshots of dark web, similar domains, etc.">
+                    <img src="./img/icons/icon-info.svg" alt="tooltip" />
+                  </div>
+                  <span>Screenshotting</span>
+                </div>
+                <div class="comparison-table-product comparison-table-open-source">
+                  <img src="./img/icons/pricing-error.svg" alt="error icon" />
+                </div>
+              </div>
+              <div class="comparison-table-item">
+                <div class="comparison-table-feature">
+                  <div class="tooltip"
+                    data-tippy-content="Feed scan data in real time to ElasticSearch, Splunk or REST endpoints.">
+                    <img src="./img/icons/icon-info.svg" alt="tooltip" />
+                  </div>
+                  <span>ElasticSearch, Splunk and REST feeds</span>
+                </div>
+                <div class="comparison-table-product comparison-table-open-source">
+                  <img src="./img/icons/pricing-error.svg" alt="error icon" />
+                </div>
+              </div>
+              <div class="comparison-table-item comparison-table-download">
+                <a href="#" class="btn btn-secondary">Download Now</a>
+              </div>
+            </div>
+            <div class="row comparison-table-heading">
+              <div class="comparison-table-heading__feature">Feature</div>
+              <div class="comparison-table-heading__name">Commercial Use</div>
+            </div>
+            <div class="comparison-table-list">
+              <div class="comparison-table-item">
+                <div class="comparison-table-feature">
+                  <div class="tooltip"
+                    data-tippy-content="How SpiderFoot is installed, maintained, secured and upgraded with each release.">
+                    <img src="./img/icons/icon-info.svg" alt="tooltip" />
+                  </div>
+                  <span>Installation, security, management and updates
+                    How SpiderFoot is installed, </span>
+                </div>
+                <div class="comparison-table-product comparison-table-spiderfoothx">
+                  Professionally managed
+                </div>
+              </div>
+              <div class="comparison-table-item">
+                <div class="comparison-table-feature">
+                  <div class="tooltip"
+                    data-tippy-content="SpiderFoot HX runs on a distributed and optimized cloud infrastructure giving it a significant performance boost compared to the open source version.">
+                    <img src="./img/icons/icon-info.svg" alt="tooltip" />
+                  </div>
+                  <span>Performance</span>
+                </div>
+                <div class="comparison-table-product comparison-table-spiderfoothx">
+                  5x-10x
+                </div>
+              </div>
+              <div class="comparison-table-item">
+                <div class="comparison-table-feature">
+                  <div class="tooltip" data-tippy-content="Add your own capabilities and integrations in Python.">
+                    <img src="./img/icons/icon-info.svg" alt="tooltip" />
+                  </div>
+                  <span>Extend functionality with Python</span>
+                </div>
+                <div class="comparison-table-product comparison-table-spiderfoothx">
+                  <img src="./img/icons/pricing-success.svg" alt="checked icon" />
+                </div>
+              </div>
+              <div class="comparison-table-item">
+                <div class="comparison-table-feature">
+                  <div class="tooltip"
+                    data-tippy-content="Security of your SpiderFoot installation, and the strength of authentication of users.">
+                    <img src="./img/icons/icon-info.svg" alt="tooltip" />
+                  </div>
+                  <span>Security & anonymity</span>
+                </div>
+                <div class="comparison-table-product comparison-table-spiderfoothx">
+                  Professionally managed & 2FA
+                </div>
+              </div>
+              <div class="comparison-table-item">
+                <div class="comparison-table-feature">
+                  <div class="tooltip"
+                    data-tippy-content="Multiple named users who can collaborate on scans and analysis with different tiers of access.">
+                    <img src="./img/icons/icon-info.svg" alt="tooltip" />
+                  </div>
+                  <span>Team collaboration</span>
+                </div>
+                <div class="comparison-table-product comparison-table-spiderfoothx">
+                  Multiple named users with role-based access
+                </div>
+              </div>
+              <div class="comparison-table-item">
+                <div class="comparison-table-feature">
+                  <div class="tooltip"
+                    data-tippy-content="The number of targets you can input for a single scan, such as subnets, IPs, domains and more.">
+                    <img src="./img/icons/icon-info.svg" alt="tooltip" />
+                  </div>
+                  <span>Targets per scan</span>
+                </div>
+                <div class="comparison-table-product comparison-table-spiderfoothx">
+                  Many
+                </div>
+              </div>
+              <div class="comparison-table-item">
+                <div class="comparison-table-feature">
+                  <div class="tooltip"
+                    data-tippy-content="Automated scheduled scans that detect when a your target’s attack surface changes.">
+                    <img src="./img/icons/icon-info.svg" alt="tooltip" />
+                  </div>
+                  <span>Monitoring with change detection and notifications</span>
+                </div>
+                <div class="comparison-table-product comparison-table-spiderfoothx">
+                  <img src="./img/icons/pricing-success.svg" alt="checked icon" />
+                </div>
+              </div>
+              <div class="comparison-table-item">
+                <div class="comparison-table-feature">
+                  <div class="tooltip"
+                    data-tippy-content="Pre-configured rules that flag when an interesting constellation of data points is found during a scan.">
+                    <img src="./img/icons/icon-info.svg" alt="tooltip" />
+                  </div>
+                  <span>Correlations</span>
+                </div>
+                <div class="comparison-table-product comparison-table-spiderfoothx">
+                  <img src="./img/icons/pricing-success.svg" alt="checked icon" />
+                </div>
+              </div>
+              <div class="comparison-table-item">
+                <div class="comparison-table-feature">
+                  <div class="tooltip"
+                    data-tippy-content="The ability to perform data collection step-by-step to precisely extract the data you’re interested in.">
+                    <img src="./img/icons/icon-info.svg" alt="tooltip" />
+                  </div>
+                  <span>Investigations</span>
+                </div>
+                <div class="comparison-table-product comparison-table-spiderfoothx">
+                  <img src="./img/icons/pricing-success.svg" alt="checked icon" />
+                </div>
+              </div>
+              <div class="comparison-table-item">
+                <div class="comparison-table-feature">
+                  <div class="tooltip"
+                    data-tippy-content="Professional customer support to help you get the most out of SpiderFoot.">
+                    <img src="./img/icons/icon-info.svg" alt="tooltip" />
+                  </div>
+                  <span>Customer support</span>
+                </div>
+                <div class="comparison-table-product comparison-table-spiderfoothx">
+                  <img src="./img/icons/pricing-success.svg" alt="checked icon" />
+                </div>
+              </div>
+              <div class="comparison-table-item">
+                <div class="comparison-table-feature">
+                  <div class="tooltip"
+                    data-tippy-content="SpiderFoot can run external tools like Nmap, CMSeeK and more to obtain more data about your target.">
+                    <img src="./img/icons/icon-info.svg" alt="tooltip" />
+                  </div>
+                  <span>Third party tools</span>
+                </div>
+                <div class="comparison-table-product comparison-table-spiderfoothx">
+                  Pre-installed & configured
+                </div>
+              </div>
+              <div class="comparison-table-item">
+                <div class="comparison-table-feature">
+                  <div class="tooltip"
+                    data-tippy-content="SpiderFoot HX provides a fully documented API to control scanning, result extraction and configuration.">
+                    <img src="./img/icons/icon-info.svg" alt="tooltip" />
+                  </div>
+                  <span>API</span>
+                </div>
+                <div class="comparison-table-product comparison-table-spiderfoothx">
+                  <img src="./img/icons/pricing-success.svg" alt="checked icon" />
+                </div>
+              </div>
+              <div class="comparison-table-item">
+                <div class="comparison-table-feature">
+                  <div class="tooltip" data-tippy-content="Collect data from the dark web with built-in TOR integration.">
+                    <img src="./img/icons/icon-info.svg" alt="tooltip" />
+                  </div>
+                  <span>TOR integration</span>
+                </div>
+                <div class="comparison-table-product comparison-table-spiderfoothx">
+                  <img src="./img/icons/pricing-success.svg" alt="checked icon" />
+                </div>
+              </div>
+              <div class="comparison-table-item">
+                <div class="comparison-table-feature">
+                  <div class="tooltip"
+                    data-tippy-content="Automatically take screenshots of dark web, similar domains, etc.">
+                    <img src="./img/icons/icon-info.svg" alt="tooltip" />
+                  </div>
+                  <span>Screenshotting</span>
+                </div>
+                <div class="comparison-table-product comparison-table-spiderfoothx">
+                  <img src="./img/icons/pricing-success.svg" alt="checked icon" />
+                </div>
+              </div>
+              <div class="comparison-table-item">
+                <div class="comparison-table-feature">
+                  <div class="tooltip"
+                    data-tippy-content="Feed scan data in real time to ElasticSearch, Splunk or REST endpoints.">
+                    <img src="./img/icons/icon-info.svg" alt="tooltip" />
+                  </div>
+                  <span>ElasticSearch, Splunk and REST feeds</span>
+                </div>
+                <div class="comparison-table-product comparison-table-spiderfoothx">
+                  <img src="./img/icons/pricing-success.svg" alt="checked icon" />
+                </div>
+              </div>
+              <div class="comparison-table-item comparison-table-download">
+                <div class="subscribe-form subscribe-form-long">
+                  <form action="">
+                    <div class="form-group">
+                      <input type="email" name="main-screen-email" placeholder="Your Email" />
+                      <button type="submit"><span>Get started</span><i class="icon-icon-arrow-right"></i></button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+<footer class="footer">
+  <img src="./img/footer-background.svg" alt="background-image" class="footer-background">
+  <div class="container">
+    <div class="footer-columns-wrapper">
+      <div class="footer-column">
+        <a href="#" class="footer-logo">
+          <img src="./img/main-logo.svg" alt="spidefoor logo">
+        </a>
+        <div class="footer-description">
+          Are you still using ad-hoc scripts to query APIs, 
+          scrape websites and filter through false positives? 
+          SpiderFoot HX enables you to “fire and forget” 
+          scan to collect OSINT from over 100 data sources 
+          without writing a single line of code.
+        </div>
+      </div>
+      <div class="footer-column">
+        <h5 class="footer__title">Product</h5>
+        <ul class="footer-menu">
+          <li class="menu-item">
+            <a href="#">See it in action</a>
+          </li>
+          <li class="menu-item">
+            <a href="#">Features</a>
+          </li>
+          <li class="menu-item">
+            <a href="#">Integrations</a>
+          </li>
+          <li class="menu-item">
+            <a href="#">Pricing</a>
+          </li>
+          <li class="menu-item">
+            <a href="#">Testimonials</a>
+          </li>
+          <li class="menu-item">
+            <a href="#">About Us</a>
+          </li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h5 class="footer__title">Use Cases</h5>
+        <ul class="footer-menu">
+          <li class="menu-item">
+            <a href="#">Attack Surface Monitoring</a>
+          </li>
+          <li class="menu-item">
+            <a href="#">Cyber Threat Intelligence</a>
+          </li>
+          <li class="menu-item">
+            <a href="#">Security Assessments</a>
+          </li>
+          <li class="menu-item">
+            <a href="#">Asset Discovery</a>
+          </li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h5 class="footer__title">Community</h5>
+          <ul class="footer-menu">
+            <li class="menu-item">
+              <a href="#">Github NewsRepo</a>
+            </li>
+            <li class="menu-item">
+              <a href="#">Documentation</a>
+            </li>
+            <li class="menu-item">
+              <a href="#">Discord</a>
+            </li>
+            <li class="menu-item">
+              <a href="#">Open Source vs. HX</a>
+            </li>
+            <li class="menu-item">
+              <a href="#">News</a>
+            </li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <ul class="footer-socials">
+          <li class="footer-socials-item">
+            <a href="#">
+              <i class="icon-icon-linkedin"></i>
+              LinkedIn 
+            </a>
+          </li>
+          <li class="footer-socials-item">
+            <a href="#">
+              <i class="icon-icon-youtube"></i>
+              Youtube 
+            </a>
+          </li>
+          <li class="footer-socials-item">
+            <a href="#">
+              <i class="icon-icon-twitter"></i>
+              Twitter 
+            </a>
+          </li>
+          <li class="footer-socials-item">
+            <a href="#">
+              <i class="icon-icon-github"></i>
+              Github 
+            </a>
+          </li>
+          <li class="footer-socials-item">
+            <a href="#">
+              <i class="icon-icon-footer-envelope"></i>
+              Support 
+            </a>
+          </li>
+          <li class="footer-socials-item">
+            <a href="#">
+              <i class="icon-icon-discord"></i>
+              Discord 
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <div class="subscribe-form">
+          <form action="">
+            <div class="subscribe-form-account">Create a SpiderFoot HX account</div>
+            <div class="form-group">
+              <input type="email" name="main-screen-email" placeholder="Your Email" />
+              <button type="submit"><i class="icon-icon-arrow-right"></i></button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright">
+       <div class="footer-copyright-column left-column">
+        © 2021, SM7 Software OÜ <a href="#">Privacy</a> <a href="#">Terms</a>
+       </div>
+       <div class="footer-copyright-column right-column">
+        This site is protected by reCAPTCHA and the Google <a href="#"> Privacy Policy</a> and <a href="#"> Terms of Service</a> apply
+       </div>
+    </div>
+  </div>
+</footer>
+
+<div class="modal modal-download" id="downloadPopup">
+  <div class="modal__body">
+    <div class="modal__content">
+      <div class="modal__close">
+        
+      </div>
+      <div class="download-image">
+        <img src="./img/spider.svg" alt="spider logo">
+      </div>
+      <div class="download-content">
+        <div class="heading-3 text-center">Download and start</div>
+        <p class="app__description">You can pay your plan in SpiderFoot platform, but firstly you need to subscribe to get the premium version</p>
+        <div class="subscribe-form subscribe-form-long">
+          <form action="">
+            <div class="form-group">
+              <input type="email" name="main-screen-email" placeholder="Your Email" />
+              <button type="submit">Get started<i class="icon-icon-arrow-right"></i></button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="js/jquery.min.js"></script>
+<script src="js/libs.min.js"></script>
+<script src="js/script.min.js"></script>
+</body>
+</html>

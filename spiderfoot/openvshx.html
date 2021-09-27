@@ -73,7 +73,7 @@
                 <a href="#">Pricing</a>
               </li>
               <li class="menu-item">
-                <a href="comparison.html">Open Source vs. HX</a>
+                <a href="openvshx.html">Open Source vs. HX</a>
               </li>
               <li class="menu-item">
                 <a href="#">Modules</a>
@@ -100,15 +100,72 @@
   <div class="body-padding"></div>
 
 <main>
-  <section class="other-page">
-    <img class="other-page-background" src="./img/abstract-background.png" alt="background image">
-    <div class="container full-height">
-      <div class="row full-height">
-        <div class="col-md-8 d-flex flex-column align-center">
-          <div class="text-center text-wrapper">
-            <h1 class="heading-1">Thanks for your download!</h1>
-            <h4>You received a letter to your email</h4>
-            <a href="index.html" class="btn btn-primary">Go to Main Page</a>
+  <section class="comparison">
+    <div class="container">
+      <h1 class="app__title">Open Source or HX?</h1>
+      <p class="app__description">Decide whether the open source version of SpiderFoot or SpiderFoot HX is best for your
+        needs.</p>
+      <div class="row">
+        <div class="col-md-6">
+          <div class="comparison-block open-source">
+            <div class="comparison-block__title">
+              Open Source
+            </div>
+            <div class="comparison-block__bar">
+              <div class="bar-item bar-open">
+                <span class="bar-percentage">25%</span>
+                <span class="bar-text">Functionality open<span>
+              </div>
+              <div class="bar-item bar-closed">
+                <span class="bar-percentage">75%</span>
+                <span class="bar-text">Functionality closed<span>
+              </div>
+            </div>
+            <div class="comparison-block__description">
+              <p>Self-hosted and focused on data collection. If your use case is focused solely on data collection on
+                small to medium targets and you wish to run SpiderFoot within your own infrastructure that you set up,
+                secure and maintain with support from the community, the open source version is probably the best option
+                for you.</p>
+              <p>
+                With the open source version, most of the modules from SpiderFoot HX are available, but the ability to
+                navigate, visualize, monitor and investigate is not available. You'll be able to export the data from
+                SpiderFoot in CSV, JSON or GEXF and work with the data in other tools.
+              </p>
+              <p>
+                The open source version is typically used by hobbyists and those new to OSINT.
+              </p>
+            </div>
+            <a href="#" class="btn btn-secondary">Download Now</a>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="comparison-block spiderfoot-hx">
+            <div class="comparison-block__title">SpiderFoot HX</div>
+            <div class="comparison-block__bar">
+              <div class="bar-item bar-open">
+                <span class="bar-percentage">100%</span>
+                <span class="bar-text">Functionality open<span>
+              </div>
+            </div>
+            <div class="comparison-block__description">
+              <p>SpiderFoot HX is designed for professionals who use OSINT as part of their work. When you want to
+                collect and monitor OSINT data as well as quickly find what's important through rich data navigation and
+                visualization features, SpiderFoot HX is what you're looking for.</p>
+              <p>SpiderFoot HX is designed for professionals who use OSINT as part of their work. When you want to
+                collect and monitor OSINT data as well as quickly find what's important through rich data navigation and
+                visualization features, SpiderFoot HX is what you're looking for.</p>
+              <p>SpiderFoot HX is typically the choice for organizations that provide security assessment services,
+                companies with their own threat intelligence teams, firms performing professional digital investigations
+                and law enforcement.</p>
+            </div>
+            <div class="subscribe-form subscribe-form-long">
+              <form action="">
+                <div class="form-group">
+                  <input type="email" name="main-screen-email" placeholder="Your Email" />
+                  <button type="submit">Get started<i class="icon-icon-arrow-right"></i></button>
+                </div>
+              </form>
+            </div>
           </div>
         </div>
       </div>

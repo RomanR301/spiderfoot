@@ -32,6 +32,21 @@
       }
     }
   }
+  &-secondary {
+    background: transparent;
+    border: 2px solid $primaryColor;
+    border-radius: 100px;
+    padding: 12px 24px;
+    font-size: 18px;
+    line-height: 25px;
+    font-weight: 400;
+    text-transform: unset;
+    color: $primaryColor;
+    &:hover {
+      color: $whiteColor;
+      background: $primaryColor;
+    }
+  }
   &-white {
     background: transparent;
     border: 2px solid $whiteColor;
@@ -55,9 +70,6 @@
         @include transition(.3);
       }
     }
-  }
-  &-secondary {
-    
   }
 }
 
