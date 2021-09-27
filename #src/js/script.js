@@ -106,6 +106,49 @@ let front = {
           },
         }
       });
+      var newsSlider = new Swiper(".news-slider", {
+        slidesPerView: 3,
+        spaceBetween: 30,
+        loop: true,
+        navigation: {
+          nextEl: ".news-next",
+          prevEl: ".news-prev",
+        },
+        breakpoints: {
+          320: {
+            slidesPerView: 1,
+          },
+          576: {
+            slidesPerView: 2,
+          },
+          767: {
+            slidesPerView: 3,
+          },
+        }
+      });
+      var booksSlider = new Swiper(".books-slider", {
+        slidesPerView: 5,
+        spaceBetween: 30,
+        loop: true,
+        navigation: {
+          nextEl: ".books-next",
+          prevEl: ".books-prev",
+        },
+        breakpoints: {
+          320: {
+            slidesPerView: 1,
+          },
+          576: {
+            slidesPerView: 2,
+          },
+          767: {
+            slidesPerView: 4,
+          },
+          992: {
+            slidesPerView: 5,
+          }
+        }
+      });
       if (window.matchMedia('(max-width: 992px)').matches) {
         $(document).on('click', '.menu-item-has-children .sub-menu-button', function(){
           $(this).toggleClass('menuOpen').next().slideToggle();
