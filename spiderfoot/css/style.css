@@ -921,7 +921,7 @@ input[type=number] {
   content: '';
   position: absolute;
   left: 4px;
-  top: 8px;
+  top: 11px;
   width: 8px;
   height: 8px;
   background: #079DD9;
@@ -4792,17 +4792,19 @@ mark.current {
 }
 
 .documentation .entry-content h1 {
-  margin-bottom: 40px;
+  margin: 15px 0 25px 0;
 }
 
 .documentation .entry-content strong {
   font-weight: 600;
 }
 
+.documentation .entry-content code {
+  font-size: 16px;
+}
+
 .documentation .entry-content pre {
   background: #2f3241;
-  font-size: 16px;
-  line-height: 24px;
   overflow-y: auto;
   overflow-x: auto;
   padding: 5px;
@@ -4810,6 +4812,8 @@ mark.current {
 }
 
 .documentation .entry-content pre code {
+  font-size: 16px;
+  line-height: 24px;
   display: block;
   white-space: pre-wrap;
   overflow-wrap: break-word;
@@ -6431,6 +6435,10 @@ mark.current {
 
   .comparison-table-spiderfoothx {
     font-size: 16px;
+  }
+
+  .documentation .entry-content {
+    overflow: hidden;
   }
 }
 

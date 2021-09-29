@@ -222,25 +222,31 @@ mark.current {
 }
 
 .documentation .entry-content {
+  @media (max-width: $breakpoint-sm) {
+    overflow: hidden;
+  }
   padding-bottom: 60px;
   * {
     font-family: "Futura PT", serif;
   }
   h1 {
-    margin-bottom: 40px;
+    margin: 15px 0 25px 0;
   }
   strong {
     font-weight: 600;
   }
+  code {
+    font-size: 16px;
+  }
   pre {
     background: rgb(47, 50, 65);
-    font-size: 16px;
-    line-height: 24px;
     overflow-y: auto;
     overflow-x: auto;
     padding: 5px;
     margin-bottom: 16px;
     code {
+      font-size: 16px;
+      line-height: 24px;
       display: block;
       white-space: pre-wrap;
       overflow-wrap: break-word;
