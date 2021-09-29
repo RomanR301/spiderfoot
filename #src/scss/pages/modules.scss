@@ -193,6 +193,7 @@
   }
   &__icon {
     img {
+      height: auto;
       width: 32px;
       min-width: 32px;
       object-fit: contain;

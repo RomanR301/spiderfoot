@@ -105,6 +105,71 @@ main {
 .navbar {
   display: flex;
   align-items: center;
+  .sub-menu {
+    @media (min-width: $breakpoint-lg) {
+      opacity: 0;
+      visibility: hidden;
+      position: absolute;
+      min-width: 160px;
+      left: 0;
+      top: 40px;
+      background: $whiteColor;
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.16);
+      border-radius: 8px;
+      @include transition(0.3);
+      pointer-events: none;
+      transform: translate(0, 10px);
+    }
+    @media (max-width: $breakpoint-lg) {
+      padding: 20px 0 0 0;
+      display: none;
+    }
+    & .menu-item {
+      width: 100%;
+      margin: 0;
+      @media (max-width: $breakpoint-lg) {
+        margin: 0 0 28px 0;
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+      a {
+        line-height: 25px;
+        width: 100%;
+        padding: 8px 16px;
+        color: $defaultText;
+        @media (max-width: $breakpoint-lg) {
+          font-size: 24px;
+          color: $whiteColor;
+        }
+        &:hover {
+          @media (min-width: $breakpoint-lg) {
+            background: rgba(7, 157, 217, 0.2);
+          }
+        }
+        &:before {
+          display: none;
+        }
+      }
+    }
+    &-button {
+      cursor: pointer;
+      font-size: 12px;
+      margin-left: 6px;
+      @include transition(0.3);
+      @media (max-width: $breakpoint-lg) {
+        top: 1px;
+        width: 30px;
+        height: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 18px;
+        right: -3px;
+        position: absolute;
+      }
+    }
+  }
   &-abstracts {
     display: none;
   }
@@ -160,71 +225,6 @@ main {
   }
 }
 
-.sub-menu {
-  @media (min-width: $breakpoint-lg) {
-    opacity: 0;
-    visibility: hidden;
-    position: absolute;
-    min-width: 160px;
-    left: 0;
-    top: 40px;
-    background: $whiteColor;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.16);
-    border-radius: 8px;
-    @include transition(0.3);
-    pointer-events: none;
-    transform: translate(0, 10px);
-  }
-  @media (max-width: $breakpoint-lg) {
-    padding: 20px 0 0 0;
-    display: none;
-  }
-  & .menu-item {
-    width: 100%;
-    margin: 0;
-    @media (max-width: $breakpoint-lg) {
-      margin: 0 0 28px 0;
-      &:last-child {
-        margin-bottom: 0;
-      }
-    }
-    a {
-      line-height: 25px;
-      width: 100%;
-      padding: 8px 16px;
-      color: $defaultText;
-      @media (max-width: $breakpoint-lg) {
-        font-size: 24px;
-        color: $whiteColor;
-      }
-      &:hover {
-        @media (min-width: $breakpoint-lg) {
-          background: rgba(7, 157, 217, 0.2);
-        }
-      }
-      &:before {
-        display: none;
-      }
-    }
-  }
-  &-button {
-    cursor: pointer;
-    font-size: 12px;
-    margin-left: 6px;
-    @include transition(0.3);
-    @media (max-width: $breakpoint-lg) {
-      top: 1px;
-      width: 30px;
-      height: 30px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 18px;
-      right: -3px;
-      position: absolute;
-    }
-  }
-}
 
 .hamburger {
   display: none;

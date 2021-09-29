@@ -3,6 +3,9 @@
 
 .about {
   margin: 60px 0;
+  @media (max-width: $breakpoint-lg) {
+    margin: 36px 0;
+  }
   position: relative;
   .row {
     align-items: center;
@@ -14,20 +17,42 @@
     right: 0;
     top: 50%;
     transform: translate(0, -50%) rotate(180deg);
+    @media (max-width: $breakpoint-xl) {
+      display: none;
+    }
   }
   &-icon {
     width: 100%;
     display: block;
     object-fit: contain;
+    @media (max-width: $breakpoint-lg) {
+      margin-top: 30px;
+    }
+    @media (max-width: $breakpoint-md) {
+      width: 207px;
+    }
+    img {
+      @include defaultIcon(contain);
+    }
   }
   &-ceo {
     margin-bottom: 120px;
+    @media (max-width: $breakpoint-lg) {
+      margin-bottom: 60px;
+    }
   }
   &-quote {
+    @media (max-width: $breakpoint-lg) {
+      margin-bottom: 16px;
+    }
     &-author {
       display: flex;
       align-items: center;
       margin-bottom: 36px;
+      @media (max-width: $breakpoint-md) {
+        flex-direction: column;
+        align-items: flex-start;
+      }
     }
     &-image {
       width: 140px;
@@ -35,6 +60,9 @@
       margin-right: 30px;
       border-radius: 100%;
       overflow: hidden;
+      @media (max-width: $breakpoint-md) {
+       margin: 0 0 16px 0;
+      }
       img {
         width: 100%;
         object-fit: cover;
@@ -124,6 +152,12 @@
 
 .goal {
   margin-bottom: 100px;
+  @media (max-width: $breakpoint-md) {
+    margin-bottom: 60px;
+  }
+  .col-md-4 {
+    margin-bottom: 16px;
+  }
   &-heading {
     margin-bottom: 16px;
   }
@@ -158,6 +192,14 @@
   &-heading {
     align-items: center;
     display: flex;
+    @media (max-width: $breakpoint-md) {
+      flex-direction: column;
+      position: relative;
+      .heading-3 {
+        width: 70%;
+        text-align: center;
+      }
+    }
   }
   &-control {
     display: flex;
@@ -169,14 +211,28 @@
       &:after {
         font-size: 30px;
       }
+      @media (max-width: $breakpoint-md) {
+        margin: 0;
+        position: absolute;
+        top: 50%;
+        transform: translate(0, -50%);
+      }
     }
   }
   &-slider {
     padding: 30px 0 60px 0;
   }
+  .swiper-slide {
+    @media (max-width: $breakpoint-md) {
+      width: 65%;
+    }
+  }
   &-item {
     display: flex;
     @include transition(.3);
+    @media (max-width: $breakpoint-md) {
+      width: 100%;
+    }
     img {
       width: 100%;
       height: 100%;
@@ -185,12 +241,19 @@
     &:hover {
       filter: drop-shadow(0px 30px 30px rgba(0, 0, 0, 0.2));
       transform: translate(0, -15px);
+      &:hover {
+        transform: none;
+        filter: none;
+      }
     }
   }
 }
 
 .sponsors {
   margin-bottom: 100px;
+  @media (max-width: $breakpoint-md) {
+    margin-bottom: 60px;
+  }
   &-heading {
     margin-bottom: 20px;
   }
@@ -240,6 +303,9 @@
     @include blur(64px);
     border-radius: 20px;
     padding: 20px;
+    @media (max-width: $breakpoint-lg) {
+      margin-top: 16px;
+    }
     .stars-image {
       display: block;
       width: 100%;
@@ -293,19 +359,43 @@
 .about-news-carousel {
   .about-news-heading {
     display: flex;
+    align-items: center;
     margin-bottom: 30px;
+    @media (max-width: $breakpoint-md) {
+      position: relative;
+      justify-content: center;
+      .heading-3 {
+        width: 70%;
+        text-align: center;
+      }
+    }
   }
   .news-carousel-navigation {
     display: flex;
+    margin-bottom: 0;
+    @media (max-width: $breakpoint-md) {
+      width: 100%;
+      justify-content: space-between;
+      margin: 0;
+      position: absolute;
+      top: 50%;
+      transform: translate(0, -50%);
+    }
   }
   .news-prev {
     margin-left: 30px;
+    @media (max-width: $breakpoint-md) {
+      margin: 0;
+    }
     &:after {
       color: $primaryColor;
     }
   }
   .news-next {
     margin-left: 30px;
+    @media (max-width: $breakpoint-md) {
+      margin: 0;
+    }
     &:after {
       color: $primaryColor;
     }

@@ -26,6 +26,7 @@
     display: block;
     z-index: -1;
     pointer-events: none;
+    height: auto;
     @media (max-width: $breakpoint-md) {
       height: 100%;
       object-fit: cover;
@@ -37,10 +38,12 @@
     top: -10px;
     right: 0;
     pointer-events: none;
+    height: auto;
     @media (max-width: $breakpoint-lg) {
       display: none;
     }
     &-half {
+      height: auto;
       pointer-events: none;
       position: absolute;
       top: 500px;
@@ -108,6 +111,7 @@
   img {
     display: block;
     width: 100%;
+    height: auto;
     object-fit: cover;
     border-radius: 10px;
   }
@@ -180,6 +184,7 @@
   }
   img {
     width: 100%;
+    height: auto;
     display: block;
     object-fit: cover;
   }
@@ -718,6 +723,7 @@
       overflow: hidden;
       img {
         width: 100%;
+        height: auto;
         display: block;
         @include transition(.3);
       }

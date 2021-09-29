@@ -1,0 +1,1589 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="">
+  <!-- <link rel="apple-touch-icon" sizes="180x180" href="./img/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="./img/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="./img/favicon-16x16.png"> -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.min.css">
+  <title>spiderfoot</title>
+</head>
+
+
+<body>
+  <header class="header">
+    <div class="container">
+      <a href="index.html" class="header-logo">
+        <img src="./img/main-logo.svg" alt="spiderfoot logo">
+      </a>
+      <div class="navbar">
+        <img src="./img/abstract-background.png" alt="abstracts background" class="navbar-abstracts" />
+        <ul class="menu">
+          <li class="menu-item menu-item-has-children">
+            <a href="#">Product</a>
+            <i class="icon-icon-shevron sub-menu-button"></i>
+            <ul class="sub-menu">
+              <li class="menu-item">
+                <a href="#action">See it in action!</a>
+              </li>
+              <li class="menu-item">
+                <a href="#features">Features</a>
+              </li>
+              <li class="menu-item">
+                <a href="#intergations">Integrations</a>
+              </li>
+              <li class="menu-item">
+                <a href="#pricing">Pricing</a>
+              </li>
+              <li class="menu-item">
+                <a href="#testimonials">Testimonials</a>
+              </li>
+            </ul>
+          </li>
+          <li class="menu-item menu-item-has-children">
+            <a href="#">Use Cases</a>
+            <i class="icon-icon-shevron sub-menu-button"></i>
+            <ul class="sub-menu">
+              <li class="menu-item">
+                <a href="news-single.html">Use Case 1</a>
+              </li>
+              <li class="menu-item">
+                <a href="news-single.html">Use Case 2</a>
+              </li>
+              <li class="menu-item">
+                <a href="news-single.html">Use Case 3</a>
+              </li>
+              <li class="menu-item">
+                <a href="news-single.html">Use Case 4</a>
+              </li>
+            </ul>
+          </li>
+          <li class="menu-item menu-item-has-children">
+            <img src="./img/icons/icon-github.svg" alt="GitHub logo">
+            <a href="#">Community</a>
+            <i class="icon-icon-shevron sub-menu-button"></i>
+            <ul class="sub-menu">
+              <li class="menu-item">
+                <a href="documentation.html">Documentation</a>
+              </li>
+            </ul>
+          </li>
+          <li class="menu-item">
+            <a href="news.html">News</a>
+          </li>
+          <li class="menu-item">
+            <a href="about.html">About</a>
+          </li>
+        </ul>
+        <button class="btn btn-primary has-icon header-cta modalTrigger" data-modal="#downloadPopup"><i class="icon-icon-user"></i>SIGN IN</button>
+      </div>
+      <div class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </header>
+  <div class="body-padding"></div>
+
+<main>
+  <section class="documentation">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3 col-xs-12 about-column">
+          <ul id="markdown-toc" class="about-list">
+            <li class="about-list__item"><a id="markdown-toc-about">About</a>
+              <ul class="sub-menu">
+                <li class="sub-menu__item">
+                  <a href="#what-is-spiderfoot">
+                    What is SpiderFoot? </a>
+                </li>
+                <li class="sub-menu__item">
+                  <a href="#what-is-osint">
+                    What is OSINT? </a>
+                </li>
+                <li class="sub-menu__item">
+                  <a href="#what-can-i-do-with-spiderfoot">
+                    What can I do with SpiderFoot? </a>
+                </li>
+              </ul>
+            </li>
+            <li class="about-list__item"><a id="markdown-toc-about">SpiderFoot HX</a>
+              <ul class="sub-menu">
+                <li class="sub-menu__item">
+                  <a href="#spiderfoot-hx">
+                    Additional Capabilities </a>
+                </li>
+              </ul>
+            </li>
+            <li class="about-list__item"><a id="markdown-toc-about">Seeking Help</a>
+              <ul class="sub-menu">
+                <li class="sub-menu__item">
+                  <a href="#help">
+                    Seeking Help </a>
+                </li>
+              </ul>
+            </li>
+            <li class="about-list__item"><a id="markdown-toc-about">Pre-Requisites</a>
+              <ul class="sub-menu">
+                <li class="sub-menu__item">
+                  <a href="#using-docker">
+                    Using Docker </a>
+                </li>
+                <li class="sub-menu__item">
+                  <a href="#linuxbsdsolaris">
+                    Linux/BSD/Solaris </a>
+                </li>
+                <li class="sub-menu__item">
+                  <a href="#windows">
+                    Windows </a>
+                </li>
+                <li class="sub-menu__item">
+                  <a href="#macos-x">
+                    MacOS </a>
+                </li>
+              </ul>
+            </li>
+            <li class="about-list__item"><a id="markdown-toc-about">Installing</a>
+              <ul class="sub-menu">
+                <li class="sub-menu__item">
+                  <a href="#installing">
+                    Installing </a>
+                </li>
+                <li class="sub-menu__item">
+                  <a href="#from-git">
+                    From git </a>
+                </li>
+                <li class="sub-menu__item">
+                  <a href="#as-a-package">
+                    As a package </a>
+                </li>
+              </ul>
+            </li>
+            <li class="about-list__item"><a id="markdown-toc-about">Starting SpiderFoot</a>
+              <ul class="sub-menu">
+                <li class="sub-menu__item">
+                  <a href="#starting">
+                    Starting SpiderFoot </a>
+                </li>
+                <li class="sub-menu__item">
+                  <a href="#webui-mode">
+                    Web UI mode </a>
+                </li>
+                <li class="sub-menu__item">
+                  <a href="#caution">
+                    Caution! </a>
+                </li>
+                <li class="sub-menu__item">
+                  <a href="#scan-mode">
+                    Scan mode </a>
+                </li>
+              </ul>
+            </li>
+            <li class="about-list__item"><a id="markdown-toc-about">Security</a>
+              <ul class="sub-menu">
+                <li class="sub-menu__item">
+                  <a href="#security">
+                    Security </a>
+                </li>
+                <li class="sub-menu__item">
+                  <a href="#auth">
+                    Authentication </a>
+                </li>
+                <li class="sub-menu__item">
+                  <a href="#ssl">
+                    TLS/SSL </a>
+                </li>
+              </ul>
+            </li>
+            <li class="about-list__item"><a id="markdown-toc-about">API Keys</a>
+              <ul class="sub-menu">
+                <li class="sub-menu__item">
+                  <a href="#api">
+                    API Keys </a>
+                </li>
+              </ul>
+            </li>
+            <li class="about-list__item"><a id="markdown-toc-about">Configuring SpiderFoot</a>
+              <ul class="sub-menu">
+                <li class="sub-menu__item">
+                  <a href="#configuring">
+                    Configuring SpiderFoot </a>
+                </li>
+              </ul>
+            </li>
+            <li class="about-list__item"><a id="markdown-toc-about">Using SpiderFoot</a>
+              <ul class="sub-menu">
+                <li class="sub-menu__item">
+                  <a href="#usage">
+                    Using SpiderFoot </a>
+                </li>
+                <li class="sub-menu__item">
+                  <a href="#running">
+                    Running a Scan </a>
+                </li>
+                <li class="sub-menu__item">
+                  <a href="#managing">
+                    Scan Results </a>
+                </li>
+                <li class="sub-menu__item">
+                  <a href="#browsing">
+                    Browsing Results </a>
+                </li>
+                <li class="sub-menu__item">
+                  <a href="#falsepos">
+                    Setting False Positives </a>
+                </li>
+                <li class="sub-menu__item">
+                  <a href="#searching">
+                    Searching Results </a>
+                </li>
+                <li class="sub-menu__item">
+                  <a href="#managing-scans">
+                    Managing Scans </a>
+                </li>
+                <li class="sub-menu__item">
+                  <a href="#tor-integration">
+                    Tor Integration </a>
+                </li>
+              </ul>
+            </li>
+            <li class="about-list__item"><a id="markdown-toc-about">Modules</a>
+              <ul class="sub-menu">
+                <li class="sub-menu__item">
+                  <a href="#modules">
+                    Modules </a>
+                </li>
+                <li class="sub-menu__item">
+                  <a href="#overview">
+                    Overview </a>
+                </li>
+                <li class="sub-menu__item">
+                  <a href="#module-list">
+                    Module List </a>
+                </li>
+                <li class="sub-menu__item">
+                  <a href="#data-elements">
+                    Data Elements </a>
+                </li>
+                <li class="sub-menu__item">
+                  <a href="#writing-a-module">
+                    Writing a Module </a>
+                </li>
+              </ul>
+            </li>
+            <li class="about-list__item"><a id="markdown-toc-about">Database</a>
+              <ul class="sub-menu">
+                <li class="sub-menu__item">
+                  <a href="#db">
+                    Database </a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+        <div class="col-md-9 col-xs-12">
+          <div class="search-form d-flex align-middle">
+            <input type="search" placeholder="Search..." class="search-form__input">
+            <button data-search="next" class="search-form__btn"><img
+                src="./img/icons/shevron-thin.svg"
+                alt="icon arrow bottom"></button>
+            <button data-search="prev" class="search-form__btn"><img
+                src="./img/icons/shevron-thin.svg"
+                alt="icon arrow top"></button>
+          </div>
+          <div class="entry-content">
+            <h1 class="heading-2">Documentation</h1>
+            <h3 id="about">About</h3>
+
+
+
+            <h4 id="what-is-spiderfoot">What is SpiderFoot?</h4>
+
+
+
+            <p>SpiderFoot is a reconnaissance tool that automatically queries over 100 public data sources (OSINT) to
+              gather intelligence on IP addresses, domain names, e-mail addresses, names and more. You simply specify
+              the target you want to investigate, pick which modules to enable and then SpiderFoot will collect data to
+              build up an understanding of all the entities and how they relate to each other.</p>
+
+
+
+            <h4 id="what-is-osint">What is OSINT?</h4>
+
+
+
+            <p>OSINT (Open Source Intelligence) is data available in the public domain which might reveal interesting
+              information about your target. This includes DNS, Whois, Web pages, passive DNS, spam blacklists, file
+              meta data, threat intelligence lists as well as services like SHODAN, HaveIBeenPwned? and more.</p>
+
+
+
+            <h4 id="what-can-i-do-with-spiderfoot">What can I do with SpiderFoot?</h4>
+
+
+
+            <p>The data returned from a SpiderFoot scan will reveal a lot of information about your target, providing
+              insight into possible data leaks, vulnerabilities or other sensitive information that can be leveraged
+              during a penetration test, red team exercise or for threat intelligence. Try it out against your own
+              network to see what you might have exposed!</p>
+
+
+
+            <p><a href="#toc">Up to table of contents</a></p>
+
+
+
+            <h3 id="spiderfoot-hx">SpiderFoot HX</h3>
+
+
+
+            <p>SpiderFoot HX builds upon the open source version’s module base to offer enhanced functionality all
+              aspects of SpiderFoot, including performance, usability, data visualisation, security and more.</p>
+
+
+
+            <h4 id="what-is-osint">Additional Capabilities</h4>
+
+
+
+            <p>In addition to the data collection capabilities of the open source version, SpiderFoot HX takes things a
+              step further with the following features:
+            </p>
+
+
+
+            <ul>
+              <li><strong>No installation or setup needed at all.</strong> Once you register, everything is ready to go.
+                No Python dependencies to install, no virtual machines to spin up or ensuring you have enough
+                compute/memory/disk to run a large scan.</li>
+              <li><strong>Investigations.</strong> Sometimes, you don’t want full automation of your scan and want to
+                step through the data collection process step-by-step, module-by-module. Investigations provide you with
+                a visual way to take full control of the scanning process.</li>
+              <li><strong>Multi-target scanning.</strong> In cases where you have multiple entities (domains, e-mail
+                addresses, etc.) related to the same target, you can supply them all as targets of the one scan. This
+                enables SpiderFoot to better identify relationships and find relevant information.</li>
+              <li><strong>Scans are faster.</strong> Thanks to the completely overhauled backend architecture of
+                SpiderFoot HX, scans run up to 10x faster than the open source version. This means you get the data you
+                need, faster.</li>
+              <li><strong>OSINT monitoring.</strong> Run scans automatically on a daily, weekly or monthly basis at a
+                time of your choice and have all changes between scans automatically tracked and alerted on.</li>
+              <li><strong>Email notifications.</strong> Receive email notifications when SpiderFoot scans finish, or
+                when scheduled scans identify changes between scan runs.</li>
+              <li><strong>Slack integration.</strong> Prefer your notifications over Slack? No problem; input your Slack
+                hook URL and you’ll see notifications in Slack for scan completions and/or change notifications from
+                scheduled scans.</li>
+              <li><strong>Import scan targets.</strong> When scanning many targets, it might be easier to load them in
+                via CSV, or as exported from <a rel="noopener noreferrer" href="https://www.hunch.ly"
+                  target="_new">Hunchly</a>.</li>
+              <li><strong>More modules.</strong> SpiderFoot HX adds additional modules for UDP port scanning,
+                identification of languages used in content and screenshotting of certain content like social media
+                profiles, dark web sites and security-sensitive webpages such as those that accept credentials.</li>
+              <li><strong>Correlations.</strong> During and after a scan completes, the SpiderFoot HX correlation engine
+                is looking for certain conditions that should be immediately investigated. This includes anomalies but
+                also open cloud storage buckets, hostnames only found from certain sources and more.</li>
+              <li><strong>Reporting &amp; Visualisations.</strong> Slice and dice your scan results by data type, data
+                family, module, module category and data source. Look at each data point in-depth to see how it was
+                discovered, its relationships and more.</li>
+              <li><strong>Team collaboration.</strong> Got a team working on OSINT and threat intelligence? With
+                SpiderFoot HX, you can have multiple users with role-based access control, collaborating on scans and
+                investigations.</li>
+              <li><strong>Annotations.</strong> Add notes to scan results and pull them out with the API for rich
+                integrations with internal SIEM tools, investigative platforms and ticketing systems.</li>
+              <li><strong>Security.</strong> Two-factor authentication (2FA), role-based access control and a fully
+                locked down cloud infrastructure mean you don’t need to deal with the security of your OSINT platform
+                and investigations.</li>
+              <li><strong>Anonymous.</strong> SpiderFoot HX has TOR integration out of the box and provides no way for a
+                scanned entity to know that it’s you doing the scanning.</li>
+              <li><strong>Custom Scan Profiles.</strong> Got a particular combination of modules you like to use for
+                your scans but don’t like having to define them each time? With SpiderFoot HX, you can define scan
+                profiles and re-use them for future scans.</li>
+              <li><strong>SpiderFoot HX API.</strong> The SpiderFoot HX API is a fully documented RESTful API that
+                supports virtually all UI functions so you can orchestrate the platform and extract data
+                programmatically.</li>
+            </ul>
+
+
+
+            <p><a href="#toc">Up to table of contents</a></p>
+
+
+
+            <h3 id="help">Seeking Help</h3>
+
+
+
+            <p>Aside from this document, you’ll be able to get help with SpiderFoot from a number of places:</p>
+
+
+
+            <ul>
+              <li>Chatting with others in the community on our <a rel="noreferrer noopener"
+                  href="https://discord.gg/vyvztrG" target="_blank">Discord server</a></li>
+              <li>CLI tutorials on&nbsp;<a href="https://asciinema.org/~spiderfoot">asciinema.org/~spiderfoot</a> (open
+                source version only)</li>
+              <li>Checking out the short videos on our <a rel="noreferrer noopener"
+                  href="https://www.youtube.com/channel/UCujtHhVLNeiJA_3F-lghD-w" target="_blank">YouTube channel</a>
+                (SpiderFoot HX only)</li>
+              <li>Raising an issue in the&nbsp;<a href="https://github.com/smicallef/spiderfoot/issues">Github repo</a>
+              </li>
+              <li>Emailing&nbsp;<a
+                  href="https://www.spiderfoot.net/documentation/support@spiderfoot.net">support@spiderfoot.net</a></li>
+            </ul>
+
+
+
+            <p><a href="#toc">Up to table of contents</a></p>
+
+
+
+            <h3 id="reqs">Pre-Requisites</h3>
+
+
+
+            <h4 id="using-docker">Using Docker</h4>
+
+
+
+            <p>If you would like to side-step having to install anything to get SpiderFoot running on Linux,&nbsp;follow
+              the instructions <a
+                href="https://www.spiderfoot.net/a-simpler-way-to-get-spiderfoot-running-is-to-use-docker/">here</a>&nbsp;to
+              run SpiderFoot in a Docker container.</p>
+
+
+
+            <h4 id="linuxbsdsolaris">Linux/BSD/Solaris</h4>
+
+
+
+            <p>SpiderFoot is written in Python 3, so to run on Linux/Solaris/FreeBSD/etc. you need Python 3.6+
+              installed, in addition to the various module dependencies. To install the dependencies using&nbsp;<a
+                href="https://pypi.python.org/pypi/pip">PIP</a>, run the following:</p>
+
+
+
+            <pre class="wp-block-code"><code>$ pip3 install -r requirements.txt</code></pre>
+
+
+
+            <h4 id="windows">Windows</h4>
+
+
+
+            <p>If you’re using the legacy SpiderFoot 2.12 for Windows, you’ll have a compiled executable (.EXE) file and
+              so all dependencies are packaged with it. No third party tools/libraries need to be installed, not even
+              Python.</p>
+
+
+
+            <p><span class="has-inline-color has-vivid-red-color">After version 2.12 however, SpiderFoot no longer ships
+                with a .EXE file for running on Windows due to the stale nature of py2exe and inability to build some
+                dependencies properly anymore on Windows.</span></p>
+
+
+
+            <p>Fortunately, with Python for Windows you can follow the below instructions to get SpiderFoot dependencies
+              installed on Windows easily:</p>
+
+
+
+            <ol>
+              <li>Install&nbsp;<a href="https://www.python.org/downloads/release/python-2716/">Python for Windows</a>
+              </li>
+              <li>Install PIP by downloading&nbsp;<a href="https://bootstrap.pypa.io/get-pip.py">this file</a>&nbsp;and
+                running it with Python simply by doing:&nbsp;<code>python get-pip.py</code></li>
+              <li>Run pip as you would have for Linux by doing:&nbsp;<code>pip3 install -r requirements.txt</code></li>
+              <li>(Optional if you want to run from the repository and not a packaged release)&nbsp;<a
+                  href="https://git-scm.com/download/win">Install git</a></li>
+            </ol>
+
+
+
+            <h4 id="macos-x">MacOS</h4>
+
+
+
+            <p>Installing on MacOS X is facilitated by using the Homebrew package manager to install Python 3.5+, pip
+              and then installing SpiderFoot dependencies as you would on Linux:</p>
+
+
+
+            <ol>
+              <li>First, make sure you have Homebrew installed. Try running&nbsp;<code>brew</code>&nbsp;and if that
+                doesn’t work,&nbsp;<a href="https://brew.sh/">install it</a>.</li>
+              <li>Install Python 3.5+ with&nbsp;<code>brew install python</code> and this will also install pip</li>
+              <li>With pip you can now install the SpiderFoot dependencies as you would on Linux
+                with&nbsp;<code>pip3 install -r requirements.txt</code></li>
+              <li>(Optional if you want to run from the repository and not a packaged release) Install git
+                with&nbsp;<code>brew install git</code></li>
+            </ol>
+
+
+
+            <p><a href="#toc">Up to table of contents</a></p>
+
+
+
+            <h3 id="installing">Installing</h3>
+
+
+
+            <p>SpiderFoot can be installed using&nbsp;<code>git</code>&nbsp;(this is the recommended approach as you’ll
+              always have the latest version by simply doing a&nbsp;<code>git pull</code>), or by downloading a tarball
+              of a release. The approach is the same regardless of platform:</p>
+
+
+
+            <h4 id="from-git">From git</h4>
+
+
+
+            <pre class="wp-block-code"><code>$ git clone https://github.com/smicallef/spiderfoot.git
+$ cd spiderfoot
+~/spiderfoot$</code></pre>
+
+
+
+            <h4 id="as-a-package">As a package</h4>
+
+
+
+            <pre class="wp-block-code"><code>$ wget https://github.com/smicallef/spiderfoot/archive/v3.0-final.tar.gz
+$ tar zxvf v3.0-final.tar.gz
+$ cd spiderfoot
+~/spiderfoot$</code></pre>
+
+
+
+            <p><a href="#toc">Up to table of contents</a></p>
+
+
+
+            <h3 id="starting">Running SpiderFoot</h3>
+
+
+
+            <p>To run SpiderFoot, simply execute&nbsp;<code>sf.py</code>&nbsp;from the directory you extracted/pulled
+              SpiderFoot into. Ensure you’re using Python 3; on some Linux distributions <code>python</code> is Python
+              2.7, so best to be explicit and use <code>python3</code>:</p>
+
+
+
+            <pre class="wp-block-code"><code>~/spiderfoot$ python3 sf.py
+Attempting to verify database and update if necessary...
+You must specify a target when running in scan mode. Try --help for guidance.</code></pre>
+
+
+
+            <p>This is telling you that you’re missing command-line arguments, because SpiderFoot doesn’t know whether
+              you want to run it in scan mode, or in Web UI mode.</p>
+
+
+
+            <p>Use <strong>Web UI mode </strong>when you want to have SpiderFoot run with its built-in web server,
+              enabling you to run scans, browse data and manage configuration via a web browser. Web UI mode also
+              enables you to drive SpiderFoot using <code>sfcli.py</code> in a client/server model.</p>
+
+
+
+            <p>Use <strong>scan mode </strong>when you just want to have SpiderFoot fire off a scan and parse the
+              results as output. No web server is started in this mode.</p>
+
+
+
+            <h4 id="webui-mode">Web UI mode</h4>
+
+
+
+            <p>To start SpiderFoot in Web UI mode, you need to tell it what IP and port to listen to. The below example
+              binds SpiderFoot to localhost (127.0.0.1) on port 5001:</p>
+
+
+
+            <pre class="wp-block-code"><code>~/spiderfoot$ python3 sf.py -l 127.0.0.1:5001</code></pre>
+
+
+
+            <p>Once executed, a web-server will be started, which will listen on 127.0.0.1:5001. You can then use the
+              web-browser of your choice by browsing to https://127.0.0.1:5001. Or, since version 2.10 you can use the
+              CLI, which by default will connect to the server locally, on 127.0.0.1:5001, or you can provide a URL of
+              your server explicitly:</p>
+
+
+
+            <pre class="wp-block-code"><code>~/spiderfoot$ python3 sfcli.py -s https://127.0.0.1:5001</code></pre>
+
+
+
+            <p>If you wish to make SpiderFoot accessible from another system, for example running it on a server and
+              controlling it remotely using <code>sfcli.py</code>, then you can specify an external IP for SpiderFoot to
+              bind to, or use 0.0.0.0 so that it binds to all addresses, including 127.0.0.1:</p>
+
+
+
+            <pre class="wp-block-code"><code>~/spiderfoot$ python3 sf.py -l 0.0.0.0:5001</code></pre>
+
+
+
+            <p>Then to use the CLI from a remote system where the&nbsp;<code>sfcli.py</code>&nbsp;file has been copied
+              to, you would run:</p>
+
+
+
+            <pre class="wp-block-code"><code>$ python3 sfcli.py -u https://&lt;remote ip&gt;:5001</code></pre>
+
+
+
+            <p>Run&nbsp;<code>python3 ./sfcli.py --help</code>&nbsp;to better understand how to use the client CLI.</p>
+
+
+
+            <p>If port 5001 is used by another application on your system, you can change the port:</p>
+
+
+
+            <pre class="wp-block-code"><code>~/spiderfoot$ python3 sf.py -l 127.0.0.1:9999</code></pre>
+
+
+
+            <p>Once started, you will see something similar to this, which means you are ready to go. If you instead see
+              an error message about missing modules, please go back and ensure you’ve installed all the pre-requisites.
+            </p>
+
+
+
+            <pre class="wp-block-code"><code>~/spiderfoot$ python3 ./sf.py -l 0.0.0.0:5001
+Attempting to verify database and update if necessary...
+Starting web server at https://0.0.0.0:5001 ...
+
+
+*************************************************************
+Use SpiderFoot by starting your web browser of choice and
+browse to https://&lt;IP of this host&gt;:5001
+*************************************************************
+
+
+[08/Jul/2019:14:40:53] ENGINE Listening for SIGHUP.
+[08/Jul/2019:14:40:53] ENGINE Listening for SIGTERM.
+[08/Jul/2019:14:40:53] ENGINE Listening for SIGUSR1.
+[08/Jul/2019:14:40:53] ENGINE Bus STARTING
+[08/Jul/2019:14:40:53] ENGINE Serving on https://0.0.0.0:5001
+[08/Jul/2019:14:40:53] ENGINE Bus STARTED</code></pre>
+
+
+
+            <p><strong><span class="has-inline-color has-vivid-red-color">Caution!</span></strong></p>
+
+
+
+            <p><span class="has-inline-color has-vivid-red-color">By default, SpiderFoot does not authenticate users
+                connecting to its user-interface or serve over HTTPS, so avoid running it on a server/workstation that
+                can be accessed from untrusted devices, as they will be able to control SpiderFoot remotely and initiate
+                scans from your devices. As of SpiderFoot 2.7, to use authentication and HTTPS, see the&nbsp;<a
+                  href="#security">Security</a>&nbsp;section below.</span></p>
+
+
+
+            <h4 id="scan-mode">Scan mode</h4>
+
+
+
+            <p>New in SpiderFoot 3.0 is the ability to run SpiderFoot entirely via the command-line (without starting a
+              web server) to run a scan. You can see all the available command-line arguments by using the
+              <code>--help</code> flag:
+            </p>
+
+
+
+            <pre class="wp-block-code"><code>~/spiderfoot$ python3 ./sf.py --help
+usage: sf.py [-h] [-d] [-l IP:port] [-m mod1,mod2,...] [-M] [-s TARGET]
+         [-t type1,type2,...] [-T] [-o tab|csv|json] [-n] [-r] [-S LENGTH]
+         [-D DELIMITER] [-f] [-F FILTER] [-x] [-q]
+
+SpiderFoot 3.0: Open Source Intelligence Automation.
+
+optional arguments:
+-h, --help          show this help message and exit
+-d, --debug         Enable debug output.
+-l IP:port          IP and port to listen on.
+-m mod1,mod2,...    Modules to enable.
+-M, --modules       List available modules.
+-s TARGET           Target for the scan.
+-t type1,type2,...  Event types to collect.
+-T, --types         List available event types.
+-o tab|csv|json     Output format. Tab is default.
+-n                  Strip newlines from data.
+-r                  Include the source data field in tab/csv output.
+-S LENGTH           Maximum data length to display. By default, all data is
+                  shown.
+-D DELIMITER        Delimiter to use for CSV output. Default is ,.
+-f                  Filter out other event types that weren't requested with
+                  -t.
+-F FILTER           Filter out a set of event types.
+-x                  STRICT MODE. Will only enable modules that can directly
+                  consume your target, and if -t was specified only those
+                  events will be consumed by modules. This overrides -t
+                  and -m options.
+-q                  Disable logging.
+</code></pre>
+
+
+
+            <p>The command-line arguments are fairly self explanatory, however a few require some explaining. First,
+              some simple examples…</p>
+
+
+
+            <p>The below example is running a scan against binarypool.com as a target, enabling a very simple module,
+              <code>sfp_dnsresolve</code> which performs simple DNS resolutions of any identified IP addresses and
+              hostnames.
+            </p>
+
+
+
+            <pre class="wp-block-code"><code>~/spiderfoot$ python3 ./sf.py -m sfp_dnsresolve -s binarypool.com
+Attempting to verify database and update if necessary...
+[*] Modules enabled (3): sfp_dnsresolve,sfp__stor_db,sfp__stor_stdout
+[*] Scan [FA0D8528] initiated.
+[*] Downloading configuration data from: https://publicsuffix.org/list/effective_tld_names.dat
+[*] Identifying aliases for specified target(s)
+[*] Aliases identified: [{'value': '104.236.67.238', 'type': 'IP_ADDRESS'}, {'value': 'binarypool.com', 'type': 'INTERNET_NAME'}, {'value': b'binarypool.com', 'type': 'INTERNET_NAME'}]
+[*] sfp_dnsresolve module loaded.
+[*] sfp__stor_db module loaded.
+[*] sfp__stor_stdout module loaded.
+SpiderFoot UI                 	Internet Name                                	binarypool.com
+sfp_dnsresolve                	IP Address                                   	104.236.67.238
+sfp_dnsresolve                	Domain Name (Parent)                         	com
+[*] Scan [FA0D8528] completed.
+[*] Scan completed with status FINISHED</code></pre>
+
+
+
+            <p>We can see that it is a little noisy, so we can add the <code>-q</code> flag to reduce output to just the
+              data from the scan:</p>
+
+
+
+            <pre class="wp-block-code"><code>~/spiderfoot$ python3 ./sf.py -m sfp_dnsresolve -s binarypool.com -q
+Attempting to verify database and update if necessary...
+SpiderFoot UI                 	Internet Name                                	binarypool.com
+sfp_dnsresolve                	IP Address                                   	104.236.67.238
+sfp_dnsresolve                	Domain Name                                  	binarypool.com
+SpiderFoot UI                 	Domain Name                                  	binarypool.com
+</code></pre>
+
+
+
+            <p>It’s also not necessary to specify any module, and just run all modules for your scan:</p>
+
+
+
+            <pre class="wp-block-code"><code>~/spiderfoot$ python3 ./sf.py -s binarypool.com -q
+Attempting to verify database and update if necessary...
+WARNING: You didn't specify any modules or types, so all will be enabled.
+SpiderFoot UI                 	Internet Name                                	binarypool.com
+sfp_hunter                    	Email Address                                	steve@binarypool.com
+sfp_emailrep                  	Raw Data from RIRs/APIs                      	{'references': 5, 'email': 'steve@binarypool.com', 'suspicious': False, 'reputation': 'high', 'details': {'valid_mx': True, 'data_breach': True, 'suspicious_tld': False, 'spf_strict': False, 'days_since_domain_creation': 5315, 'last_seen': '10/16/2019', 'credentials_leaked_recent': False, 'malicious_activity': False, 'spoofable': True, 'dmarc_enforced': False, 'profiles': ['pastebin', 'twitter'], 'free_provider': False, 'disposable': False, 'deliverable': True, 'spam': False, 'domain_reputation': 'high', 'credentials_leaked': True, 'accept_all': True, 'new_domain': False, 'domain_exists': True, 'first_seen': '05/05/2012', 'malicious_activity_recent': False, 'blacklisted': False}}
+sfp_email                     	Email Address                                	steve@binarypool.com
+sfp_emailrep                  	Hacked Email Address                         	steve@binarypool.com [Unknown]
+...</code></pre>
+
+
+
+            <p>So far this has all been fairly simple. But if we want to do something a little more advanced, such as
+              getting every possible e-mail address on a domain name (<code>-t EMAILADDR</code>), using only modules
+              that take our target directly as input (referred to as “strict mode”, <code>-x</code>), and only get
+              e-mail address but not any other data (<code>-f</code>), we can do the following:</p>
+
+
+
+            <pre class="wp-block-code"><code>~/spiderfoot$ python3 ./sf.py -s spiderfoot.net -t EMAILADDR -f -x -q
+Attempting to verify database and update if necessary...
+sfp_hunter                    	Email Address                                	support@spiderfoot.net
+~/spiderfoot$</code></pre>
+
+
+
+            <p><a href="#toc">Up to table of contents</a></p>
+
+
+
+            <h3 id="security">Security</h3>
+
+
+
+            <p>Since version 2.7, SpiderFoot introduced authentication as well as TLS/SSL support. These are automatic
+              based on the presence of specific files.</p>
+
+
+
+            <h4 id="auth">Authentication</h4>
+
+
+
+            <p>SpiderFoot will require basic digest authentication if a file named&nbsp;<code>passwd</code>&nbsp;exists
+              in the SpiderFoot root directory. The format of the file is simple – just create an entry per account, in
+              the format of:</p>
+
+
+
+            <pre class="wp-block-code"><code>username:password</code></pre>
+
+
+
+            <p>For example:</p>
+
+
+
+            <pre class="wp-block-code"><code>admin:supersecretpassword</code></pre>
+
+
+
+            <p>Once the file is created, restart SpiderFoot.</p>
+
+
+
+            <h4 id="ssl">TLS/SSL</h4>
+
+
+
+            <p>SpiderFoot will serve HTTPS (and only that) if it detects the existence of a public certificate and key
+              file in SpiderFoot’s root directory. This means whatever port you set SpiderFoot to listen on is the port
+              TLS/SSL will be used. It is not possible for SpiderFoot to serve both HTTP and HTTPS simultaneously on
+              different ports. If you need to do that, an nginx proxy in front of SpiderFoot would be a better solution.
+            </p>
+
+
+
+            <p>Simply place two files in the SpiderFoot directory –&nbsp;<code>spiderfoot.crt</code>&nbsp;(RSA public
+              key in PEM format) and&nbsp;<code>spiderfoot.key</code>&nbsp;(RSA private key in PEM format). Restart
+              SpiderFoot and you will now be serving HTTPS only.</p>
+
+
+
+            <p>A <a href="https://github.com/smicallef/spiderfoot/blob/master/generate-certificate">helper script</a>
+              has been provided for Linux users to generate self-signed certificate using OpenSSL, or you can follow the
+              instructions <a
+                href="https://stackoverflow.com/questions/10175812/how-to-create-a-self-signed-certificate-with-openssl">in
+                this StackOverflow article</a>.</p>
+
+
+
+            <p><a href="#toc">Up to table of contents</a></p>
+
+
+
+            <h3 id="api">API Keys</h3>
+
+
+
+            <p>Many SpiderFoot modules require API keys to function to their fullest extent (or at all), so you will
+              need to go to each service and obtain an API key where you feel that having such a key would add value to
+              your scans. Instructions for how to obtain each API key can be found within the Settings for the
+              respective module:</p>
+
+
+
+            <figure class="wp-block-image size-large"><img loading="lazy" width="1024" height="451"
+                src="https://www.spiderfoot.net/wp-content/uploads/2020/10/config-1024x451.png" alt=""
+                class="wp-image-1832"
+                srcset="https://www.spiderfoot.net/wp-content/uploads/2020/10/config-1024x451.png 1024w, https://www.spiderfoot.net/wp-content/uploads/2020/10/config-300x132.png 300w, https://www.spiderfoot.net/wp-content/uploads/2020/10/config-768x338.png 768w, https://www.spiderfoot.net/wp-content/uploads/2020/10/config.png 1062w"
+                sizes="(max-width: 1024px) 100vw, 1024px"></figure>
+
+
+
+            <p><a href="#toc">Up to table of contents</a></p>
+
+
+
+            <h3 id="configuring">Configuring SpiderFoot</h3>
+
+
+
+            <p>One of the main principles behind SpiderFoot is to be highly configurable. Every setting is available in
+              the user interface within the Settings section and should be adequately explained there. Just a few key
+              points to note:</p>
+
+
+
+            <ul>
+              <li>API keys can be imported and exported between SpiderFoot and SpiderFoot HX using the “Import API Keys”
+                and “Export API Keys” functions. The format is also a simple CSV so can also be manipulated outside of
+                SpiderFoot to be loaded in, if you prefer.</li>
+              <li>When Debugging is enabled, a lot of logs are generated and can sometimes result in error messages
+                about database locking. This appears to be harmless towards the scan but can mean that logs get dropped.
+              </li>
+              <li>It is worth going through the modules you intend to rely upon heavily to ensure they are configured
+                appropriately for your needs, most importantly the DNS-related modules as they tend to have a knock-on
+                impact to many other modules.</li>
+            </ul>
+
+
+
+            <p><a href="#toc">Up to table of contents</a></p>
+
+
+
+            <h3 id="usage">Using SpiderFoot</h3>
+
+
+
+            <h4 id="running">Running a Scan</h4>
+
+
+
+            <p>When you run SpiderFoot in Web UI mode for the first time, there is no historical data, so you should be
+              presented with a screen like the following:</p>
+
+
+
+            <figure class="wp-block-image"><img loading="lazy" width="948" height="204"
+                src="https://134.209.41.85/wp-content/uploads/2019/07/spiderfoot-newscan.png" alt=""
+                class="wp-image-399"
+                srcset="https://www.spiderfoot.net/wp-content/uploads/2019/07/spiderfoot-newscan.png 948w, https://www.spiderfoot.net/wp-content/uploads/2019/07/spiderfoot-newscan-300x65.png 300w, https://www.spiderfoot.net/wp-content/uploads/2019/07/spiderfoot-newscan-768x165.png 768w"
+                sizes="(max-width: 948px) 100vw, 948px"></figure>
+
+
+
+            <p>To initiate a scan, click on the ‘New Scan’ button in the top menu bar. You will then need to define a
+              name for your scan (these are non-unique) and a target (also non-unique):</p>
+
+
+
+            <figure class="wp-block-image"><img loading="lazy" width="637" height="495"
+                src="https://134.209.41.85/wp-content/uploads/2019/07/spiderfoot-newscan3.png" alt=""
+                class="wp-image-400"
+                srcset="https://www.spiderfoot.net/wp-content/uploads/2019/07/spiderfoot-newscan3.png 637w, https://www.spiderfoot.net/wp-content/uploads/2019/07/spiderfoot-newscan3-300x233.png 300w"
+                sizes="(max-width: 637px) 100vw, 637px"></figure>
+
+
+
+            <p>You can then define how you would like to run the scan – either by use case (the tab selected by
+              default), by data required or by module.</p>
+
+
+
+            <p>Module-based scanning is for more advanced users who are familiar with the behavior and data provided by
+              different modules, and want more control over the scan:</p>
+
+
+
+            <figure class="wp-block-image"><img loading="lazy" width="955" height="439"
+                src="https://134.209.41.85/wp-content/uploads/2019/07/spiderfoot-modules.png" alt=""
+                class="wp-image-402"
+                srcset="https://www.spiderfoot.net/wp-content/uploads/2019/07/spiderfoot-modules.png 955w, https://www.spiderfoot.net/wp-content/uploads/2019/07/spiderfoot-modules-300x138.png 300w, https://www.spiderfoot.net/wp-content/uploads/2019/07/spiderfoot-modules-768x353.png 768w"
+                sizes="(max-width: 955px) 100vw, 955px"></figure>
+
+
+
+            <p>Beware though, there is no dependency checking when scanning by module, only for scanning by required
+              data. This means that if you select a module that depends on event types only provided by other modules,
+              but those modules are not selected, you will get no results.</p>
+
+
+
+            <h4 id="managing">Scan Results</h4>
+
+
+
+            <p>From the moment you click ‘Run Scan’, you will be taken to a screen for monitoring your scan in near real
+              time:</p>
+
+
+
+            <figure class="wp-block-image"><img loading="lazy" width="1024" height="589"
+                src="https://134.209.41.85/wp-content/uploads/2019/07/spiderfoot-running-1024x589.png" alt=""
+                class="wp-image-404"
+                srcset="https://www.spiderfoot.net/wp-content/uploads/2019/07/spiderfoot-running-1024x589.png 1024w, https://www.spiderfoot.net/wp-content/uploads/2019/07/spiderfoot-running-300x173.png 300w, https://www.spiderfoot.net/wp-content/uploads/2019/07/spiderfoot-running-768x442.png 768w, https://www.spiderfoot.net/wp-content/uploads/2019/07/spiderfoot-running.png 1179w"
+                sizes="(max-width: 1024px) 100vw, 1024px"></figure>
+
+
+
+            <p>That screen is made up of a graph showing a break down of the data obtained so far plus log messages
+              generated by SpiderFoot and its modules.</p>
+
+
+
+            <p>The bars of the graph are clickable, taking you to the result table for that particular data type.</p>
+
+
+
+            <h4 id="browsing">Browsing Results</h4>
+
+
+
+            <p>By clicking on the ‘Browse’ button for a scan, you can browse the data by type:</p>
+
+
+
+            <figure class="wp-block-image"><img loading="lazy" width="948" height="683"
+                src="https://134.209.41.85/wp-content/uploads/2019/07/spiderfoot-browse.png" alt="" class="wp-image-406"
+                srcset="https://www.spiderfoot.net/wp-content/uploads/2019/07/spiderfoot-browse.png 948w, https://www.spiderfoot.net/wp-content/uploads/2019/07/spiderfoot-browse-300x216.png 300w, https://www.spiderfoot.net/wp-content/uploads/2019/07/spiderfoot-browse-768x553.png 768w"
+                sizes="(max-width: 948px) 100vw, 948px"></figure>
+
+
+
+            <p>This data is exportable and searchable. Click the Search box to get a pop-up explaining how to perform
+              searches.</p>
+
+
+
+            <p>By clicking on one of the data types, you will be presented with the actual data:</p>
+
+
+
+            <figure class="wp-block-image"><img loading="lazy" width="947" height="457"
+                src="https://134.209.41.85/wp-content/uploads/2019/07/spiderfoot-browse2.png" alt=""
+                class="wp-image-408"
+                srcset="https://www.spiderfoot.net/wp-content/uploads/2019/07/spiderfoot-browse2.png 947w, https://www.spiderfoot.net/wp-content/uploads/2019/07/spiderfoot-browse2-300x145.png 300w, https://www.spiderfoot.net/wp-content/uploads/2019/07/spiderfoot-browse2-768x371.png 768w"
+                sizes="(max-width: 947px) 100vw, 947px"></figure>
+
+
+
+            <p>The fields displayed are explained as follows:</p>
+
+
+
+            <ul>
+              <li>Checkbox field: Use this to set/unset fields as false positive. Once at least one is checked, click
+                the orange False Positive button above to set/unset the record.</li>
+              <li>Data Element: The data the module was able to obtain about your target.</li>
+              <li>Source Data Element: The data the module received as the basis for its data colletion. In the example
+                above, the sfp_portscan_tcp module received an event about an open port, and used that to obtain the
+                banner on that port.</li>
+              <li>Source Module: The module that identified this data.</li>
+              <li>Identified: When the data was identified by the module.</li>
+            </ul>
+
+
+
+            <p>You can click the black icons to modify how this data is represented. For instance you can get a unique
+              data representation by clicking the Unique Data View icon:</p>
+
+
+
+            <figure class="wp-block-image"><img loading="lazy" width="945" height="329"
+                src="https://134.209.41.85/wp-content/uploads/2019/07/spiderfoot-unique.png" alt="" class="wp-image-410"
+                srcset="https://www.spiderfoot.net/wp-content/uploads/2019/07/spiderfoot-unique.png 945w, https://www.spiderfoot.net/wp-content/uploads/2019/07/spiderfoot-unique-300x104.png 300w, https://www.spiderfoot.net/wp-content/uploads/2019/07/spiderfoot-unique-768x267.png 768w"
+                sizes="(max-width: 945px) 100vw, 945px"></figure>
+
+
+
+            <h4 id="falsepos">Setting False Positives</h4>
+
+
+
+            <p>Version 2.6.0 introduced the ability to set data records as false positive. As indicated in the previous
+              section, use the checkbox and the orange button to set/unset records as false positive.</p>
+
+
+
+            <p>Once you have set records as false positive, you will see an indicator next to those records, and have
+              the ability to filter them from view, as shown below:</p>
+
+
+
+            <figure class="wp-block-image"><img loading="lazy" width="1024" height="274"
+                src="https://134.209.41.85/wp-content/uploads/2019/07/spiderfoot-falsepos2-1024x274.png" alt=""
+                class="wp-image-412"
+                srcset="https://www.spiderfoot.net/wp-content/uploads/2019/07/spiderfoot-falsepos2-1024x274.png 1024w, https://www.spiderfoot.net/wp-content/uploads/2019/07/spiderfoot-falsepos2-300x80.png 300w, https://www.spiderfoot.net/wp-content/uploads/2019/07/spiderfoot-falsepos2-768x206.png 768w, https://www.spiderfoot.net/wp-content/uploads/2019/07/spiderfoot-falsepos2.png 1188w"
+                sizes="(max-width: 1024px) 100vw, 1024px"></figure>
+
+
+
+            <p><strong>NOTE</strong>: Records can only be set to false positive once a scan has finished running. This
+              is because setting a record to false positive also results in all child data elements being set to false
+              positive. This obviously cannot be done if the scan is still running and can thus lead to an inconsistent
+              state in the back-end. The UI will prevent you from doing so.</p>
+
+
+
+            <p>The result of a record being set to false positive, aside from the indicator in the data table view and
+              exports, is that such data will not be shown in the node graphs.</p>
+
+
+
+            <h4 id="searching">Searching Results</h4>
+
+
+
+            <p>Results can be searched either at the whole scan level, or within individual data types. The scope of the
+              search is determined by the screen you are on at the time.</p>
+
+
+
+            <figure class="wp-block-image"><img loading="lazy" width="1024" height="429"
+                src="https://134.209.41.85/wp-content/uploads/2019/07/spiderfoot-search-1024x429.png" alt=""
+                class="wp-image-413"
+                srcset="https://www.spiderfoot.net/wp-content/uploads/2019/07/spiderfoot-search-1024x429.png 1024w, https://www.spiderfoot.net/wp-content/uploads/2019/07/spiderfoot-search-300x126.png 300w, https://www.spiderfoot.net/wp-content/uploads/2019/07/spiderfoot-search-768x322.png 768w, https://www.spiderfoot.net/wp-content/uploads/2019/07/spiderfoot-search.png 1185w"
+                sizes="(max-width: 1024px) 100vw, 1024px"></figure>
+
+
+
+            <p>As indicated by the pop-up box when selecting the search field, you can search as follows:</p>
+
+
+
+            <ul>
+              <li>Exact value: Non-wildcard searching for a specific value. For example, search for 404 within the HTTP
+                Status Code section to see all pages that were not found.</li>
+              <li>Pattern matching: Search for simple wildcards to find patterns. For example, search for *:22 within
+                the Open TCP Port section to see all instances of port 22 open.</li>
+              <li>Regular expression searches: Encapsulate your string in ‘/’ to search by regular expression. For
+                example, search for ‘/\d+.\d+.\d+.\d+/’ to find anything looking like an IP address in your scan
+                results.</li>
+            </ul>
+
+
+
+            <h4 id="managing-scans">Managing Scans</h4>
+
+
+
+            <p>When you have some historical scan data accumulated, you can use the list available on the ‘Scans’
+              section to manage them:</p>
+
+
+
+            <figure class="wp-block-image"><img loading="lazy" width="944" height="286"
+                src="https://134.209.41.85/wp-content/uploads/2019/07/spiderfoot-scanlist2.png" alt=""
+                class="wp-image-414"
+                srcset="https://www.spiderfoot.net/wp-content/uploads/2019/07/spiderfoot-scanlist2.png 944w, https://www.spiderfoot.net/wp-content/uploads/2019/07/spiderfoot-scanlist2-300x91.png 300w, https://www.spiderfoot.net/wp-content/uploads/2019/07/spiderfoot-scanlist2-768x233.png 768w"
+                sizes="(max-width: 944px) 100vw, 944px"></figure>
+
+
+
+            <p>You can filter the scans shown by altering the Filter drop-down selection. Except for the green refresh
+              icon, all icons on the right will all apply to whichever scans you have checked the checkboxes for.</p>
+
+
+
+            <h4 id="tor-integration">Tor Integration</h4>
+
+
+
+            <p>Refer to&nbsp;<a href="https://www.spiderfoot.net/spiderfoot-and-tor/">this post</a>&nbsp;for more
+              information.</p>
+
+
+
+            <p><a href="#toc">Up to table of contents</a></p>
+
+
+
+            <h3 id="modules">Modules</h3>
+
+
+
+            <h4 id="overview">Overview</h4>
+
+
+
+            <p>SpiderFoot has all data collection modularised. When a module discovers a piece of data, that data is
+              transmitted to all other modules that are ‘interested’ in that data type for processing. Those modules
+              will then act on that piece of data to identify new data, and in turn generate new events for other
+              modules which may be interested, and so on.</p>
+
+
+
+            <p>For example,&nbsp;<code>sfp_dnsresolve</code>&nbsp;may identify an IP address associated with your
+              target, notifying all interested modules. One of those interested modules would be
+              the&nbsp;<code>sfp_ripe</code>&nbsp;module, which will take that IP address and identify the netblock it
+              is a part of, the BGP ASN and so on.</p>
+
+
+
+            <p>This might be best illustrated by looking at module code. For example,
+              the&nbsp;<code>sfp_names</code>&nbsp;module looks for TARGET_WEB_CONTENT and EMAILADDR events for
+              identifying human names:</p>
+
+
+
+            <pre class="wp-block-code"><code>    # What events is this module interested in for input
+# * = be notified about all events.
+def watchedEvents(self):
+    return ["TARGET_WEB_CONTENT", "EMAILADDR"]
+
+# What events this module produces
+# This is to support the end user in selecting modules based on events
+# produced.
+def producedEvents(self):
+    return ["HUMAN_NAME"]
+</code></pre>
+
+
+
+            <p>Meanwhile, as each event is generated to a module, it is also recorded in the SpiderFoot database for
+              reporting and viewing in the UI.</p>
+
+
+
+            <h4 id="module-list">Module List</h4>
+
+
+
+            <p>To see a list of all SpiderFoot modules, run <code>sf.py -M</code>:</p>
+
+
+
+            <pre class="wp-block-code"><code>~/spiderfoot$ python3 ./sf.py -M
+Attempting to verify database and update if necessary...
+Modules available:
+sfp_abusech                Check if a host/domain, IP or netblock is malicious according to abuse.ch.
+sfp_abuseipdb              Check if a netblock or IP is malicious according to AbuseIPDB.com.
+sfp_accounts               Look for possible associated accounts on nearly 200 websites like Ebay, Slashdot, reddit, etc.
+sfp_adblock                Check if linked pages would be blocked by AdBlock Plus.
+sfp_ahmia                  Search Tor 'Ahmia' search engine for mentions of the target domain.
+sfp_alienvault             Obtain information from AlienVault Open Threat Exchange (OTX)
+sfp_alienvaultiprep        Check if an IP or netblock is malicious according to the AlienVault IP Reputation database.
+sfp_apility                Search Apility API for IP address and domain reputation.
+sfp_archiveorg             Identifies historic versions of interesting files/pages from the Wayback Machine.
+sfp_arin                   Queries ARIN registry for contact information.
+...</code></pre>
+
+
+
+            <h4 id="data-elements">Data Elements</h4>
+
+
+
+            <p>As mentioned above, SpiderFoot works on an “event-driven” module, whereby each module generates events
+              about&nbsp;<em>data elements</em>&nbsp;which other modules listen to and consume.</p>
+
+
+
+            <p>The data elements are one of the following types:</p>
+
+
+
+            <ul>
+              <li><em>entities</em>&nbsp;like IP addresses, Internet names (hostnames, sub-domains, domains),</li>
+              <li><em>sub-entities</em>&nbsp;like port numbers, URLs and software installed,</li>
+              <li><em>descriptors</em>&nbsp;of those entities (malicious, physical location information, …) or</li>
+              <li><em>data</em>&nbsp;which is mostly unstructured data (web page content, port banners, raw DNS records,
+                …)</li>
+            </ul>
+
+
+
+            <p>To see a full list of all the types available, run <code>sf.py -T</code>:</p>
+
+
+
+            <pre class="wp-block-code"><code>~/spiderfoot$ python3 ./sf.py -T
+Attempting to verify database and update if necessary...
+Types available:
+ACCOUNT_EXTERNAL_OWNED                         Account on External Site
+ACCOUNT_EXTERNAL_OWNED_COMPROMISED             Hacked Account on External Site
+ACCOUNT_EXTERNAL_USER_SHARED_COMPROMISED       Hacked User Account on External Site
+AFFILIATE_COMPANY_NAME                         Affiliate - Company Name
+AFFILIATE_DESCRIPTION_ABSTRACT                 Affiliate Description - Abstract
+AFFILIATE_DESCRIPTION_CATEGORY                 Affiliate Description - Category
+AFFILIATE_DOMAIN                               Affiliate - Domain Name
+AFFILIATE_DOMAIN_NAME                          Affiliate - Domain Name
+AFFILIATE_DOMAIN_UNRESOLVED                    Affiliate - Domain Name - Unresolved
+AFFILIATE_DOMAIN_WHOIS                         Affiliate - Domain Whois
+AFFILIATE_EMAILADDR                            Affiliate - Email Address
+...</code></pre>
+
+
+
+            <h4 id="writing-a-module">Writing a Module</h4>
+
+
+
+            <p>To write a SpiderFoot module, start by looking at the&nbsp;<code>sfp_template.py</code>&nbsp;file which
+              is a skeleton module that does nothing. Use the following steps as your guide:</p>
+
+
+
+            <ol>
+              <li>Create a copy of&nbsp;<code>sfp_template.py</code>&nbsp;to whatever your module will be named. Try and
+                make this something descriptive, i.e. not something like&nbsp;<code>sfp_mymodule.py</code>but instead
+                something like&nbsp;<code>sfp_imageanalyser.py</code>&nbsp;if you were creating a module to analyse
+                image content.</li>
+              <li>Replace XXX in the new module with the name of your module and update the descriptive information in
+                the header and comment within the module.</li>
+              <li>The comment for the class (check in&nbsp;<code>sfp_template.py</code>) is used by SpiderFoot in the UI
+                to correctly categorise modules, so make it something meaningful. Look at other modules for examples.
+              </li>
+              <li>Set the events
+                in&nbsp;<code>watchedEvents()</code>&nbsp;and&nbsp;<code>producedEvents()</code>&nbsp;accordingly, based
+                on the data element table in the previous section. If you are producing a new data element not
+                pre-existing in SpiderFoot, you must create this in the database:<ul>
+                  <li><code>~/spiderfoot$ sqlite3 spiderfoot.db
+sqlite&gt; INSERT INTO tbl_event_types (event, event_descr, event_raw) VALUES ('NEW_DATA_ELEMENT_TYPE_NAME_HERE', 'Description of your New Data Element Here', 0, 'DESCRIPTOR or DATA or ENTITY or SUBENTITY');`
+</code></li>
+                </ul>
+              </li>
+              <li>Put the logic for the module in&nbsp;<code>handleEvent()</code>. Each call
+                to&nbsp;<code>handleEvent()</code>&nbsp;is provided a&nbsp;<code>SpiderFootEvent</code>&nbsp;object. The
+                most important values within this object are:<ul>
+                  <li><code>eventType</code>: The data element ID
+                    (<code>IP_ADDRESS</code>,&nbsp;<code>WEBSERVER_BANNER</code>, etc.)</li>
+                  <li><code>data</code>: The actual data, e.g. the IP address or web server banner, etc.</li>
+                  <li><code>module</code>: The name of the module that produced the event (<code>sfp_dnsresolve</code>,
+                    etc.)</li>
+                </ul>
+              </li>
+              <li>When it is time to generate your event, create an instance of&nbsp;<code>SpiderFootEvent</code>:<ul>
+                  <li><code>e = SpiderFootEvent("IP_ADDRESS", ipaddr, self.__name__, event)</code></li>
+                  <li>Note: the&nbsp;<code>event</code>&nbsp;passed as the last variable is the event that your module
+                    received. This is what builds a relationship between data elements in the SpiderFoot database.</li>
+                </ul>
+              </li>
+              <li>Notify all modules that may be interested in the event:<ul>
+                  <li><code>self.notifyListeners(e)</code></li>
+                </ul>
+              </li>
+            </ol>
+
+
+
+            <p><a href="#toc">Up to table of contents</a></p>
+
+
+
+            <h3 id="db">Database</h3>
+
+
+
+            <p>All SpiderFoot data is stored in a SQLite database (<code>spiderfoot.db</code>&nbsp;in your SpiderFoot
+              installation folder) which can be used outside of SpiderFoot for analysis of your data.</p>
+
+
+
+            <p>The schema is quite simple and can be viewed in the&nbsp;<a
+                href="https://github.com/smicallef/spiderfoot/blob/master/sfdb.py#L37">GitHub repo</a>.</p>
+
+
+
+            <p>The below queries might provide some further clues:</p>
+
+
+
+            <pre class="wp-block-code"><code># Total number of scans in the SpiderFoot database
+sqlite&gt; select count(*) from tbl_scan_instance;
+10
+</code></pre>
+
+
+
+            <pre class="wp-block-code"><code># Obtain the ID for a particular scan
+sqlite&gt; select guid from tbl_scan_instance where seed_target = 'binarypool.com';
+b459e339523b8d06235bd06087ae6c6017aaf4ed68dccea0b65a1999a17e460a
+</code></pre>
+
+
+
+            <pre class="wp-block-code"><code># Number of results per data type
+sqlite&gt; select count(*), type from tbl_scan_results where scan_instance_id = 'b459e339523b8d06235bd06087ae6c6017aaf4ed68dccea0b65a1999a17e460a' group by type;
+5|AFFILIATE_INTERNET_NAME
+2|AFFILIATE_IPADDR
+1|CO_HOSTED_SITE
+1|DOMAIN_NAME
+1|DOMAIN_REGISTRAR
+1|DOMAIN_WHOIS
+1|GEOINFO
+28|HTTP_CODE
+48|HUMAN_NAME
+49|INTERNET_NAME
+2|IP_ADDRESS
+49|LINKED_URL_EXTERNAL
+144|LINKED_URL_INTERNAL
+2|PROVIDER_DNS
+1|PROVIDER_MAIL
+4|RAW_DNS_RECORDS
+1|RAW_FILE_META_DATA
+1|ROOT
+14|SEARCH_ENGINE_WEB_CONTENT
+1|SOFTWARE_USED
+16|TARGET_WEB_CONTENT
+2|TCP_PORT_OPEN
+1|TCP_PORT_OPEN_BANNER
+1|URL_FORM
+10|URL_JAVASCRIPT
+6|URL_STATIC
+21|URL_WEB_FRAMEWORK
+28|WEBSERVER_BANNER
+28|WEBSERVER_HTTPHEADERS</code></pre>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <img src="./img/footer-background.svg" alt="background-image" class="footer-background">
+  <div class="container">
+    <div class="footer-columns-wrapper">
+      <div class="footer-column">
+        <a href="#" class="footer-logo">
+          <img src="./img/main-logo.svg" alt="spidefoor logo">
+        </a>
+        <div class="footer-description">
+          Are you still using ad-hoc scripts to query APIs, 
+          scrape websites and filter through false positives? 
+          SpiderFoot HX enables you to “fire and forget” 
+          scan to collect OSINT from over 100 data sources 
+          without writing a single line of code.
+        </div>
+      </div>
+      <div class="footer-column">
+        <h5 class="footer__title">Product</h5>
+        <ul class="footer-menu">
+          <li class="menu-item">
+            <a href="#">See it in action</a>
+          </li>
+          <li class="menu-item">
+            <a href="#">Features</a>
+          </li>
+          <li class="menu-item">
+            <a href="#">Integrations</a>
+          </li>
+          <li class="menu-item">
+            <a href="#">Pricing</a>
+          </li>
+          <li class="menu-item">
+            <a href="#">Testimonials</a>
+          </li>
+          <li class="menu-item">
+            <a href="#">About Us</a>
+          </li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h5 class="footer__title">Use Cases</h5>
+        <ul class="footer-menu">
+          <li class="menu-item">
+            <a href="#">Attack Surface Monitoring</a>
+          </li>
+          <li class="menu-item">
+            <a href="#">Cyber Threat Intelligence</a>
+          </li>
+          <li class="menu-item">
+            <a href="#">Security Assessments</a>
+          </li>
+          <li class="menu-item">
+            <a href="#">Asset Discovery</a>
+          </li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h5 class="footer__title">Community</h5>
+          <ul class="footer-menu">
+            <li class="menu-item">
+              <a href="#">Github NewsRepo</a>
+            </li>
+            <li class="menu-item">
+              <a href="#">Documentation</a>
+            </li>
+            <li class="menu-item">
+              <a href="#">Discord</a>
+            </li>
+            <li class="menu-item">
+              <a href="#">Open Source vs. HX</a>
+            </li>
+            <li class="menu-item">
+              <a href="#">News</a>
+            </li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <ul class="footer-socials">
+          <li class="footer-socials-item">
+            <a href="#">
+              <i class="icon-icon-linkedin"></i>
+              LinkedIn 
+            </a>
+          </li>
+          <li class="footer-socials-item">
+            <a href="#">
+              <i class="icon-icon-youtube"></i>
+              Youtube 
+            </a>
+          </li>
+          <li class="footer-socials-item">
+            <a href="#">
+              <i class="icon-icon-twitter"></i>
+              Twitter 
+            </a>
+          </li>
+          <li class="footer-socials-item">
+            <a href="#">
+              <i class="icon-icon-github"></i>
+              Github 
+            </a>
+          </li>
+          <li class="footer-socials-item">
+            <a href="#">
+              <i class="icon-icon-footer-envelope"></i>
+              Support 
+            </a>
+          </li>
+          <li class="footer-socials-item">
+            <a href="#">
+              <i class="icon-icon-discord"></i>
+              Discord 
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <div class="subscribe-form">
+          <form action="">
+            <div class="subscribe-form-account">Create a SpiderFoot HX account</div>
+            <div class="form-group">
+              <input type="email" name="main-screen-email" placeholder="Your Email" />
+              <button type="submit"><i class="icon-icon-arrow-right"></i></button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright">
+       <div class="footer-copyright-column left-column">
+        © 2021, SM7 Software OÜ <a href="#">Privacy</a> <a href="#">Terms</a>
+       </div>
+       <div class="footer-copyright-column right-column">
+        This site is protected by reCAPTCHA and the Google <a href="#"> Privacy Policy</a> and <a href="#"> Terms of Service</a> apply
+       </div>
+    </div>
+  </div>
+</footer>
+
+<div class="modal modal-download" id="downloadPopup">
+  <div class="modal__body">
+    <div class="modal__content">
+      <div class="modal__close">
+        
+      </div>
+      <div class="download-image">
+        <img src="./img/spider.svg" alt="spider logo">
+      </div>
+      <div class="download-content">
+        <div class="heading-3 text-center">Download and start</div>
+        <p class="app__description">You can pay your plan in SpiderFoot platform, but firstly you need to subscribe to get the premium version</p>
+        <div class="subscribe-form subscribe-form-long">
+          <form action="">
+            <div class="form-group">
+              <input type="email" name="main-screen-email" placeholder="Your Email" />
+              <button type="submit">Get started<i class="icon-icon-arrow-right"></i></button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="js/jquery.min.js"></script>
+<script src="js/libs.min.js"></script>
+<script src="js/script.min.js"></script>
+</body>
+</html>

@@ -136,7 +136,7 @@ let front = {
         },
         breakpoints: {
           320: {
-            slidesPerView: 1,
+            slidesPerView: 'auto',
           },
           576: {
             slidesPerView: 2,
@@ -156,16 +156,16 @@ let front = {
     } else {
         null
     }
-    $(document).on('click', 'a[href^="#"]', function (event) {
-      event.preventDefault();
+    // $(document).on('click', 'a[href^="#"]', function (event) {
+    //   event.preventDefault();
   
-      $('html, body').animate({
-          scrollTop: $($.attr(this, 'href')).offset().top - 100
-      }, 500);
-      $('body').removeClass('active');
-      $('.hamburger').removeClass('open');
-      $('.navbar').removeClass('active');
-    });
+    //   $('html, body').animate({
+    //       scrollTop: $($.attr(this, 'href')).offset().top - 100
+    //   }, 500);
+    //   $('body').removeClass('active');
+    //   $('.hamburger').removeClass('open');
+    //   $('.navbar').removeClass('active');
+    // });
     $(document).on('click', '.table-view', function() {
       $(this).addClass('active');
       $('.card-view').removeClass('active');
@@ -182,7 +182,10 @@ let front = {
       $('.table-view').removeClass('active');
       $('.modules-list').addClass('card-list');
     }
-    
+
+    // $(document).on('click', '.documentation-item', function(){
+    //   $(this).toggleClass('menuOpen').find('.sub-menu').slideToggle();
+    // })
 
   }
 };
@@ -367,3 +370,122 @@ function createSelect() {
 			}, false);
 		}
 }
+
+$(document).ready(function () {
+  $(document).on('click', 'a', function () {
+      if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+          let target = $(this.hash);
+          target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+          if (target.length) {
+              $('html,body').animate({
+                  scrollTop: (target.offset().top) - 120
+              }, 1000);
+              return false;
+          }
+      }
+  });
+
+  $(document).on('click', '.about-list__item', function () {
+      let item = $(this);
+      let list = $(this).find('.sub-menu');
+      if (item.hasClass('active')) {
+          item.removeClass('active');
+          list.slideToggle();
+      } else {
+          item.addClass('active');
+          list.slideToggle();
+      }
+  });
+});
+
+
+
+$(function () {
+  // the input field
+  var $input = $("input[type='search']"),
+      // clear button
+      $clearBtn = $("button[data-search='clear']"),
+      // prev button
+      $prevBtn = $("button[data-search='prev']"),
+      // next button
+      $nextBtn = $("button[data-search='next']"),
+      // the context where to search
+      $content = $(".entry-content"),
+      // jQuery object to save <mark> elements
+      $results,
+      d,
+      // the class that will be appended to the current
+      // focused element
+      currentClass = "current",
+      // top offset for the jump (the search bar)
+      offsetTop = 210,
+
+      // the current index of the focused element
+      currentIndex = 0;
+
+  /**
+   * Jumps to the element matching the currentIndex
+   */
+  function jumpTo() {
+      if ($results.length) {
+          var position,
+              $current = $results.eq(currentIndex);
+          $results.removeClass(currentClass);
+          if ($current.length) {
+              $current.addClass(currentClass);
+              position = $current.offset().top - 160;
+              window.scrollTo(0, position);
+          }
+      }
+  }
+
+  /**
+   * Searches for the entered keyword in the
+   * specified context on input
+   */
+  $input.on("input", function () {
+      var searchVal = this.value;
+      $content.unmark({
+          done: function () {
+              $content.mark(searchVal, {
+                  separateWordSearch: true,
+                  done: function () {
+                      $results = $content.find("mark");
+                      //  console.log($results.length);
+                      $(".total").text($results.length);
+                      currentIndex = 1;
+                      jumpTo();
+                  }
+              });
+          }
+      });
+  });
+
+  /**
+   * Clears the search
+   */
+  $clearBtn.on("click", function () {
+      $content.unmark();
+      $input.val("").focus();
+  });
+
+  /**
+   * Next and previous search jump to
+   */
+
+  $nextBtn.add($prevBtn).on("click", function () {
+      if ($results.length) {
+          currentIndex += $(this).is($prevBtn) ? -1 : 1;
+
+          if (currentIndex < 1) {
+              currentIndex = $results.length - 1;
+          }
+          if (currentIndex > $results.length - 1) {
+              currentIndex = 1;
+          }
+
+          $(".ed").text(currentIndex);
+          jumpTo();
+      }
+  });
+});
