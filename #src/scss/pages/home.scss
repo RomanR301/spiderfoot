@@ -349,7 +349,7 @@
       margin-bottom: 110px;
     }
     @media (max-width: $breakpoint-md) {
-      margin-bottom: 50px;
+      margin-bottom: 80px;
     }
     &.pricing-card-most-popular {
       @media (max-width: $breakpoint-md) {
@@ -420,6 +420,7 @@
     padding: 0 15px;
     display: none;
     &-main {
+      width: 100%;
       display: flex;
     }
     @media (max-width: $breakpoint-lg) {
@@ -428,11 +429,8 @@
     @media (max-width: $breakpoint-md) {
       display: flex;
       flex-direction: column;
-      margin-top: 65px;
+      margin-top: 0;
       padding: 0;
-      &-main {
-        display: none;
-      }
     }
     &__text {
       font-size: 16px;
@@ -452,6 +450,7 @@
   z-index: 2;
   @media (max-width: $breakpoint-lg) {
     border: none;
+    border-radius: 20px;
   }
   &.anually {
     .pricing-card__price_monthly {
@@ -572,7 +571,8 @@
     border-radius: 0px 0px 20px 20px;
     @include transition(0.3);
     @media (max-width: $breakpoint-md) {
-      bottom: 100px;
+      bottom: -40px;
+      padding: 23px 10px 15px 10px;
     }
     i {
       margin-right: 10px;
@@ -583,6 +583,9 @@
 .testimonials {
   position: relative;
   margin-bottom: 100px;
+  .app__title {
+    text-align: left;
+  }
   @media (max-width: $breakpoint-lg) {
     margin-bottom: 60px;
   }
@@ -721,9 +724,14 @@
     &__icon {
       border-radius: 10px;
       overflow: hidden;
+      height: 230px;
+      @media (max-width: $breakpoint-lg) {
+        height: 200px;
+      }
       img {
         width: 100%;
-        height: auto;
+        height: 100%;
+        object-fit: cover;
         display: block;
         @include transition(.3);
       }

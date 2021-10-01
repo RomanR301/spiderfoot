@@ -1,3 +1,43 @@
 @import "../abstracts/mixins";
 @import "../abstracts/variables";
 
+
+.contact {
+  min-height: 50vh;
+  padding: 60px 0 80px 0;
+  .row {
+    justify-content: center;
+  }
+  .form-group {
+    margin-bottom: 20px;
+  }
+  .form-control {
+    border: 2px solid #606060;
+    border-radius: 5px;
+    background: transparent;
+    padding: 11px 24px;
+    color: #ffffff;
+    &:focus {
+      box-shadow: none;
+    }
+    &::placeholder  {
+      color: #ffffff;
+    }
+    &::-moz-placeholder {
+      color: #ffffff;
+    }
+  }
+  textarea {
+    height: 160px;
+  }
+  .btn-primary {
+    background: $darkBlue;
+    font-size: 18px;
+    font-weight: 400;
+    width: 125px;
+    text-transform: none;
+    &:hover {
+      background: transparent;
+    }
+  }
+}

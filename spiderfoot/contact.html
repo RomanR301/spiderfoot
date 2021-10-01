@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="">
+  <!-- <link rel="apple-touch-icon" sizes="180x180" href="./img/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="./img/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="./img/favicon-16x16.png"> -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.min.css">
+  <title>spiderfoot</title>
+</head>
+
+
+<body>
+  <header class="header">
+    <div class="container">
+      <a href="index.html" class="header-logo">
+        <img src="./img/main-logo.svg" alt="spiderfoot logo">
+      </a>
+      <div class="navbar">
+        <img src="./img/abstract-background.png" alt="abstracts background" class="navbar-abstracts" />
+        <ul class="menu">
+          <li class="menu-item menu-item-has-children">
+            <a href="#">Product</a>
+            <i class="icon-icon-shevron sub-menu-button"></i>
+            <ul class="sub-menu">
+              <li class="menu-item">
+                <a href="#action">See it in action!</a>
+              </li>
+              <li class="menu-item">
+                <a href="#features">Features</a>
+              </li>
+              <li class="menu-item">
+                <a href="#intergations">Integrations</a>
+              </li>
+              <li class="menu-item">
+                <a href="#pricing">Pricing</a>
+              </li>
+              <li class="menu-item">
+                <a href="#testimonials">Testimonials</a>
+              </li>
+            </ul>
+          </li>
+          <li class="menu-item menu-item-has-children">
+            <a href="#">Use Cases</a>
+            <i class="icon-icon-shevron sub-menu-button"></i>
+            <ul class="sub-menu">
+              <li class="menu-item">
+                <a href="news-single.html">Use Case 1</a>
+              </li>
+              <li class="menu-item">
+                <a href="news-single.html">Use Case 2</a>
+              </li>
+              <li class="menu-item">
+                <a href="news-single.html">Use Case 3</a>
+              </li>
+              <li class="menu-item">
+                <a href="news-single.html">Use Case 4</a>
+              </li>
+            </ul>
+          </li>
+          <li class="menu-item menu-item-has-children">
+            <img src="./img/icons/icon-github.svg" alt="GitHub logo">
+            <a href="#">Community</a>
+            <i class="icon-icon-shevron sub-menu-button"></i>
+            <ul class="sub-menu">
+              <li class="menu-item">
+                <a href="documentation.html">Documentation</a>
+              </li>
+            </ul>
+          </li>
+          <li class="menu-item">
+            <a href="news.html">News</a>
+          </li>
+          <li class="menu-item">
+            <a href="about.html">About</a>
+          </li>
+        </ul>
+        <button class="btn btn-primary has-icon header-cta modalTrigger" data-modal="#downloadPopup"><i class="icon-icon-user"></i>SIGN IN</button>
+      </div>
+      <div class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </header>
+  <div class="body-padding"></div>
+
+<main>
+  <section class="contact">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-5 col-sm-8 col-xs-12">
+          <h1 class="app__title">Contact Us</h1>
+          <form action="">
+            <div class="form-group">
+              <input type="text" name="contacts-name" class="form-control" placeholder="Name">
+            </div>
+            <div class="form-group">
+              <input type="email" name="contacts-email" class="form-control" placeholder="Email">
+            </div>
+            <div class="form-group">
+              <textarea class="form-control" name="contacts-message" placeholder="Your Message"></textarea>
+            </div>
+            <div class="form-group">
+              <button type="submit" class="btn btn-primary">Send</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+<footer class="footer">
+  <img src="./img/footer-background.svg" alt="background-image" class="footer-background">
+  <div class="container">
+    <div class="footer-columns-wrapper">
+      <div class="footer-column">
+        <a href="#" class="footer-logo">
+          <img src="./img/main-logo.svg" alt="spidefoor logo">
+        </a>
+        <div class="footer-description">
+          Are you still using ad-hoc scripts to query APIs, 
+          scrape websites and filter through false positives? 
+          SpiderFoot HX enables you to “fire and forget” 
+          scan to collect OSINT from over 100 data sources 
+          without writing a single line of code.
+        </div>
+      </div>
+      <div class="footer-column">
+        <h5 class="footer__title">Product</h5>
+        <ul class="footer-menu">
+          <li class="menu-item">
+            <a href="#">See it in action</a>
+          </li>
+          <li class="menu-item">
+            <a href="#">Features</a>
+          </li>
+          <li class="menu-item">
+            <a href="#">Integrations</a>
+          </li>
+          <li class="menu-item">
+            <a href="#">Pricing</a>
+          </li>
+          <li class="menu-item">
+            <a href="#">Testimonials</a>
+          </li>
+          <li class="menu-item">
+            <a href="#">About Us</a>
+          </li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h5 class="footer__title">Use Cases</h5>
+        <ul class="footer-menu">
+          <li class="menu-item">
+            <a href="#">Attack Surface Monitoring</a>
+          </li>
+          <li class="menu-item">
+            <a href="#">Cyber Threat Intelligence</a>
+          </li>
+          <li class="menu-item">
+            <a href="#">Security Assessments</a>
+          </li>
+          <li class="menu-item">
+            <a href="#">Asset Discovery</a>
+          </li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h5 class="footer__title">Community</h5>
+          <ul class="footer-menu">
+            <li class="menu-item">
+              <a href="#">Github NewsRepo</a>
+            </li>
+            <li class="menu-item">
+              <a href="#">Documentation</a>
+            </li>
+            <li class="menu-item">
+              <a href="#">Discord</a>
+            </li>
+            <li class="menu-item">
+              <a href="#">Open Source vs. HX</a>
+            </li>
+            <li class="menu-item">
+              <a href="#">News</a>
+            </li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <ul class="footer-socials">
+          <li class="footer-socials-item">
+            <a href="#">
+              <i class="icon-icon-linkedin"></i>
+              LinkedIn 
+            </a>
+          </li>
+          <li class="footer-socials-item">
+            <a href="#">
+              <i class="icon-icon-youtube"></i>
+              Youtube 
+            </a>
+          </li>
+          <li class="footer-socials-item">
+            <a href="#">
+              <i class="icon-icon-twitter"></i>
+              Twitter 
+            </a>
+          </li>
+          <li class="footer-socials-item">
+            <a href="#">
+              <i class="icon-icon-github"></i>
+              Github 
+            </a>
+          </li>
+          <li class="footer-socials-item">
+            <a href="#">
+              <i class="icon-icon-footer-envelope"></i>
+              Support 
+            </a>
+          </li>
+          <li class="footer-socials-item">
+            <a href="#">
+              <i class="icon-icon-discord"></i>
+              Discord 
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <div class="subscribe-form">
+          <form action="">
+            <div class="subscribe-form-account">Create a SpiderFoot HX account</div>
+            <div class="form-group">
+              <input type="email" name="main-screen-email" placeholder="Your Email" />
+              <button type="submit"><i class="icon-icon-arrow-right"></i></button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright">
+       <div class="footer-copyright-column left-column">
+        © 2021, SM7 Software OÜ <a href="#">Privacy</a> <a href="#">Terms</a>
+       </div>
+       <div class="footer-copyright-column right-column">
+        This site is protected by reCAPTCHA and the Google <a href="#"> Privacy Policy</a> and <a href="#"> Terms of Service</a> apply
+       </div>
+    </div>
+  </div>
+</footer>
+
+<div class="modal modal-download" id="downloadPopup">
+  <div class="modal__body">
+    <div class="modal__content">
+      <div class="modal__close">
+        
+      </div>
+      <div class="download-image">
+        <img src="./img/spider.svg" alt="spider logo">
+      </div>
+      <div class="download-content">
+        <div class="heading-3 text-center">Download and start</div>
+        <p class="app__description">You can pay your plan in SpiderFoot platform, but firstly you need to subscribe to get the premium version</p>
+        <div class="subscribe-form subscribe-form-long">
+          <form action="">
+            <div class="form-group">
+              <input type="email" name="main-screen-email" placeholder="Your Email" />
+              <button type="submit">Get started<i class="icon-icon-arrow-right"></i></button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="js/jquery.min.js"></script>
+<script src="js/libs.min.js"></script>
+<script src="js/script.min.js"></script>
+</body>
+</html>

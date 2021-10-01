@@ -91,6 +91,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    overflow: hidden;
     @media (max-width: $breakpoint-md) {
       height: fit-content;
     }

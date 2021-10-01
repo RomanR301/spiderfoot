@@ -54,7 +54,7 @@
         flex: 0 0 100%;
         max-width: 100%;
       }
-      .news-item__icon {
+      .news-carousel-item__icon {
         height: 360px;
         @media (max-width: $breakpoint-lg) {
           height: 250px;
@@ -64,7 +64,7 @@
     .col-xs-12 {
       margin-bottom: 48px;
     }
-    .news-item__icon {
+    .news-carousel-item__icon {
       height: 280px;
       @media (max-width: $breakpoint-lg) {
         height: 250px;
@@ -74,7 +74,7 @@
         object-fit: cover;
       }
     }
-    .news-item__title {
+    .news-carousel-item__title {
       font-size: 36px;
       @media (max-width: $breakpoint-lg) {
         font-size: 26px;

@@ -611,6 +611,7 @@ input[type=number] {
   display: flex;
   flex-direction: column;
   align-items: center;
+  overflow: hidden;
 }
 
 .modal-action iframe {
@@ -1247,6 +1248,12 @@ input[type=number] {
 
 .subscribe-form-long button i {
   margin-left: 12px;
+}
+
+.footer_errtext.error-message {
+  font-size: 14px;
+  text-align: center;
+  color: red;
 }
 
 .container {
@@ -3123,6 +3130,7 @@ button.swiper-pagination-bullet {
 }
 
 .pricing-additional-main {
+  width: 100%;
   display: flex;
 }
 
@@ -3275,6 +3283,10 @@ button.swiper-pagination-bullet {
   margin-bottom: 100px;
 }
 
+.testimonials .app__title {
+  text-align: left;
+}
+
 .testimonials .square-half {
   position: absolute;
   left: 0;
@@ -3397,11 +3409,13 @@ button.swiper-pagination-bullet {
 .news-carousel-item__icon {
   border-radius: 10px;
   overflow: hidden;
+  height: 230px;
 }
 
 .news-carousel-item__icon img {
   width: 100%;
-  height: auto;
+  height: 100%;
+  object-fit: cover;
   display: block;
   -webkit-transition: all 0.3s ease-out;
   -moz-transition: all 0.3s ease-out;
@@ -3495,8 +3509,8 @@ button.swiper-pagination-bullet {
   max-width: 100%;
 }
 
-.news-list .col-xs-12:nth-child(1) .news-item__icon,
-.news-list .col-xs-12:nth-child(4) .news-item__icon {
+.news-list .col-xs-12:nth-child(1) .news-carousel-item__icon,
+.news-list .col-xs-12:nth-child(4) .news-carousel-item__icon {
   height: 360px;
 }
 
@@ -3504,16 +3518,16 @@ button.swiper-pagination-bullet {
   margin-bottom: 48px;
 }
 
-.news-list .news-item__icon {
+.news-list .news-carousel-item__icon {
   height: 280px;
 }
 
-.news-list .news-item__icon img {
+.news-list .news-carousel-item__icon img {
   height: 100%;
   object-fit: cover;
 }
 
-.news-list .news-item__title {
+.news-list .news-carousel-item__title {
   font-size: 36px;
 }
 
@@ -4544,6 +4558,55 @@ button.swiper-pagination-bullet {
 
 .about-news-carousel .news-next:after {
   color: #079DD9;
+}
+
+.contact {
+  min-height: 50vh;
+  padding: 60px 0 80px 0;
+}
+
+.contact .row {
+  justify-content: center;
+}
+
+.contact .form-group {
+  margin-bottom: 20px;
+}
+
+.contact .form-control {
+  border: 2px solid #606060;
+  border-radius: 5px;
+  background: transparent;
+  padding: 11px 24px;
+  color: #ffffff;
+}
+
+.contact .form-control:focus {
+  box-shadow: none;
+}
+
+.contact .form-control::placeholder {
+  color: #ffffff;
+}
+
+.contact .form-control::-moz-placeholder {
+  color: #ffffff;
+}
+
+.contact textarea {
+  height: 160px;
+}
+
+.contact .btn-primary {
+  background: #0089CF;
+  font-size: 18px;
+  font-weight: 400;
+  width: 125px;
+  text-transform: none;
+}
+
+.contact .btn-primary:hover {
+  background: transparent;
 }
 
 .search-form {
@@ -5633,6 +5696,7 @@ mark.current {
 
   .pricing-card {
     border: none;
+    border-radius: 20px;
   }
 
   .pricing-card__badge {
@@ -5654,6 +5718,10 @@ mark.current {
 
   .news-carousel {
     margin-bottom: 60px;
+  }
+
+  .news-carousel-item__icon {
+    height: 200px;
   }
 
   .news-carousel-item__title {
@@ -5690,16 +5758,16 @@ mark.current {
     max-width: 100%;
   }
 
-  .news-list .col-xs-12:nth-child(1) .news-item__icon,
-  .news-list .col-xs-12:nth-child(4) .news-item__icon {
+  .news-list .col-xs-12:nth-child(1) .news-carousel-item__icon,
+  .news-list .col-xs-12:nth-child(4) .news-carousel-item__icon {
     height: 250px;
   }
 
-  .news-list .news-item__icon {
+  .news-list .news-carousel-item__icon {
     height: 250px;
   }
 
-  .news-list .news-item__title {
+  .news-list .news-carousel-item__title {
     font-size: 26px;
   }
 
@@ -6053,7 +6121,7 @@ mark.current {
   }
 
   .pricing-card-wrapper {
-    margin-bottom: 50px;
+    margin-bottom: 80px;
   }
 
   .pricing-card-wrapper.pricing-card-most-popular {
@@ -6067,12 +6135,8 @@ mark.current {
   .pricing-additional {
     display: flex;
     flex-direction: column;
-    margin-top: 65px;
+    margin-top: 0;
     padding: 0;
-  }
-
-  .pricing-additional-main {
-    display: none;
   }
 
   .pricing-additional__text {
@@ -6080,7 +6144,8 @@ mark.current {
   }
 
   .pricing-card__button {
-    bottom: 100px;
+    bottom: -40px;
+    padding: 23px 10px 15px 10px;
   }
 
   .testimonials .square-half {
