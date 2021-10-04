@@ -104,202 +104,159 @@
           <div class="subscribe-form-account">Create an account</div>
         </form>
       </div>
-      <div class="row filter-wrapp align-justify">
-        <div class="column d-flex align-left align-middle">
-          <div class="filter-column">
-            <label class="filter-input__label --relative">
-              <input id="searchInput" class="filter-input" type="text" name="search"
-                placeholder="Search module by name...">
-              <i class="icon-search filter-input__icon"></i>
-            </label>
+      <div class="modules-filters">
+        <div class="modules-filters-search">
+          <div class="modules-filters-search-input">
+            <input type="search" class="form-control" name="modules-search" placeholder="Search module by name...">
           </div>
-          <div class="filter-column ml-16">
-            <div class="custom-select custom-select-js">
-              <select id="status">
-                <option>Status</option>
-                <option value="free">Free</option>
-                <option value="tiered">Tiered</option>
-                <option value="commercial">Commercial</option>
-              </select>
-            </div>
+          <div class="modules-filters-select">
+            <select id="modules-status" class="custom-select" placeholder-text="Status">
+              <option value="1" class="select-dropdown__list-item">Item 1</option>
+              <option value="2" class="select-dropdown__list-item">Item 2</option>
+              <option value="3" class="select-dropdown__list-item">Item 3</option>
+              <option value="4" class="select-dropdown__list-item">Item 4</option>
+            </select>
           </div>
-
-          <div class="filter-column ml-16">
+          <div class="modules-filters-submit">
             <button type="button" id="buttonSearch" name="buttonSearch" class="btn btn-primary">Search</button>
           </div>
         </div>
-        <div class="column filter-grid d-flex align-right align-middle">
-          <button type="button" name="buttonTable" class="btn filter-grid__btn active d-flex align-middle">
-            <i class="icon-tableview"></i> <span class="d-none d-xl-inline-block">Table View</span>
-          </button>
-          <button type="button" name="buttonCard" class="ml-16 btn filter-grid__btn d-flex align-middle">
-            <i class="icon-cardvieww"></i> <span class="d-none d-xl-inline-block">Card View</span>
-          </button>
-          <input style="display:none;" type="text" name="tableView" value="med_block">
+        <div class="modules-filters-view">
+          <div class="view-item table-view active"><i class="icon-icon-table-view"></i> <span>Table View</span></div>
+          <div class="view-item card-view"><i class="icon-icon-card-view"></i> <span>Card View</span></div>
         </div>
       </div>
-      <div class="row module-table__header d-flex">
-        <div class="column col-xl-3 col-lg-3 col-md-3 col-xs-12">
-          <div class="--bold">Module</div>
+      <div class="modules-list">
+        <div class="modules-heading">
+          <div class="modules-heading__module">Module</div>
+          <div class="modules-heading__description">Description</div>
+          <div class="modules-heading__status">Status</div>
+          <div class="modules-heading__link">Link to module website</div>
         </div>
-        <div class="column col-xl-4 col-lg-4  col-md-4 col-xs-12">
-          <div class="--bold">Description</div>
-        </div>
-        <div class="column col-xl-2 col-lg-2  col-md-2 col-xs-12">
-          <div class="--bold">Status</div>
-        </div>
-        <div class="column col-xl-3 col-lg-3  col-md-3 col-xs-12">
-          <div class="--bold">Link to module website</div>
-        </div>
-      </div>
-      <div class="post-listing">
-        <div class="med_block">
-          <div class="module-card">
-            <div class="column col-xl-3 col-lg-3 col-md-3 d-flex align-center align-left  module-table__view">
-              <div class="module-table__icon">
-                <img src="https://www.spiderfoot.net/wp-content/themes/spiderfoot/img/logo/LOGO-sfp_totalhash.png">
-              </div>
-              <h2 class="module-table__name">
-                TotalHash.com </h2>
+        <div class="modules-item">
+          <div class="modules__icon__title">
+            <div class="modules__icon">
+              <img src="./img/modules/modules-ibm.svg" alt="img logo">
             </div>
-            <div class="module-card__icon module-card__view">
-              <img src="https://www.spiderfoot.net/wp-content/themes/spiderfoot/img/logo/LOGO-sfp_totalhash.png">
-            </div>
-            <h2 class="module-card__name --bold heading-3 module-card__view">
-              TotalHash.com </h2>
-            <div class="module-card__description app__description">
-              Check if a host/domain or IP is malicious according to TotalHash.com. </div>
-            <div class="d-flex align-justify align-middle module-card__view">
-              <div class="module-card__status heading-4 --semiBold">
-                Free </div>
-              <a href="https://totalhash.cymru.com/" target="_blank" class="module-card__link">
-                Visit Website
-              </a>
-            </div>
-            <div class="column col-xl-2 col-lg-2  col-md-2 module-table__view">
-              <div class="module-card__status heading-4 --semiBold">
-                Free </div>
-            </div>
-            <div class="column col-xl-3 col-lg-3  col-md-3 module-table__view">
-              <a href="https://totalhash.cymru.com/" target="_blank" class="module-card__link">
-                Visit Website
-              </a>
+            <div class="modules__title">
+              IBM X-Force
             </div>
           </div>
-        </div>
-        <div class="med_block">
-          <div class="module-card">
-            <div class="column col-xl-3 col-lg-3 col-md-3 d-flex align-center align-left  module-table__view">
-              <div class="module-table__icon">
-                <img
-                  src="https://www.spiderfoot.net/wp-content/themes/spiderfoot/img/logo/LOGO-sfp_malwaredomainlist.png">
-              </div>
-              <h2 class="module-table__name">
-                malwaredomainlist.com </h2>
-            </div>
-            <div class="module-card__icon module-card__view">
-              <img
-                src="https://www.spiderfoot.net/wp-content/themes/spiderfoot/img/logo/LOGO-sfp_malwaredomainlist.png">
-            </div>
-            <h2 class="module-card__name --bold heading-3 module-card__view">
-              malwaredomainlist.com </h2>
-            <div class="module-card__description app__description">
-              Check if a host/domain, IP or netblock is malicious according to malwaredomainlist.com. </div>
-            <div class="d-flex align-justify align-middle module-card__view">
-              <div class="module-card__status heading-4 --semiBold">
-                Free </div>
-              <a href="http://www.malwaredomainlist.com/" target="_blank" class="module-card__link">
-                Visit Website
-              </a>
-            </div>
-            <div class="column col-xl-2 col-lg-2  col-md-2 module-table__view">
-              <div class="module-card__status heading-4 --semiBold">
-                Free </div>
-            </div>
-            <div class="column col-xl-3 col-lg-3  col-md-3 module-table__view">
-              <a href="http://www.malwaredomainlist.com/" target="_blank" class="module-card__link">
-                Visit Website
-              </a>
-            </div>
+          <div class="modules__description">
+            Use Shodan to discover which of your devices are connected to the Internet, where they are located and who
+            is using them
+          </div>
+          <div class="modules__status">
+            PURCHASE
+          </div>
+          <div class="modules__link">
+            <a href="#">Visit Website</a>
           </div>
         </div>
-        <div class="med_block">
-          <div class="module-card">
-            <div class="column col-xl-3 col-lg-3 col-md-3 d-flex align-center align-left  module-table__view">
-              <div class="module-table__icon">
-                <img src="https://www.spiderfoot.net/wp-content/uploads/2020/06/logo-default.png">
-              </div>
-              <h2 class="module-table__name">
-                PhishStats </h2>
+        <div class="modules-item">
+          <div class="modules__icon__title">
+            <div class="modules__icon">
+              <img src="./img/modules/modules-github.svg" alt="Github logo">
             </div>
-            <div class="module-card__icon module-card__view">
-              <img src="https://www.spiderfoot.net/wp-content/uploads/2020/06/logo-default.png">
-            </div>
-            <h2 class="module-card__name --bold heading-3 module-card__view">
-              PhishStats </h2>
-            <div class="module-card__description app__description">
-              Determine if an IP Address is malicious </div>
-            <div class="d-flex align-justify align-middle module-card__view">
-              <div class="module-card__status heading-4 --semiBold">
-                Free </div>
-              <a href="https://phishstats.info/" target="_blank" class="module-card__link">
-                Visit Website
-              </a>
-            </div>
-            <div class="column col-xl-2 col-lg-2  col-md-2 module-table__view">
-              <div class="module-card__status heading-4 --semiBold">
-                Free </div>
-            </div>
-            <div class="column col-xl-3 col-lg-3  col-md-3 module-table__view">
-              <a href="https://phishstats.info/" target="_blank" class="module-card__link">
-                Visit Website
-              </a>
+            <div class="modules__title">
+              Github
             </div>
           </div>
-        </div>
-        <div class="med_block">
-          <div class="module-card">
-            <div class="column col-xl-3 col-lg-3 col-md-3 d-flex align-center align-left  module-table__view">
-              <div class="module-table__icon">
-                <img src="https://www.spiderfoot.net/wp-content/themes/spiderfoot/img/logo/LOGO-sfp_s3bucket.png">
-              </div>
-              <h2 class="module-table__name">
-                Amazon S3 Bucket Finder </h2>
-            </div>
-            <div class="module-card__icon module-card__view">
-              <img src="https://www.spiderfoot.net/wp-content/themes/spiderfoot/img/logo/LOGO-sfp_s3bucket.png">
-            </div>
-            <h2 class="module-card__name --bold heading-3 module-card__view">
-              Amazon S3 Bucket Finder </h2>
-            <div class="module-card__description app__description">
-              Search for potential Amazon S3 buckets associated with the target and attempt to list their contents.
-            </div>
-            <div class="d-flex align-justify align-middle module-card__view">
-              <div class="module-card__status heading-4 --semiBold">
-                Free </div>
-              <a href="https://aws.amazon.com/s3/" target="_blank" class="module-card__link">
-                Visit Website
-              </a>
-            </div>
-            <div class="column col-xl-2 col-lg-2  col-md-2 module-table__view">
-              <div class="module-card__status heading-4 --semiBold">
-                Free </div>
-            </div>
-            <div class="column col-xl-3 col-lg-3  col-md-3 module-table__view">
-              <a href="https://aws.amazon.com/s3/" target="_blank" class="module-card__link">
-                Visit Website
-              </a>
-            </div>
+          <div class="modules__description">
+            Use Shodan to discover which of your devices are connected to the Internet, where they are located and who
+            is using them
+          </div>
+          <div class="modules__status">
+            FREE
+          </div>
+          <div class="modules__link">
+            <a href="#">Visit Website</a>
           </div>
         </div>
-
+        <div class="modules-item">
+          <div class="modules__icon__title">
+            <div class="modules__icon">
+              <img src="./img/modules/modules-shodan.svg" alt="shodan logo">
+            </div>
+            <div class="modules__title">
+              Shodan
+            </div>
+          </div>
+          <div class="modules__description">
+            Use Shodan to discover which of your devices are connected to the Internet, where they are located and who
+            is using them
+          </div>
+          <div class="modules__status">
+            FREE
+          </div>
+          <div class="modules__link">
+            <a href="#">Visit Website</a>
+          </div>
+        </div>
+        <div class="modules-item">
+          <div class="modules__icon__title">
+            <div class="modules__icon">
+              <img src="./img/modules/modules-ibm.svg" alt="img logo">
+            </div>
+            <div class="modules__title">
+              IBM X-Force
+            </div>
+          </div>
+          <div class="modules__description">
+            Use Shodan to discover which of your devices are connected to the Internet, where they are located and who
+            is using them
+          </div>
+          <div class="modules__status">
+            PURCHASE
+          </div>
+          <div class="modules__link">
+            <a href="#">Visit Website</a>
+          </div>
+        </div>
+        <div class="modules-item">
+          <div class="modules__icon__title">
+            <div class="modules__icon">
+              <img src="./img/modules/modules-github.svg" alt="Github logo">
+            </div>
+            <div class="modules__title">
+              Github
+            </div>
+          </div>
+          <div class="modules__description">
+            Use Shodan to discover which of your devices are connected to the Internet, where they are located and who
+            is using them
+          </div>
+          <div class="modules__status">
+            FREE
+          </div>
+          <div class="modules__link">
+            <a href="#">Visit Website</a>
+          </div>
+        </div>
+        <div class="modules-item">
+          <div class="modules__icon__title">
+            <div class="modules__icon">
+              <img src="./img/modules/modules-shodan.svg" alt="shodan logo">
+            </div>
+            <div class="modules__title">
+              Shodan
+            </div>
+          </div>
+          <div class="modules__description">
+            Use Shodan to discover which of your devices are connected to the Internet, where they are located and who
+            is using them
+          </div>
+          <div class="modules__status">
+            FREE
+          </div>
+          <div class="modules__link">
+            <a href="#">Visit Website</a>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 </main>
-<script>
-
-</script>
 <footer class="footer">
   <img src="./img/footer-background.svg" alt="background-image" class="footer-background">
   <div class="container">

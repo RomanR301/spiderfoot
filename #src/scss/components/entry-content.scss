@@ -122,5 +122,24 @@
       transform: rotate(180deg);
     }
   }
+  code {
+    font-size: 16px;
+  }
+  pre {
+    background: rgb(47, 50, 65);
+    overflow-y: auto;
+    overflow-x: auto;
+    padding: 5px;
+    margin-bottom: 16px;
+    code {
+      font-size: 16px;
+      line-height: 24px;
+      display: block;
+      white-space: pre-wrap;
+      overflow-wrap: break-word;
+      padding: 5px;
+      overflow-x: auto;
+    }
+  }
 }
 

@@ -8,117 +8,120 @@
   border-radius: 100px;
   padding: 12px 27px;
   resize: none;
-  color: #4F4F4F;
+  color: #4f4f4f;
   font-size: 18px;
   line-height: 25px;
-  @include transition(.3);
+  @include transition(0.3);
   &:focus {
     box-shadow: 1px 1px 10px rgba(255, 255, 255, 0.3);
     outline: none;
   }
-  &::placeholder  {
-    color: #4F4F4F;
+  &::placeholder {
+    color: #4f4f4f;
   }
   &::-moz-placeholder {
-    color: #4F4F4F;
+    color: #4f4f4f;
   }
 }
 
+.custom-select {
+  position: relative;
+  width: 200px
+}
 
-.select-dropdown {
-	position: relative;
-	display: inline-block;
-	max-width: 100%;
-	margin: 0 15px 0 0;
-	&:last-child {
-		margin-right: 0px;
-	}
-	&__button {
-    width: 100%;
-    font-family: inherit;
-    border: none;
-    border-radius: 100px;
-    padding: 12px 27px 12px 60px;
-    resize: none;
-    text-align: left;
+.custom-select select {
+  display: none;
+  opacity: 0;
+  visibility: hidden;
+  font-size: 16px;
+  padding: 11px 34px 11px 56px;
+}
+
+.select-list {
+  position: absolute;
+  cursor: pointer;
+  background: #fff;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 0;
+  min-width: 100%;
+  border-radius: 10px;
+  overflow: hidden;
+  top: 110%;
+  left: 0;
+  visibility: visible;
+  opacity: 1;
+  -webkit-transform: translate(0, 0);
+  transform: translate(0, 0);
+  z-index: 5;
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+
+.select-list__item {
+  display: block;
+  list-style-type: none;
+  padding: 10px 15px;
+  background: #fff;
+  border-top: 1px solid #e6e6e6;
+  font-size: 18px;
+  line-height: 1.4;
+  cursor: pointer;
+  text-align: left;
+  color: $defaultText;
+  transition: all ease-in-out 0.3s;
+  &:first-child {
+    border-top: none;
+  }
+  &:hover {
+    background: $primaryColor;
+    border-color: $primaryColor;
+    color: $whiteColor;
+    transition: all ease-in-out 0.3s;
+  }
+}
+.select-list__item.--current {
+  border: 2px solid #eeeeee;
+  border-radius: 100px;
+  padding: 11px 34px 11px 56px;
+  &:hover {
+    color: $defaultText;
     background: $whiteColor;
-    @media (max-width: $breakpoint-lg) {
-      font-size: 16px;
-    }
-    &:before {
-      content: '';
-      background-repeat: no-repeat;
-      width: 18px;
-      height: 12px;
-      left: 27px;
-      top: 50%;
-      transform: translate(0, -50%);
-      position: absolute;
-      background-image: url('../img/icons/status-icon.svg');
-    }
-    i:before {
-      position: absolute;
-      right: 20px;
-      top: 50%;
-      transform: translate(0, -50%);
-      color: #5A6C81;
-    }
-    span {
-      color: $defaultextLight;
-      font-size: 18px;
-      line-height: 25px;
-    }
-		&:focus {
-			outline: none;
-		}
-	}
-	&__list {
-		position: absolute;
-		display: block;
-		left: 0;
-		right: 0;
-		max-height: 300px;
-		overflow: auto;
-		margin: 0;
-		padding: 0;
-		border-top: 0px solid transparent;
-		list-style-type: none;
-		opacity: 0;
-		pointer-events: none;
-		transform-origin: top left;
-		transform: scale(1,0);
-		transition: all ease-in-out .3s;
-		z-index: 101;
+  }
+}
 
-    top: 60px;
-    border-radius: 20px;
+.select-list__item.--current:after {
+  content: "\e90c";
+  font-family: "icomoon" !important;
+  font-size: 13px;
+  position: absolute;
+  color: #5A6C81;
+  top: 50%;
+  right: 21px;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
 
-		&.active {
-			opacity: 1;
-			pointer-events: auto;
-			transform: scale(1,1);
-		}
-	}
-	&__list-item {
-		display: block;
-		list-style-type: none;
-		padding: 10px 15px;
-		background: #fff;
-		border-top: 1px solid #e6e6e6;
-		font-size: 14px;
-		line-height: 1.4;
-		cursor: pointer;
-		text-align: left;
-    color: $defaultextLight;
-		transition: all ease-in-out .3s;
-    &:first-child {
-      border-top: none;
-    }
-		&:hover {
-      background: $primaryColor;
-      border-color: $primaryColor;
-			color: $whiteColor;
-			transition: all ease-in-out .3s;
-		}
-	}
+.select-list__item.--current:before {
+  content: "";
+  background-repeat: no-repeat;
+  width: 18px;
+  height: 12px;
+  left: 27px;
+  top: 50%;
+  transform: translate(0, -50%);
+  position: absolute;
+  background-image: url("../img/icons/status-icon.svg");
+}
+.select-hide {
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transform: translate(0, 50px);
+  transform: translate(0, 50px);
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
 }

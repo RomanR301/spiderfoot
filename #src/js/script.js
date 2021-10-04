@@ -156,36 +156,47 @@ let front = {
     } else {
         null
     }
-    // $(document).on('click', 'a[href^="#"]', function (event) {
-    //   event.preventDefault();
+
+    $("button[name='buttonTable']").click(function () {
+      $('.med_inline_block').addClass('med_block').removeClass('med_inline_block');
+      $('.module-table__header').addClass('d-flex').removeClass('d-none');
+      $("input[name='tableView']").val('med_block');
+      if (!$(".med_block")[0]) {
+        $('.module-table__header').removeClass('d-flex').addClass('d-none');
+      }
+      $('.post-listing').removeClass('row m-row');
+    });
   
-    //   $('html, body').animate({
-    //       scrollTop: $($.attr(this, 'href')).offset().top - 100
-    //   }, 500);
-    //   $('body').removeClass('active');
-    //   $('.hamburger').removeClass('open');
-    //   $('.navbar').removeClass('active');
-    // });
-    $(document).on('click', '.table-view', function() {
-      $(this).addClass('active');
-      $('.card-view').removeClass('active');
-      $('.modules-list').removeClass('card-list');
-    })
-    $(document).on('click', '.card-view', function() {
-      $(this).addClass('active');
-      $('.table-view').removeClass('active');
-      $('.modules-list').addClass('card-list');
+    $("button[name='buttonCard']").click(function () {
+      $('.med_block').addClass('med_inline_block').removeClass('med_block');
+      $('.module-table__header').removeClass('d-flex').addClass('d-none');
+      $('.post-listing').addClass('row m-row');
+      $("input[name='tableView']").val('med_inline_block');
+      if (!$(".med_inline_block")[0]) {
+        $('.post-listing').removeClass('row m-row');
+      }
     })
 
-    if(window.matchMedia('(max-width: 768px)').matches){
-      $(this).addClass('active');
-      $('.table-view').removeClass('active');
-      $('.modules-list').addClass('card-list');
-    }
-
-    // $(document).on('click', '.documentation-item', function(){
-    //   $(this).toggleClass('menuOpen').find('.sub-menu').slideToggle();
+    // $(document).on('click', '.table-view', function() {
+    //   $(this).addClass('active');
+    //   $('.card-view').removeClass('active');
+    //   $('.modules-list').removeClass('card-list');
     // })
+    // $(document).on('click', '.card-view', function() {
+    //   $(this).addClass('active');
+    //   $('.table-view').removeClass('active');
+    //   $('.modules-list').addClass('card-list');
+    // })
+
+    // if(window.matchMedia('(max-width: 768px)').matches){
+    //   $(this).addClass('active');
+    //   $('.table-view').removeClass('active');
+    //   $('.modules-list').addClass('card-list');
+    // }
+
+    // // $(document).on('click', '.documentation-item', function(){
+    // //   $(this).toggleClass('menuOpen').find('.sub-menu').slideToggle();
+    // // })
 
   }
 };
@@ -271,105 +282,71 @@ document.body.addEventListener('keyup', function(e) {
 
 
 
-
-document.addEventListener('DOMContentLoaded', createSelect, false);
-function createSelect() {
-    var select = document.getElementsByClassName('custom-select'),
-      liElement,
-      ulElement,
-      optionValue,
-      iElement,
-      optionText,
-      selectDropdown,
-      elementParentSpan;
-
-      for (var select_i = 0, len = select.length; select_i < len; select_i++) {
-        //console.log('selects init');
-
-      select[select_i].style.display = 'none';
-      wrapElement(document.getElementById(select[select_i].id), document.createElement('div'), select_i, select[select_i].getAttribute('placeholder-text'));
-
-      for (var i = 0; i < select[select_i].options.length; i++) {
-        liElement = document.createElement("li");
-        optionValue = select[select_i].options[i].value;
-        optionText = document.createTextNode(select[select_i].options[i].text);
-        liElement.className = 'select-dropdown__list-item';
-        liElement.setAttribute('data-value', optionValue);
-        liElement.appendChild(optionText);
-        ulElement.appendChild(liElement);
-
-        liElement.addEventListener('click', function () {
-          displyUl(this);
-        }, false);
-      }
-    }
-    function wrapElement(el, wrapper, i, placeholder) {
-      el.parentNode.insertBefore(wrapper, el);
-      wrapper.appendChild(el);
-
-      document.addEventListener('click', function (e) {
-        let clickInside = wrapper.contains(e.target);
-        if (!clickInside) {
-          let menu = wrapper.getElementsByClassName('select-dropdown__list');
-          menu[0].classList.remove('active');
-        }
-      });
-
-      var buttonElement = document.createElement("button"),
-        spanElement = document.createElement("span"),
-        spanText = document.createTextNode(placeholder);
-        iElement = document.createElement("i");
-        ulElement = document.createElement("ul");
-
-      wrapper.className = 'select-dropdown select-dropdown--' + i;
-      buttonElement.className = 'select-dropdown__button select-dropdown__button--' + i;
-      buttonElement.setAttribute('data-value', '');
-      buttonElement.setAttribute('type', 'button');
-      spanElement.className = 'select-dropdown select-dropdown--' + i;
-      iElement.className = 'icon-icon-shevron';
-      ulElement.className = 'select-dropdown__list select-dropdown__list--' + i;
-      ulElement.id = 'select-dropdown__list-' + i;
-
-      wrapper.appendChild(buttonElement);
-      spanElement.appendChild(spanText);
-      buttonElement.appendChild(spanElement);
-      buttonElement.appendChild(iElement);
-      wrapper.appendChild(ulElement);
-    }
-
-    function displyUl(element) {
-
-      if (element.tagName == 'BUTTON') {
-        selectDropdown = element.parentNode.getElementsByTagName('ul');
-        //var labelWrapper = document.getElementsByClassName('js-label-wrapper');
-        for (var i = 0, len = selectDropdown.length; i < len; i++) {
-          selectDropdown[i].classList.toggle("active");
-          //var parentNode = $(selectDropdown[i]).closest('.js-label-wrapper');
-          //parentNode[0].classList.toggle("active");
-        }
-      } else if (element.tagName == 'LI') {
-        var selectId = element.parentNode.parentNode.getElementsByTagName('select')[0];
-        selectElement(selectId.id, element.getAttribute('data-value'));
-        elementParentSpan = element.parentNode.parentNode.getElementsByTagName('span');
-        element.parentNode.classList.toggle("active");
-        elementParentSpan[0].textContent = element.textContent;
-        elementParentSpan[0].parentNode.setAttribute('data-value', element.getAttribute('data-value'));
-      }
-
-    }
-    function selectElement(id, valueToSelect) {
-      var element = document.getElementById(id);
-      element.value = valueToSelect;
-      element.setAttribute('selected', 'selected');
-    }
-    var buttonSelect = document.getElementsByClassName('select-dropdown__button');
-    for (var i = 0, len = buttonSelect.length; i < len; i++) {
-      buttonSelect[i].addEventListener('click', function (e) {
-				e.preventDefault();
-				displyUl(this);
-			}, false);
-		}
+function closeAllSelect(e) {
+  var t, s, n, l = [];
+  for (t = document.getElementsByClassName("select-items"),
+  s = document.getElementsByClassName("select-selected"),
+  n = 0; n < s.length; n++)
+      e == s[n] ? l.push(n) : s[n].classList.remove("select-arrow-active");
+  for (n = 0; n < t.length; n++)
+      l.indexOf(n) && t[n].classList.add("select-hide")
 }
+function fireEvent(e, t) {
+  if (document.createEventObject) {
+      s = document.createEventObject();
+      return e.fireEvent("on" + t, s)
+  }
+  var s;
+  return (s = document.createEvent("HTMLEvents")).initEvent(t, !0, !0),
+  !e.dispatchEvent(s)
+}
+var x, i, j, selElmnt, a, b, c;
+for (x = document.getElementsByClassName("custom-select-js"),
+i = 0; i < x.length; i++) {
+  for (selElmnt = x[i].getElementsByTagName("select")[0],
+  (a = document.createElement("DIV")).setAttribute("class", "select-list__item --current"),
+  a.innerHTML = selElmnt.options[selElmnt.selectedIndex].innerHTML,
+  x[i].appendChild(a),
+  (b = document.createElement("DIV")).setAttribute("class", "select-list select-hide"),
+  j = 0; j < selElmnt.length; j++)
+      (c = document.createElement("DIV")).innerHTML = selElmnt.options[j].innerHTML,
+      c.setAttribute("class", "select-list__item"),
+      c.addEventListener("click", function(e) {
+          var t, s, n, l, i;
+          for (l = this.parentNode.parentNode.getElementsByTagName("select")[0],
+          i = this.parentNode.previousSibling,
+          s = 0; s < l.length; s++)
+              if (l.options[s].innerHTML == this.innerHTML) {
+                  for (l.options[s].selected = !0,
+                  fireEvent(l.options[s], "change"),
+                  l.selectedIndex = s,
+                  i.innerHTML = this.innerHTML,
+                  t = this.parentNode.getElementsByClassName("same-as-selected"),
+                  n = 0; n < t.length; n++)
+                      t[n].setAttribute("class", "select-list__item");
+                  this.setAttribute("class", "select-list__item same-as-selected");
+                  break
+              }
+          i.click()
+      }),
+      b.appendChild(c);
+  x[i].appendChild(b),
+  a.addEventListener("click", function(e) {
+      e.stopPropagation(),
+      closeAllSelect(this),
+      this.nextSibling.classList.toggle("select-hide"),
+      this.classList.toggle("select-arrow-active")
+  })
+}
+document.addEventListener("click", closeAllSelect);
+
+
+$(document).on("click", ".filter-grid__btn", function() {
+  let e = $(this).parents(".grid-wrap");
+  $(this).hasClass("addSmall") ? e.addClass("small") : e.removeClass("small"),
+  $(this).hasClass("active") ? $(this).removeClass("active") : ($(".filter-grid__btn").removeClass("active"),
+  $(this).addClass("active"))
+}),
 
 $(document).ready(function () {
   $(document).on('click', 'a', function () {
