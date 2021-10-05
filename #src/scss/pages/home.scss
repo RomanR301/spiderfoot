@@ -689,7 +689,12 @@
     }
   }
 }
-
+.news-slider {
+  opacity: 0;
+  &.swiper-container-initialized {
+    opacity: 1;
+  }
+}
 .news-carousel {
   margin-bottom: 123px;
   @media (max-width: $breakpoint-lg) {

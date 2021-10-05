@@ -823,6 +823,10 @@ input[type=number] {
   transition: all 0.3s ease-out;
 }
 
+.entry-content {
+  overflow: hidden;
+}
+
 .entry-content * {
   font-family: 'Lora', serif;
 }
@@ -859,17 +863,17 @@ input[type=number] {
 }
 
 .entry-content h2 {
-  font-size: 48px;
-  font-size: -webkit-calc(28px + (48 - 28) * ((100vw - 300px) / (1900 - 300)));
-  font-size: -moz-calc(28px + (48 - 28) * ((100vw - 300px) / (1900 - 300)));
-  font-size: calc(28px + (48 - 28) * ((100vw - 300px) / (1900 - 300)));
+  font-size: 40px;
+  font-size: -webkit-calc(28px + (40 - 28) * ((100vw - 300px) / (1900 - 300)));
+  font-size: -moz-calc(28px + (40 - 28) * ((100vw - 300px) / (1900 - 300)));
+  font-size: calc(28px + (40 - 28) * ((100vw - 300px) / (1900 - 300)));
 }
 
 .entry-content h3 {
-  font-size: 36px;
-  font-size: -webkit-calc(24px + (36 - 24) * ((100vw - 300px) / (1900 - 300)));
-  font-size: -moz-calc(24px + (36 - 24) * ((100vw - 300px) / (1900 - 300)));
-  font-size: calc(24px + (36 - 24) * ((100vw - 300px) / (1900 - 300)));
+  font-size: 34px;
+  font-size: -webkit-calc(24px + (34 - 24) * ((100vw - 300px) / (1900 - 300)));
+  font-size: -moz-calc(24px + (34 - 24) * ((100vw - 300px) / (1900 - 300)));
+  font-size: calc(24px + (34 - 24) * ((100vw - 300px) / (1900 - 300)));
 }
 
 .entry-content h4 {
@@ -948,7 +952,6 @@ input[type=number] {
 
 .entry-content blockquote {
   position: relative;
-  line-height: 1.4;
   margin: 88px 0;
   font-size: 20px;
   line-height: 1.75;
@@ -979,6 +982,11 @@ input[type=number] {
 
 .entry-content code {
   font-size: 16px;
+  overflow-x: auto;
+  scrollbar-color: #0089CF transparent;
+  scrollbar-width: thin;
+  font-family: monospace;
+  padding: 5px;
 }
 
 .entry-content pre {
@@ -997,6 +1005,31 @@ input[type=number] {
   overflow-wrap: break-word;
   padding: 5px;
   overflow-x: auto;
+}
+
+.entry-content blockquote.wp-block-quote.is-style-large {
+  margin-bottom: 88px;
+}
+
+.entry-content .wp-block-table table {
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.entry-content .wp-block-table tbody > tr:nth-child(odd) {
+  background: #2f3241;
+}
+
+.entry-content .wp-block-table td,
+.entry-content .wp-block-table th {
+  padding: 10px 16px;
+  font-size: 14px;
+  line-height: 28px;
+}
+
+.wp-block-quote.is-style-large p {
+  font-size: 20px;
 }
 
 .form-control {
@@ -1591,9 +1624,9 @@ main {
 .navbar .sub-menu .menu-item .modalTrigger {
   background: #079DD9;
   width: 100%;
-  border-radius: 100px;
   padding: 4px 5px;
-  margin: 0px 0px 10px 0;
+  border-radius: 100px;
+  margin: 0;
   font-size: 14px;
   display: flex;
   justify-content: center;
@@ -3417,6 +3450,14 @@ button.swiper-pagination-bullet {
   align-self: flex-start;
 }
 
+.news-slider {
+  opacity: 0;
+}
+
+.news-slider.swiper-container-initialized {
+  opacity: 1;
+}
+
 .news-carousel {
   margin-bottom: 123px;
 }
@@ -4148,6 +4189,10 @@ button.swiper-pagination-bullet {
   margin-bottom: 30px;
 }
 
+.privacy-page {
+  margin: 60px 0;
+}
+
 .comparison {
   margin: 60px 0;
 }
@@ -4537,7 +4582,12 @@ button.swiper-pagination-bullet {
 }
 
 .books-slider {
+  opacity: 0;
   padding: 30px 0 60px 0;
+}
+
+.books-slider.swiper-container-initialized {
+  opacity: 1;
 }
 
 .books-item {
@@ -4546,6 +4596,7 @@ button.swiper-pagination-bullet {
   -moz-transition: all 0.3s ease-out;
   -o-transition: all 0.3s ease-out;
   transition: all 0.3s ease-out;
+  max-height: 240px;
 }
 
 .books-item img {
@@ -5677,6 +5728,11 @@ mark.current {
     width: 100%;
   }
 
+  .entry-content p {
+    font-size: 18px;
+    margin-bottom: 26px;
+  }
+
   main {
     padding-top: 60px;
   }
@@ -5699,7 +5755,7 @@ mark.current {
     height: auto;
     font-size: 32px;
     line-height: 32px;
-    display: inline;
+    display: block;
   }
 
   .header .menu-item a:before {
@@ -5722,6 +5778,12 @@ mark.current {
 
   .navbar .sub-menu .menu-item:last-child {
     margin-bottom: 0;
+  }
+
+  .navbar .sub-menu .menu-item .modalTrigger {
+    margin: 0;
+    padding: 6px 14px;
+    width: fit-content;
   }
 
   .navbar .sub-menu .menu-item a {

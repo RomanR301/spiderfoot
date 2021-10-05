@@ -2,6 +2,7 @@
 @import "../abstracts/variables";
 
 .entry-content {
+  overflow: hidden;
   * {
     font-family: 'Lora', serif;
   }
@@ -14,6 +15,10 @@
     line-height: 1.75;
     color: #CFCFCF;
     margin-bottom: 36px;
+    @media (max-width: $breakpoint-lg) {
+      font-size: 18px;
+      margin-bottom: 26px;
+    }
   }
   & a {
     color: $primaryColor;
@@ -26,10 +31,10 @@
     @include fontSize(32, 62);
   }
   & h2 {
-    @include fontSize(28, 48);
+    @include fontSize(28, 40);
   }
   & h3 {
-    @include fontSize(24, 36);
+    @include fontSize(24, 34);
   }
   & h4 {
     @include fontSize(22, 26);
@@ -98,7 +103,6 @@
   }
   & blockquote {
     position: relative;
-    line-height: 1.4;
     margin: 88px 0;
     font-size: 20px;
     line-height: 1.75;
@@ -124,6 +128,11 @@
   }
   code {
     font-size: 16px;
+    overflow-x: auto;
+    scrollbar-color: #0089CF transparent;
+    scrollbar-width: thin;
+    font-family: monospace;
+    padding: 5px;
   }
   pre {
     background: rgb(47, 50, 65);
@@ -141,5 +150,25 @@
       overflow-x: auto;
     }
   }
+  blockquote.wp-block-quote.is-style-large {
+    margin-bottom: 88px;
+  }
+  .wp-block-table table {
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+  }
+  .wp-block-table tbody>tr:nth-child(odd) {
+    background: #2f3241;
+  }
 }
 
+.entry-content .wp-block-table td, .entry-content .wp-block-table th {
+  padding: 10px 16px;
+  font-size: 14px;
+  line-height: 28px;
+}
+
+.wp-block-quote.is-style-large p {
+  font-size: 20px;
+}
