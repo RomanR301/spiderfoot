@@ -66,9 +66,6 @@
       font-size: 18px;
       color: #CFCFCF;
       line-height: 1.75;
-      @media (min-width: $breakpoint-xxl) {
-        font-size: 24px;
-      }
       &:before {
         content: '';
         position: absolute;

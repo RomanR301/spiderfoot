@@ -64,6 +64,12 @@
       text-align: left;
     }
   }
+  .app__title {
+    font-size: 62px;
+    @media (max-width: $breakpoint-lg) {
+      @include fontSize(32, 54);
+    }
+  }
   & h1 {
     margin-bottom: 0;
   }
@@ -250,7 +256,7 @@
       align-items: center;
     }
     .btn-primary {
-      width: fit-content;
+      width: max-content;
     }
     .img-container {
       filter: drop-shadow(-30px 30px 80px #000);
@@ -354,6 +360,9 @@
     &.pricing-card-most-popular {
       @media (max-width: $breakpoint-md) {
         margin-top: 40px;
+      }
+      .pricing-card {
+        border-radius: 0 0 10px 10px;
       }
     }
   }
@@ -470,7 +479,7 @@
     font-size: 12px;
     display: flex;
     justify-content: center;
-    height: 76px;
+    height: 40px;
     padding: 13px;
     width: calc(100% - 30px);
     left: 15px;
@@ -557,9 +566,10 @@
     position: absolute;
     bottom: -44px;
     left: 15px;
-    height: 55px;
+    height: 44px;
     width: calc(100% - 30px);
-    padding: 22px 10px 10px 10px;
+    line-height: 1;
+    padding: 12px 10px 10px 10px;
     text-decoration: none;
     display: flex;
     justify-content: center;

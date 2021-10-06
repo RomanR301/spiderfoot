@@ -51,7 +51,7 @@
     background: rgba(0, 0, 0, 0.4);
   }
   &__content {
-    background: rgba(47, 50, 65, 0.5);
+    background: rgba(47, 50, 65, 1);
     @include blur(64px);
     border-radius: 20px;
     position: relative;
@@ -91,9 +91,10 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     overflow: hidden;
     @media (max-width: $breakpoint-md) {
-      height: fit-content;
+      height: auto;
     }
     @media (max-width: $breakpoint-md) {
       padding: 20px 15px;
@@ -102,7 +103,7 @@
   iframe {
     width: 655px;
     height: 368px;
-    margin: auto;
+    margin: 100px auto;
     @media (max-width: $breakpoint-lg) {
       width: 520px;
       height: 292px;

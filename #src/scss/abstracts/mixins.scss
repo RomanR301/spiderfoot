@@ -26,8 +26,8 @@
 }
 
 @mixin blur($px){
-  backdrop-filter: blur($px);
-  -webkit-backdrop-filter: blur($px);
+  // backdrop-filter: blur($px);
+  // -webkit-backdrop-filter: blur($px);
 }
 
 @mixin text-ellipsis($strokes) {

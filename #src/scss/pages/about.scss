@@ -16,6 +16,7 @@
     position: absolute;
     right: 0;
     top: 50%;
+    z-index: -12;
     transform: translate(0, -50%) rotate(180deg);
     @media (max-width: $breakpoint-xl) {
       display: none;
@@ -308,6 +309,7 @@
     @include blur(64px);
     border-radius: 20px;
     padding: 20px;
+    position: relative;
     @media (max-width: $breakpoint-lg) {
       margin-top: 16px;
     }

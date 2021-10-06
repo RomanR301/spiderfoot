@@ -566,9 +566,7 @@ input[type=number] {
 }
 
 .modal__content {
-  background: rgba(47, 50, 65, 0.5);
-  backdrop-filter: blur(64px);
-  -webkit-backdrop-filter: blur(64px);
+  background: #2f3241;
   border-radius: 20px;
   position: relative;
   margin: auto;
@@ -611,13 +609,14 @@ input[type=number] {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   overflow: hidden;
 }
 
 .modal-action iframe {
   width: 655px;
   height: 368px;
-  margin: auto;
+  margin: 100px auto;
 }
 
 .btn {
@@ -716,9 +715,7 @@ input[type=number] {
   height: fit-content;
   display: flex;
   align-items: center;
-  background: rgba(47, 50, 65, 0.5);
-  backdrop-filter: blur(64px);
-  -webkit-backdrop-filter: blur(64px);
+  background: #2f3241;
 }
 
 .modal-download .download-image {
@@ -1312,6 +1309,11 @@ input[type=number] {
   font-size: 14px;
   text-align: center;
   color: red;
+}
+
+.grecaptcha-badge {
+  opacity: 0;
+  visibility: hidden;
 }
 
 .container {
@@ -2936,6 +2938,10 @@ button.swiper-pagination-bullet {
   text-align: left;
 }
 
+.main-screen .app__title {
+  font-size: 62px;
+}
+
 .main-screen h1 {
   margin-bottom: 0;
 }
@@ -3070,7 +3076,7 @@ button.swiper-pagination-bullet {
 }
 
 .benefits-row .btn-primary {
-  width: fit-content;
+  width: max-content;
 }
 
 .benefits-row .img-container {
@@ -3104,8 +3110,6 @@ button.swiper-pagination-bullet {
   align-items: center;
   justify-content: center;
   background: rgba(47, 50, 65, 0.5);
-  backdrop-filter: blur(64px);
-  -webkit-backdrop-filter: blur(64px);
   border-radius: 20px;
   margin-bottom: 30px;
   padding: 20px;
@@ -3131,6 +3135,10 @@ button.swiper-pagination-bullet {
 .pricing {
   position: relative;
   margin-bottom: 120px;
+}
+
+.pricing-card-wrapper.pricing-card-most-popular .pricing-card {
+  border-radius: 0 0 10px 10px;
 }
 
 .pricing-card-wrapper {
@@ -3211,8 +3219,6 @@ button.swiper-pagination-bullet {
 .pricing-card {
   background: rgba(47, 50, 65, 0.5);
   border: 1px solid #2b2c31;
-  backdrop-filter: blur(64px);
-  -webkit-backdrop-filter: blur(64px);
   border-radius: 10px;
   position: relative;
   z-index: 2;
@@ -3236,7 +3242,7 @@ button.swiper-pagination-bullet {
   font-size: 12px;
   display: flex;
   justify-content: center;
-  height: 76px;
+  height: 40px;
   padding: 13px;
   width: calc(100% - 30px);
   left: 15px;
@@ -3326,9 +3332,10 @@ button.swiper-pagination-bullet {
   position: absolute;
   bottom: -44px;
   left: 15px;
-  height: 55px;
+  height: 44px;
   width: calc(100% - 30px);
-  padding: 22px 10px 10px 10px;
+  line-height: 1;
+  padding: 12px 10px 10px 10px;
   text-decoration: none;
   display: flex;
   justify-content: center;
@@ -3416,8 +3423,6 @@ button.swiper-pagination-bullet {
 
 .testimonials-item {
   background: rgba(47, 50, 65, 0.5);
-  backdrop-filter: blur(64px);
-  -webkit-backdrop-filter: blur(64px);
   border-radius: 10px;
   padding: 24px;
   height: 100%;
@@ -3611,8 +3616,6 @@ button.swiper-pagination-bullet {
 
 .follow-us {
   background: rgba(47, 50, 65, 0.5);
-  backdrop-filter: blur(64px);
-  -webkit-backdrop-filter: blur(64px);
   border-radius: 20px;
   text-align: center;
   padding: 30px;
@@ -3719,7 +3722,7 @@ button.swiper-pagination-bullet {
   text-align: center;
   border-radius: 100px;
   background: #079DD9;
-  width: fit-content;
+  width: max-content;
   padding: 2px 13px;
   margin: auto auto 24px auto;
 }
@@ -3955,8 +3958,6 @@ button.swiper-pagination-bullet {
 .med_inline_block .module-card {
   border-radius: 5px;
   background: rgba(47, 50, 65, 0.5);
-  backdrop-filter: blur(64px);
-  -webkit-backdrop-filter: blur(64px);
   border-radius: 20px;
   padding: 16px;
   height: 100%;
@@ -4063,7 +4064,7 @@ button.swiper-pagination-bullet {
 
 .med_block .module-table__icon img {
   width: 100%;
-  height: 100%;
+  height: 75px;
   object-fit: contain;
 }
 
@@ -4203,8 +4204,6 @@ button.swiper-pagination-bullet {
 
 .comparison-block {
   background: rgba(47, 50, 65, 0.5);
-  backdrop-filter: blur(64px);
-  -webkit-backdrop-filter: blur(64px);
   border-radius: 20px;
   padding: 24px;
   margin-bottom: 34px;
@@ -4273,6 +4272,10 @@ button.swiper-pagination-bullet {
   width: 100%;
 }
 
+.comparison-table {
+  margin: 0 15px;
+}
+
 .comparison-table.--mobile {
   display: none;
 }
@@ -4280,6 +4283,12 @@ button.swiper-pagination-bullet {
 .comparison-table-heading {
   background: #2F3241;
   padding: 15px 9px;
+}
+
+.comparison-table-heading .col-md-3,
+.comparison-table-heading .col-md-4,
+.comparison-table-heading .col-md-5 {
+  padding: 0;
 }
 
 .comparison-table-heading__feature {
@@ -4375,6 +4384,7 @@ button.swiper-pagination-bullet {
   position: absolute;
   right: 0;
   top: 50%;
+  z-index: -12;
   transform: translate(0, -50%) rotate(180deg);
 }
 
@@ -4458,8 +4468,6 @@ button.swiper-pagination-bullet {
 
 .services-item:hover {
   background: rgba(47, 50, 65, 0.5);
-  backdrop-filter: blur(64px);
-  -webkit-backdrop-filter: blur(64px);
 }
 
 .services-item:hover i:before {
@@ -4529,8 +4537,6 @@ button.swiper-pagination-bullet {
 
 .goal-item {
   background: rgba(47, 50, 65, 0.5);
-  backdrop-filter: blur(64px);
-  -webkit-backdrop-filter: blur(64px);
   border-radius: 20px;
   padding: 24px;
   height: 100%;
@@ -4682,10 +4688,9 @@ button.swiper-pagination-bullet {
 
 .sponsors-stars {
   background: rgba(47, 50, 65, 0.5);
-  backdrop-filter: blur(64px);
-  -webkit-backdrop-filter: blur(64px);
   border-radius: 20px;
   padding: 20px;
+  position: relative;
 }
 
 .sponsors-stars .stars-image {
@@ -5647,10 +5652,6 @@ mark.current {
 }
 
 @media (min-width: 1800px) {
-  .entry-content ul > li {
-    font-size: 24px;
-  }
-
   .entry-content ol > li {
     font-size: 24px;
   }
@@ -5900,6 +5901,13 @@ mark.current {
     text-align: center;
   }
 
+  .main-screen .app__title {
+    font-size: 54px;
+    font-size: -webkit-calc(32px + (54 - 32) * ((100vw - 300px) / (1900 - 300)));
+    font-size: -moz-calc(32px + (54 - 32) * ((100vw - 300px) / (1900 - 300)));
+    font-size: calc(32px + (54 - 32) * ((100vw - 300px) / (1900 - 300)));
+  }
+
   .main-screen-description {
     text-align: center;
   }
@@ -6076,6 +6084,14 @@ mark.current {
     font-size: 16px;
   }
 
+  .comparison-block__bar .bar-item .bar-percentage {
+    font-size: 20px;
+  }
+
+  .comparison-block__bar .bar-item .bar-text {
+    font-size: 12px;
+  }
+
   .about {
     margin: 36px 0;
   }
@@ -6181,7 +6197,7 @@ mark.current {
 
 @media (max-width: 767px) {
   .modal-action .modal__content {
-    height: fit-content;
+    height: auto;
   }
 
   .modal-action .modal__content {
@@ -6490,8 +6506,6 @@ mark.current {
 
   .module-card {
     background: rgba(47, 50, 65, 0.5);
-    backdrop-filter: blur(64px);
-    -webkit-backdrop-filter: blur(64px);
     width: 100%;
     padding: 16px;
     overflow: hidden;
@@ -6564,6 +6578,7 @@ mark.current {
 
   .comparison-table.--mobile {
     display: block;
+    margin: 0;
   }
 
   .comparison-table.--desktop {
@@ -6615,8 +6630,6 @@ mark.current {
 
   .comparison-table-item {
     background: rgba(47, 50, 65, 0.5);
-    backdrop-filter: blur(64px);
-    -webkit-backdrop-filter: blur(64px);
     border-bottom: 1px solid #383D58;
     padding: 10px 9px;
   }

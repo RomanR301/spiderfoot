@@ -40,12 +40,18 @@
         .bar-percentage {
           font-size: 26px;
           line-height: 1;
+          @media (max-width: $breakpoint-lg) {
+            font-size: 20px;
+          }
           @media (max-width: $breakpoint-sm) {
             font-size: 22px;
           }
         }
         .bar-text {
           font-size: 16px;
+          @media (max-width: $breakpoint-lg) {
+            font-size: 12px;
+          }
           @media (max-width: $breakpoint-sm) {
             font-size: 12px;
             white-space: nowrap;
@@ -89,6 +95,7 @@
 }
 
 .comparison-table {
+  margin: 0 15px;
   @media (max-width: $breakpoint-md) {
     overflow: hidden;
   }
@@ -96,6 +103,7 @@
     display: none;
     @media (max-width: $breakpoint-md) {
       display: block;
+      margin: 0;
     }
   }
   &.--desktop {
@@ -106,6 +114,9 @@
   &-heading {
     background: #2F3241;
     padding: 15px 9px;
+    .col-md-3, .col-md-4, .col-md-5 {
+      padding: 0;
+    }
     @media (max-width: $breakpoint-md) {
      padding: 10px 9px;
      border-bottom: 1px solid #383D58;

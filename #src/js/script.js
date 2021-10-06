@@ -69,6 +69,9 @@ let front = {
         slidesPerView: 2,
         spaceBetween: 30,
         loop: true,
+        autoplay: {
+          delay: 4000,
+        },
         navigation: {
           nextEl: ".testimonials-next",
           prevEl: ".testimonials-prev",
