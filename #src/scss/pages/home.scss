@@ -476,11 +476,11 @@
     border-radius: 20px 20px 0 0;
     color: $whiteColor;
     font-weight: 600;
-    font-size: 12px;
+    font-size: 15px;
     display: flex;
     justify-content: center;
     height: 40px;
-    padding: 13px;
+    padding: 11px 13px 13px 13px;
     width: calc(100% - 30px);
     left: 15px;
     @media (max-width: $breakpoint-lg) {
@@ -619,19 +619,19 @@
     @media (max-width: $breakpoint-md) {
       margin-bottom: 20px;
     }
-    &:after {
-      content: "";
-      width: 54vw;
-      height: 2px;
-      background: $primaryColor;
-      position: absolute;
-      right: 0;
-      top: 50%;
-      transform: translate(0, -50%);
-      @media (max-width: $breakpoint-md) {
-        display: none;
-      }
-    }
+    // &:after {
+    //   content: "";
+    //   width: 54vw;
+    //   height: 2px;
+    //   background: $primaryColor;
+    //   position: absolute;
+    //   right: 0;
+    //   top: 50%;
+    //   transform: translate(0, -50%);
+    //   @media (max-width: $breakpoint-md) {
+    //     display: none;
+    //   }
+    // }
     h2 {
       text-align: left;
       line-height: 1;

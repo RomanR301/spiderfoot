@@ -834,7 +834,7 @@ input[type=number] {
 }
 
 .entry-content p {
-  font-size: 20px;
+  font-size: 18px;
   line-height: 1.75;
   color: #CFCFCF;
   margin-bottom: 36px;
@@ -867,10 +867,10 @@ input[type=number] {
 }
 
 .entry-content h3 {
-  font-size: 34px;
-  font-size: -webkit-calc(24px + (34 - 24) * ((100vw - 300px) / (1900 - 300)));
-  font-size: -moz-calc(24px + (34 - 24) * ((100vw - 300px) / (1900 - 300)));
-  font-size: calc(24px + (34 - 24) * ((100vw - 300px) / (1900 - 300)));
+  font-size: 32px;
+  font-size: -webkit-calc(24px + (32 - 24) * ((100vw - 300px) / (1900 - 300)));
+  font-size: -moz-calc(24px + (32 - 24) * ((100vw - 300px) / (1900 - 300)));
+  font-size: calc(24px + (32 - 24) * ((100vw - 300px) / (1900 - 300)));
 }
 
 .entry-content h4 {
@@ -982,7 +982,7 @@ input[type=number] {
   overflow-x: auto;
   scrollbar-color: #0089CF transparent;
   scrollbar-width: thin;
-  font-family: monospace;
+  font-family: Courier;
   padding: 5px;
 }
 
@@ -995,6 +995,7 @@ input[type=number] {
 }
 
 .entry-content pre code {
+  font-family: Courier;
   font-size: 16px;
   line-height: 24px;
   display: block;
@@ -3239,11 +3240,11 @@ button.swiper-pagination-bullet {
   border-radius: 20px 20px 0 0;
   color: #ffffff;
   font-weight: 600;
-  font-size: 12px;
+  font-size: 15px;
   display: flex;
   justify-content: center;
   height: 40px;
-  padding: 13px;
+  padding: 11px 13px 13px 13px;
   width: calc(100% - 30px);
   left: 15px;
 }
@@ -3376,17 +3377,6 @@ button.swiper-pagination-bullet {
 .testimonials-heading {
   position: relative;
   margin-bottom: 48px;
-}
-
-.testimonials-heading:after {
-  content: "";
-  width: 54vw;
-  height: 2px;
-  background: #079DD9;
-  position: absolute;
-  right: 0;
-  top: 50%;
-  transform: translate(0, -50%);
 }
 
 .testimonials-heading h2 {
@@ -5096,6 +5086,7 @@ mark.current {
 }
 
 .documentation .entry-content pre code {
+  font-family: Courier;
   font-size: 16px;
   line-height: 24px;
   display: block;
@@ -6416,10 +6407,6 @@ mark.current {
 
   .testimonials-heading {
     margin-bottom: 20px;
-  }
-
-  .testimonials-heading:after {
-    display: none;
   }
 
   .testimonials-heading h2 {

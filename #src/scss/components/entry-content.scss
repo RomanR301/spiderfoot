@@ -11,7 +11,7 @@
     color: #CFCFCF;
   }
   & p {
-    font-size: 20px;
+    font-size: 18px;
     line-height: 1.75;
     color: #CFCFCF;
     margin-bottom: 36px;
@@ -34,7 +34,7 @@
     @include fontSize(28, 40);
   }
   & h3 {
-    @include fontSize(24, 34);
+    @include fontSize(24, 32);
   }
   & h4 {
     @include fontSize(22, 26);
@@ -128,7 +128,7 @@
     overflow-x: auto;
     scrollbar-color: #0089CF transparent;
     scrollbar-width: thin;
-    font-family: monospace;
+    font-family: Courier;
     padding: 5px;
   }
   pre {
@@ -138,6 +138,7 @@
     padding: 5px;
     margin-bottom: 16px;
     code {
+      font-family: Courier;
       font-size: 16px;
       line-height: 24px;
       display: block;
