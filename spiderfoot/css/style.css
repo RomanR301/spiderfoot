@@ -47,6 +47,22 @@
 }
 
 @font-face {
+  font-family: "FuturaPT";
+  font-display: swap;
+  src: url("../fonts/FuturaPT-Book.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Inconsolata-Regular";
+  font-display: swap;
+  src: url("../fonts/Inconsolata-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
   font-family: "Lora";
   font-display: swap;
   src: url("../fonts/Lora-Bold.woff2") format("woff2");
@@ -982,20 +998,22 @@ input[type=number] {
   overflow-x: auto;
   scrollbar-color: #0089CF transparent;
   scrollbar-width: thin;
-  font-family: Courier;
+  font-family: monospace;
+  letter-spacing: .5px;
   padding: 5px;
 }
 
 .entry-content pre {
   background: #2f3241;
   overflow-y: auto;
+  letter-spacing: .5px;
   overflow-x: auto;
   padding: 5px;
   margin-bottom: 16px;
 }
 
 .entry-content pre code {
-  font-family: Courier;
+  font-family: monospace;
   font-size: 16px;
   line-height: 24px;
   display: block;
@@ -5058,11 +5076,12 @@ mark.current {
 }
 
 .documentation .entry-content {
+  padding-top: 20px;
   padding-bottom: 60px;
 }
 
 .documentation .entry-content * {
-  font-family: "Futura PT", serif;
+  font-family: 'Lora', serif;
 }
 
 .documentation .entry-content h1 {
@@ -5083,10 +5102,13 @@ mark.current {
   overflow-x: auto;
   padding: 5px;
   margin-bottom: 16px;
+  font-family: monospace;
+  letter-spacing: .5px;
 }
 
 .documentation .entry-content pre code {
-  font-family: Courier;
+  font-family: monospace;
+  letter-spacing: .5px;
   font-size: 16px;
   line-height: 24px;
   display: block;
@@ -5645,6 +5667,10 @@ mark.current {
 @media (min-width: 1800px) {
   .entry-content ol > li {
     font-size: 24px;
+  }
+
+  .documentation .entry-content ol li {
+    font-size: 18px;
   }
 }
 

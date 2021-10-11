@@ -128,17 +128,19 @@
     overflow-x: auto;
     scrollbar-color: #0089CF transparent;
     scrollbar-width: thin;
-    font-family: Courier;
+    font-family: monospace;
+    letter-spacing: .5px;
     padding: 5px;
   }
   pre {
     background: rgb(47, 50, 65);
     overflow-y: auto;
+    letter-spacing: .5px;
     overflow-x: auto;
     padding: 5px;
     margin-bottom: 16px;
     code {
-      font-family: Courier;
+      font-family: monospace;
       font-size: 16px;
       line-height: 24px;
       display: block;

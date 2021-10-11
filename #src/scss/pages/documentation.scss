@@ -222,12 +222,13 @@ mark.current {
 }
 
 .documentation .entry-content {
+  padding-top: 20px;
   @media (max-width: $breakpoint-sm) {
     overflow: hidden;
   }
   padding-bottom: 60px;
   * {
-    font-family: "Futura PT", serif;
+    font-family: 'Lora', serif;
   }
   h1 {
     margin: 15px 0 25px 0;
@@ -244,8 +245,11 @@ mark.current {
     overflow-x: auto;
     padding: 5px;
     margin-bottom: 16px;
+    font-family: monospace;
+    letter-spacing: .5px;
     code {
-      font-family: Courier;
+      font-family: monospace;
+      letter-spacing: .5px;
       font-size: 16px;
       line-height: 24px;
       display: block;
@@ -258,6 +262,11 @@ mark.current {
   ol {
     ul {
       padding-left: 24px;
+    }
+    li {
+      @media (min-width: 1800px) {
+        font-size: 18px;
+      }
     }
   }
   ul {
